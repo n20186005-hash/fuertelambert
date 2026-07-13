@@ -3,6 +3,7 @@ import { getI18n } from '../i18n/ui';
 const { messages } = getI18n(Astro.url);
 const g = messages.gallery;
 const images = Array.from({ length: 22 }, (_, i) => `/gallery/fuerte-de-coquimbo-${String(i + 1).padStart(2, '0')}.jpg`);
+const photoAlts = g.photoAlts ?? images.map(() => g.photoAlt);
 ---
 
 <section id="gallery" class="section-padding" style="background: var(--bg-secondary);">
@@ -10,11 +11,14 @@ const images = Array.from({ length: 22 }, (_, i) => `/gallery/fuerte-de-coquimbo
     <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">{g.title}</h2>
     <p class="text-center text-lg mb-10" style="color: var(--text-secondary);">{g.subtitle}</p>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid">
-      {images.map((src) => (
-        <div class="gallery-item">
-          <img src={src} alt={g.photoAlt} loading="lazy" class="w-full h-56 object-cover" />
-        </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="gallery-grid">
+      {images.map((src, index) => (
+        <figure class="gallery-item rounded-2xl border overflow-hidden" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+          <img src={src} alt={photoAlts[index] ?? g.photoAlt} loading="lazy" class="w-full h-56 object-cover" />
+          <figcaption class="px-4 py-3 text-sm leading-relaxed" style="color: var(--text-secondary);">
+            {photoAlts[index] ?? g.photoAlt}
+          </figcaption>
+        </figure>
       ))}
     </div>
 

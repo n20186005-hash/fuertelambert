@@ -21,23 +21,34 @@
   },
   "hero": {
     "title": "Coquimbo Pukara",
-    "subtitle": "Pukara siglo XIX, cerro wenu, Coquimbo lafken kütral. Chile püle wigka mongen kuyfi.",
+    "subtitle": "Siglo XIX pukara, cerro wenu, 360° Coquimbo lafken, puerto kuyfi ka Pacífico.",
     "rating": "4.5 (5.080)",
     "reviewCount": "Chewü nütram 5.080",
     "hours": "Kom antü, 10:00–20:00",
-    "openMaps": "Tenda echë",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+    "openMaps": "Google Maps tenda echë",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "tags": ["Entrada küme, müten gratuíta", "Ruka chewü püle", "1 hora küpa"],
+    "routeCta": {
+      "label": "Ruta küme",
+      "href": "#transport"
+    },
+    "historyCta": {
+      "label": "Kuyfi dungu echë",
+      "href": "#history"
+    }
   },
   "intro": {
     "title": "Coquimbo Pukara echë",
     "description": "Coquimbo Pukara, Fuerte Lambert rume, siglo XIX wigka pukara, Chile Ejército wel. Cerro wenu Coquimbo lafken. Lafken defensa püle puerto kütral. Akün Monumento Nacional. Wenu viewpoint: baluarte, túnel, Coquimbo península, puerto, Cruz del Tercer Milenio. Coquimbo ta'anga füta, Región de Coquimbo küpa.",
     "visitGuide": {
       "title": "Küpa reko",
+      "eyebrow": "Küme plan",
+      "description": "Petüvün ka antü nag mew küpa müle, rangi antü ül: küme kütral, küme tenda.",
       "items": [
-        "Kom antü, 10:00 ka 20:00; echë tripaye mboyve.",
-        "Camino Al Fuerte 20, cerro Coquimbo lafken.",
-        "Küpa: baluarte, cañón kuyfi, túnel, wenu esplanade.",
-        "Auto, taxi, colectivo Coquimbo centro ka La Serena."
+        "40 ka 70 minuto küpa: baluarte, cañón, túnel, wenu esplanade.",
+        "Camino Al Fuerte 20 mew müle; cerro püle jeguata pichi korü.",
+        "Antü ka viento füta, ko ka chumpiru müley.",
+        "Pichi che ka füta che püle taxi ka colectivo küme."
       ]
     },
     "alsoKnownAs": {
@@ -52,9 +63,9 @@
   },
   "transportSection": {
     "title": "Chumküpa Coquimbo Pukara",
-    "subtitle": "Avión Santiago ka La Serena, cerro jeguata auto ka pié, ko sección nütram püle chumküpa Coquimbo Pukara.",
+    "subtitle": "Meli küme ruta müten: Coquimbo akün ka cerro wenu küpa.",
     "overviewTitle": "Echë moñma tripaye",
-    "overviewText": "Püle wenu tripaye ramo, avión La Serena Aeropuerto (LSC) ka bus füta Coquimbo. Santiago, Valparaíso, Viña del Mar püle bus directo. Coquimbo Región rupi, cerro último auto, taxi, colectivo ka pié. Pukara Coquimbo centro ka La Serena kütral.",
+    "overviewText": "Kom chewü püle, dungu müley: chumküpa Coquimbo ka chum küpa cerro. Santiago, Valparaíso, Viña del Mar püle bus füta directo. Coquimbo mew, taxi, colectivo, auto ka pié müley.",
     "arrivalTitle": "Tripaye mboyve",
     "arrivalItems": [
       "Pukara cerro wenu, último jeguata auto ka pié.",
@@ -63,73 +74,47 @@
     ],
     "modes": [
       {
-        "label": "Alternativa 01",
-        "title": "Avión",
-        "description": "Aeropuerto cercano La Serena (LSC), Coquimbo 15–20 km, vuelo Santiago ka Chile.",
-        "details": [
-          "Aeropuerto püle transfer, taxi, bus Coquimbo.",
-          "Santiago avión ka bus füta Coquimbo Región.",
-          "Pukara avión directo ül; avión tripaye püle."
-        ]
-      },
-      {
-        "label": "Alternativa 02",
-        "title": "Tren",
-        "description": "Tren küpa Coquimbo ül: pasajero tren Santiago ka Valparaíso ül.",
-        "details": [
-          "Chile tren pasajero kütral, norte tren turismo ül.",
-          "Chewü bus, auto, avión kom.",
-          "Tren región ruma, pukara küpa ül."
-        ]
-      },
-      {
-        "label": "Alternativa 03",
+        "label": "Füta akün",
+        "icon": "🚌",
         "title": "Bus füta",
-        "description": "Coquimbo bus füta Santiago, Valparaíso, Viña del Mar, kom antü.",
+        "description": "Santiago, Valparaíso, Viña del Mar püle bus füta küme ka directo.",
         "details": [
-          "Bus Coquimbo terminal; taxi, colectivo, pié cerro.",
-          "Santiago 5 ka 6 hora Ruta 5 Norte.",
-          "Costo ka kom kütral."
+          "Santiago püle 5 ka 6 hora Ruta 5 Norte.",
+          "Coquimbo terminal cerro kütral.",
+          "Auto ül ramo, costo ka kom küme."
         ]
       },
       {
-        "label": "Alternativa 04",
-        "title": "Micro / Colectivo",
-        "description": "Coquimbo rupi micro ka colectivo centro, puerto, cerro pukara.",
+        "label": "Tüfachi tramo",
+        "icon": "🚕",
+        "title": "Taxi / Colectivo",
+        "description": "Centro, puerto, terminal püle taxi ka colectivo cerro küme.",
         "details": [
-          "Colectivo cerro jeguata püle.",
-          "Pié korü, zapatilla kom.",
-          "La Serena bus ka Coquimbo."
+          "Pichi che, füta che, equipaje püle taxi küme.",
+          "Colectivo ekonomi ka korü ül.",
+          "La Serena püle Coquimbo centro rume ka transbordo."
         ]
       },
       {
-        "label": "Alternativa 05",
-        "title": "Taxi / Traslado",
-        "description": "Bus terminal, aeropuerto, hotel püle taxi cerro küpa.",
+        "label": "Auto küpa",
+        "icon": "🚗",
+        "title": "Auto ruta",
+        "description": "Auto ramo Coquimbo, La Serena ka lafken ruta rume küme.",
         "details": [
-          "Mitã, füta che, equipaje püle kom.",
-          "Auto entrada kütral, viewpoint pié.",
-          "Ciudad rupi precio küme."
+          "Ruta 5 Norte püle ka Camino Al Fuerte mew.",
+          "Estacionamiento recinto ka cercano müley.",
+          "Curva ka pichi rüpü mew antüma parkear ül."
         ]
       },
       {
-        "label": "Alternativa 06",
-        "title": "Auto",
-        "description": "Chile norte ruta auto, Coquimbo Ruta 5 Norte, Ruta 41 ka costanera.",
+        "label": "Pié küpa",
+        "icon": "🚶",
+        "title": "Pié / bicicleta",
+        "description": "Cerro küpa pié ka bicicleta, lafken ka puerto tenda müten.",
         "details": [
-          "Santiago Ruta 5 Norte Coquimbo.",
-          "Estacionamiento pukara ka cercano.",
-          "Auto esplanade, hora echë."
-        ]
-      },
-      {
-        "label": "Alternativa 07",
-        "title": "Bicicleta / Pié",
-        "description": "Coquimbo rupi bicicleta ka pié cerro pukara viewpoint.",
-        "details": [
-          "Cerro korü, petüvün tripaye.",
-          "Bicicleta korü pichi, fuerza müle.",
-          "Puerto pié lafken echë."
+          "Verano ka rangi antü korü füta.",
+          "Bicicleta pichi küme, fuerza müley.",
+          "Puerto püle ta'anga küme tenda."
         ]
       }
     ],
@@ -173,8 +158,32 @@
   },
   "gallery": {
     "title": "Ta'anga aty",
-    "subtitle": "Pukara, baluarte ka Coquimbo lafken",
+    "subtitle": "Cañón, muralla, wenu plataforma ka lafken tenda mew ta'anga.",
     "photoAlt": "Coquimbo Pukara ka Coquimbo lafken",
+    "photoAlts": [
+      "Pukara wenu tenda ka Coquimbo lafken",
+      "Cañón kuyfi ka kura plataforma",
+      "Baluarte ka muralla, puerto kütral",
+      "Wenu esplanade ka Pacífico tenda",
+      "Lafken antü nag mew",
+      "Pukara entrada ka korü rüpü",
+      "Mirador ka Cruz del Tercer Milenio tenda",
+      "Muralla defensa detalle",
+      "Puerto ka ruka tenda cerro püle",
+      "Rüpü wenu plataforma mew",
+      "Mirador abierto ka lafken",
+      "Cañón ka Coquimbo waria",
+      "Baluarte esquina antü kontraluz",
+      "Puerto ka costanera wenu tenda",
+      "Muralla ka península horizonte",
+      "Cerro rüpü püle entrada",
+      "Plataforma ka Cruz del Tercer Milenio",
+      "Muralla textura ka estructura",
+      "Waria ka puerto cerro püle",
+      "Mirador baranda ka azul ko",
+      "Bahía curva pukara borde püle",
+      "Tarde nag wenu esplanade"
+    ],
     "viewAll": "Tenda echë Google Maps",
     "showMore": "Ta'anga füta echë",
     "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
@@ -182,8 +191,20 @@
   "reviews": {
     "title": "Chewü nütram",
     "declaration": "Chewü nütram Google Maps (enlace externo).",
+    "featuredTitle": "Pichi nütram küme",
+    "featuredSubtitle": "Epu chewü nütram: tenda, kuyfi dungu ka küpa mongen müley.",
     "moreReviews": "Google Maps echë",
     "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "featured": [
+      {
+        "text": "Kuyfi dungu füta. Cerro wenu pukara; viewpoint 360°. Ruka chewü püle kom.",
+        "source": "Diego M., Febrero 2026"
+      },
+      {
+        "text": "Küyen rupi pukara, Cruz del Tercer Milenio füta ka sitio newen kütral.",
+        "source": "Tomás V., Diciembre 2025"
+      }
+    ],
     "items": [
       {
         "name": "Camila R.",
@@ -219,7 +240,7 @@
   },
   "footer": {
     "siteName": "Coquimbo Pukara",
-    "rights": "© 2026 Coquimbo Pukara — Küme mongen nütram. Kom derecho.",
+    "rights": "© 2026 Coquimbo Pukara — Proyecto independiente ka non-profit. Kom derecho.",
     "privacy": "Privacidad",
     "terms": "Dungu reko",
     "cookies": "Cookie",
@@ -229,7 +250,6 @@
     "officialLinksList": [
       { "name": "Ilustre Municipalidad de Coquimbo", "url": "https://www.municoquimbo.cl" },
       { "name": "SERNATUR Región de Coquimbo", "url": "https://www.sernatur.cl/region/coquimbo/" },
-      { "name": "Turismo Región de Coquimbo", "url": "https://turismoregiondecoquimbo.cl/" },
       { "name": "Consejo de Monumentos Nacionales", "url": "https://www.monumentos.gob.cl" },
       { "name": "Gobierno Regional de Coquimbo", "url": "https://www.gorecoquimbo.cl" }
     ],
@@ -349,7 +369,7 @@
         "items": [
           {
             "q": "¿Müle entrada pago?",
-            "a": "Acceso pichi ka gratuito; precio entrada echë, temporada rupi. Esplanade ka viewpoint hora 10:00–20:00."
+            "a": "Acceso müten gratuito; cambio temporal, actividad especial ka horario müle ramo, entrada mew echë. Esplanade ka viewpoint hora 10:00–20:00."
           },
           {
             "q": "¿Chum aravo küpa?",

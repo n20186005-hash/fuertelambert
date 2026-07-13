@@ -21,23 +21,34 @@
   },
   "hero": {
     "title": "Fuerte de Coquimbo",
-    "subtitle": "A 19th-century fortress that watched over Coquimbo Bay from the hilltop — a witness to northern Chile's military and port history.",
+    "subtitle": "A 19th-century hilltop fortress with 360° views across Coquimbo Bay, its port history and the Pacific coastline.",
     "rating": "4.5(5,080)",
     "reviewCount": "5,080 reviews",
     "hours": "Open daily, 10:00–20:00",
-    "openMaps": "View Location",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+    "openMaps": "View on Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "tags": ["Usually free entry", "Family-friendly", "Suggested visit: 1 hour"],
+    "routeCta": {
+      "label": "Plan Your Route",
+      "href": "#transport"
+    },
+    "historyCta": {
+      "label": "Explore The History",
+      "href": "#history"
+    }
   },
   "intro": {
     "title": "Discover Fuerte de Coquimbo",
     "description": "Fuerte de Coquimbo, also known as Fuerte Lambert, is a 19th-century military fortification built by the Chilean Army on the hill that overlooks Coquimbo Bay. It was part of a coastal defence system raised to protect the port, then one of the busiest on the country's northern coast. Today it is a National Monument and a natural viewpoint: from its ramparts and tunnels you can take in the peninsula, the harbour and the Cruz del Tercer Milenio. It is one of the most photographed spots in Coquimbo and a must-stop for anyone exploring the Coquimbo Region.",
     "visitGuide": {
       "title": "Visitor Guide",
+      "eyebrow": "Practical Planning",
+      "description": "A morning or late-afternoon visit usually offers softer light, a more comfortable climb and the clearest sense of the bay below.",
       "items": [
-        "Open every day, roughly 10:00 to 20:00; confirm the schedule before you go.",
-        "Located at Camino Al Fuerte 20, on the hill that closes Coquimbo Bay.",
-        "The visit includes ramparts, historic cannons, tunnels and a panoramic esplanade.",
-        "A few minutes by car, taxi or colectivo from downtown Coquimbo and neighbouring La Serena."
+        "Allow around 40 to 70 minutes to cover the ramparts, cannons, tunnels and panoramic esplanade.",
+        "The site stands at Camino Al Fuerte 20, with the final access stretch climbing uphill once you reach the hill.",
+        "Wind and sun exposure are stronger here than in the town centre, so bring water, sun protection and a hat.",
+        "If travelling with children or older companions, a taxi or colectivo is the easiest way to handle the last stretch."
       ]
     },
     "alsoKnownAs": {
@@ -52,9 +63,9 @@
   },
   "transportSection": {
     "title": "How to Reach Fuerte de Coquimbo",
-    "subtitle": "From a flight into Santiago or La Serena to the final hill climb by car or on foot, here is a clear guide to the most common ways to reach Fuerte de Coquimbo.",
+    "subtitle": "Focus on the four transport choices that matter most, from regional arrival to the final climb up to the fort.",
     "overviewTitle": "Start with where you are coming from",
-    "overviewText": "If you are coming from far away, the usual pattern is to fly into La Serena Airport or take a long-distance bus to Coquimbo. From Santiago, Valparaíso or Viña del Mar, the bus is the most direct option. Once in the Coquimbo Region, the last stretch up the hill is done by car, taxi, colectivo or on foot. The fort is a few kilometres from downtown Coquimbo and from La Serena.",
+    "overviewText": "For most visitors, the real decision is how to get into Coquimbo and how to manage the last stretch uphill. From Santiago, Valparaiso or Vina del Mar, the long-distance bus is usually the most straightforward entry. Once in town, choose a taxi, colectivo, self-drive approach or the climb on foot depending on time, energy and who is travelling with you.",
     "arrivalTitle": "Know this before you set out",
     "arrivalItems": [
       "The fort sits on a hill, so the final approach is usually by vehicle or on foot up the slope.",
@@ -63,73 +74,47 @@
     ],
     "modes": [
       {
-        "label": "Option 01",
-        "title": "Air Travel",
-        "description": "The closest air gateway is La Serena Airport (LSC), about 15–20 km from Coquimbo, with regular flights from Santiago and other parts of Chile.",
-        "details": [
-          "From the airport you can take a transfer, taxi or bus towards Coquimbo.",
-          "You can also fly into Santiago and then take a long-distance bus to the Coquimbo Region.",
-          "The fort has no direct air access; the flight is only the first leg of the trip."
-        ]
-      },
-      {
-        "label": "Option 02",
-        "title": "Train",
-        "description": "Rail is not currently a practical way to reach Coquimbo: there is no passenger service that connects the area directly with Santiago or Valparaíso.",
-        "details": [
-          "Chile has limited passenger rail coverage; the northern stretch has no regular tourist train.",
-          "For most travellers, bus, car or plane are simpler options.",
-          "Train works better as a regional route idea than as direct access to the fort."
-        ]
-      },
-      {
-        "label": "Option 03",
+        "label": "Regional Arrival",
+        "icon": "🚌",
         "title": "Long-distance Bus",
-        "description": "This is the most used way to reach Coquimbo from Santiago, Valparaíso or Viña del Mar, with frequent departures throughout the day.",
+        "description": "From Santiago, Valparaiso or Vina del Mar, the coach remains the clearest and most practical way to enter Coquimbo.",
         "details": [
-          "Buses arrive at the Coquimbo terminal; from there take a taxi, colectivo or the walk up the hill.",
-          "The trip from Santiago takes about 5 to 6 hours via the Ruta 5 Norte.",
-          "It is the most balanced option between cost and comfort for visitors from other regions."
+          "From Santiago, the journey usually takes about 5 to 6 hours via the Ruta 5 Norte.",
+          "The Coquimbo bus terminal sits relatively close to the hill where the fort stands.",
+          "If you are not driving, this is the best-balanced option for cost, frequency and convenience."
         ]
       },
       {
-        "label": "Option 04",
-        "title": "Local Public Transport",
-        "description": "Within Coquimbo, micros (buses) and colectivos connect the centre, the port and the surroundings of the hill where the fort stands.",
+        "label": "Final Stretch",
+        "icon": "🚕",
+        "title": "Taxi Or Colectivo",
+        "description": "From downtown, the port or the bus station, a taxi or colectivo is the least tiring way to reach the entrance.",
         "details": [
-          "Colectivos are a cheap way to climb most of the slope.",
-          "The final walk on foot is short but uphill; wear comfortable shoes.",
-          "From La Serena there are also buses linking both cities."
+          "Choose a taxi first if you are travelling with children, older companions or camera gear.",
+          "Colectivos are usually cheaper and still save you from most of the climb.",
+          "From La Serena, many visitors first reach central Coquimbo and transfer here."
         ]
       },
       {
-        "label": "Option 05",
-        "title": "Taxi / Private Transfer",
-        "description": "For the last stretch from the bus terminal, the airport or your hotel, a taxi is the most comfortable way to climb the hill.",
+        "label": "Driving Visit",
+        "icon": "🚗",
+        "title": "Self-drive Route",
+        "description": "Driving works well if you are linking the fort with Coquimbo, La Serena and other coastal stops in one trip.",
         "details": [
-          "It is especially useful if you travel with children, older companions or luggage.",
-          "The vehicle drops you near the entrance; the viewpoint is then reached on foot.",
-          "Within the city, fares are usually easier to manage than a long intercity transfer."
+          "Approach via the Ruta 5 Norte and continue towards Camino Al Fuerte.",
+          "Parking is usually available on the grounds or close by.",
+          "On the uphill approach, avoid stopping on narrow bends or tight roadside stretches."
         ]
       },
       {
-        "label": "Option 06",
-        "title": "Self-Drive",
-        "description": "Driving fits well into a route through northern Chile; Coquimbo is reached via the Ruta 5 Norte and then Route 41 or the coastal avenue.",
+        "label": "Slow-Paced Approach",
+        "icon": "🚶",
+        "title": "Walking Or Cycling",
+        "description": "If you want the climb itself to be part of the experience, walking or cycling reveals the relationship between the bay, the slope and the port.",
         "details": [
-          "From Santiago, take the Ruta 5 Norte to the turn-off for Coquimbo.",
-          "There is parking on the fort grounds and in nearby areas.",
-          "Driving up to the esplanade is possible; check the opening hours."
-        ]
-      },
-      {
-        "label": "Option 07",
-        "title": "Cycling / Walking",
-        "description": "Once in Coquimbo, walking or cycling up the slope is a pleasant way to approach the fort and the viewpoint.",
-        "details": [
-          "The climb is uphill, so take it easy and go early.",
-          "Cycling shortens the stretch, but the slope demands effort.",
-          "From the port or peninsula, the walk lets you see the bay up close."
+          "The slope feels noticeably harder in summer and around midday, so start early.",
+          "Cycling shortens the approach, but it still demands steady effort.",
+          "From the port or peninsula, the ascent offers some of the most photogenic bay views."
         ]
       }
     ],
@@ -173,8 +158,32 @@
   },
   "gallery": {
     "title": "Photo Gallery",
-    "subtitle": "The fort, its ramparts and Coquimbo Bay",
+    "subtitle": "Browse the fort through specific visual moments, from artillery details to high lookouts over the bay.",
     "photoAlt": "Fuerte de Coquimbo and Coquimbo Bay",
+    "photoAlts": [
+      "Wide hilltop view of the fort above Coquimbo Bay",
+      "Preserved 19th-century cannon on a stone platform",
+      "Rampart wall with the harbour visible in the distance",
+      "Panoramic esplanade overlooking the Pacific coastline",
+      "Coquimbo Bay in warm late-afternoon light",
+      "Approach to the fort between walls and uphill access",
+      "High viewpoint facing the Cruz del Tercer Milenio",
+      "Detail of defensive masonry and artillery position",
+      "View over the port and urban rooftops from the hill",
+      "Ascending path towards the fort's upper platform",
+      "Open lookout above the bay and shoreline",
+      "Historic cannons with the city behind them",
+      "Backlit corner of the bastion wall",
+      "Elevated perspective over the port and coastal road",
+      "Stone walls and peninsula skyline near sunset",
+      "Entrance zone reached from the hill road",
+      "Fort platform with the Cruz del Tercer Milenio beyond",
+      "Weathered wall texture and structural details of the site",
+      "Hillside outlook showing both residential blocks and harbour",
+      "Lookout railing above the blue-green sea",
+      "Curving coastline of the bay seen from the fort edge",
+      "Evening light across the panoramic fort terrace"
+    ],
     "viewAll": "View Location on Google Maps",
     "showMore": "Show More Photos",
     "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
@@ -182,8 +191,20 @@
   "reviews": {
     "title": "Visitor Reviews",
     "declaration": "Visitor feedback is available on Google Maps (external link).",
+    "featuredTitle": "Selected Impressions",
+    "featuredSubtitle": "Two short visitor quotes break up the long read and reinforce the fort's mix of panorama and history.",
     "moreReviews": "View on Google Maps",
     "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "featured": [
+      {
+        "text": "A place full of history. You understand why they put it on top of the hill: the viewpoint is 360 degrees. Great to go with family.",
+        "source": "Diego M., February 2026"
+      },
+      {
+        "text": "Sunset from the fort, with the Cruz del Tercer Milenio in the background, is spectacular and makes the strategic setting immediately clear.",
+        "source": "Tomas V., December 2025"
+      }
+    ],
     "items": [
       {
         "name": "Camila R.",
@@ -219,7 +240,7 @@
   },
   "footer": {
     "siteName": "Fuerte de Coquimbo",
-    "rights": "© 2026 Fuerte de Coquimbo — Independent Travel Guide. All rights reserved.",
+    "rights": "© 2026 Fuerte de Coquimbo — Independent non-profit heritage guide. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "cookies": "Cookie Settings",
@@ -229,7 +250,6 @@
     "officialLinksList": [
       { "name": "Ilustre Municipalidad de Coquimbo", "url": "https://www.municoquimbo.cl" },
       { "name": "SERNATUR Región de Coquimbo", "url": "https://www.sernatur.cl/region/coquimbo/" },
-      { "name": "Turismo Región de Coquimbo", "url": "https://turismoregiondecoquimbo.cl/" },
       { "name": "Consejo de Monumentos Nacionales", "url": "https://www.monumentos.gob.cl" },
       { "name": "Gobierno Regional de Coquimbo", "url": "https://www.gorecoquimbo.cl" }
     ],
@@ -349,7 +369,7 @@
         "items": [
           {
             "q": "Is there an entrance fee?",
-            "a": "Access is usually low-cost or free at certain times; confirm the price at the entrance, as it may vary by season and management. The esplanade and views are visited within opening hours (10:00–20:00)."
+            "a": "The site is usually free to enter; if there is a temporary management change, special event or schedule adjustment, confirm it at the entrance. The esplanade and viewpoints are visited within opening hours (10:00–20:00)."
           },
           {
             "q": "How long does a visit take?",

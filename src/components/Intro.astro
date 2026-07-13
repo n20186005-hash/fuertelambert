@@ -7,7 +7,7 @@ const om = messages.officialManagement;
 
 <section id="visit" class="section-padding" style="background: var(--bg-secondary);">
   <div class="max-w-6xl mx-auto px-4">
-    <div class="grid lg:grid-cols-2 gap-12 items-start">
+    <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-start">
       <div>
         <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-5" style="color: var(--text-primary);">{intro.title}</h2>
         <p class="text-lg leading-relaxed mb-8" style="color: var(--text-secondary);">{intro.description}</p>
@@ -19,15 +19,6 @@ const om = messages.officialManagement;
       </div>
 
       <div class="space-y-6">
-        <div class="rounded-2xl p-6 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
-          <h3 class="font-semibold mb-4" style="color: var(--text-primary);">{intro.visitGuide.title}</h3>
-          <ul class="space-y-3 text-base" style="color: var(--text-secondary);">
-            {intro.visitGuide.items.map((item) => (
-              <li class="flex gap-3"><span style="color: var(--accent);">✓</span><span>{item}</span></li>
-            ))}
-          </ul>
-        </div>
-
         <div class="rounded-2xl p-6 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
           <h3 class="font-semibold mb-4" style="color: var(--text-primary);">{intro.alsoKnownAs.title}</h3>
           <ul class="space-y-3 text-base" style="color: var(--text-secondary);">

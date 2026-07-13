@@ -21,23 +21,34 @@
   },
   "hero": {
     "title": "Fuerte de Coquimbo",
-    "subtitle": "Una fortaleza del siglo XIX que vigiló la bahía de Coquimbo desde lo alto del cerro, testigo de la historia militar y portuaria del norte de Chile.",
+    "subtitle": "Una fortaleza decimonónica sobre el cerro, con vistas de 360° sobre la bahía de Coquimbo, su historia portuaria y la costa del Pacífico.",
     "rating": "4.5(5.080)",
     "reviewCount": "5.080 opiniones",
     "hours": "Abierto todos los días, 10:00–20:00",
-    "openMaps": "Ver ubicación",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+    "openMaps": "Ver ubicación en Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "tags": ["Entrada habitualmente gratuita", "Ideal para familias", "Visita sugerida: 1 hora"],
+    "routeCta": {
+      "label": "Planificar la ruta",
+      "href": "#transport"
+    },
+    "historyCta": {
+      "label": "Explorar la historia",
+      "href": "#history"
+    }
   },
   "intro": {
     "title": "Descubre el Fuerte de Coquimbo",
     "description": "El Fuerte de Coquimbo, también conocido como Fuerte Lambert, es una fortificación militar del siglo XIX construida por el Ejército de Chile sobre el cerro que domina la bahía de Coquimbo. Forma parte de un sistema de defensas costeras levantadas para proteger el puerto, entonces uno de los más activos del norte del país. Hoy es un Monumento Nacional y un mirador natural: desde sus baluartes y túneles se contempla la península, el puerto y la Cruz del Tercer Milenio. Es uno de los puntos más fotografiados de Coquimbo y una parada obligada para quienes recorren la Región de Coquimbo.",
     "visitGuide": {
       "title": "Guía de visita",
+      "eyebrow": "Planificación útil",
+      "description": "La visita suele funcionar mejor por la mañana o antes del atardecer, cuando la luz es más amable y la vista de la bahía luce con mayor claridad.",
       "items": [
-        "Abierto todos los días, aproximadamente de 10:00 a 20:00; confirma el horario antes de ir.",
-        "Ubicado en Camino Al Fuerte 20, sobre el cerro que cierra la bahía de Coquimbo.",
-        "El recorrido incluye baluartes, cañones históricos, túneles y una explanada con vista panorámica.",
-        "A pocos minutos en auto, taxi o colectivo desde el centro de Coquimbo y la vecina La Serena."
+        "Reserva entre 40 y 70 minutos para recorrer baluartes, cañones, túneles y la explanada panorámica.",
+        "Se ubica en Camino Al Fuerte 20, con acceso final en pendiente una vez que llegas al cerro.",
+        "El viento y la radiación solar se sienten más que en el centro urbano, así que conviene llevar agua, gorro y bloqueador.",
+        "Si viajas con niños o personas mayores, taxi o colectivo son la forma más cómoda para el tramo final."
       ]
     },
     "alsoKnownAs": {
@@ -52,9 +63,9 @@
   },
   "transportSection": {
     "title": "Cómo llegar al Fuerte de Coquimbo",
-    "subtitle": "Desde el vuelo hasta Santiago o La Serena hasta la última cuesta en auto o a pie, aquí tienes una guía clara de las formas más habituales de llegar al Fuerte de Coquimbo.",
+    "subtitle": "Reduce la decisión a cuatro rutas realmente útiles, desde la llegada interurbana hasta la subida final al cerro.",
     "overviewTitle": "Primero define tu punto de partida",
-    "overviewText": "Si vienes de lejos, lo normal es volar al Aeropuerto de La Serena o tomar un bus de larga distancia hasta Coquimbo. Desde Santiago, Valparaíso o Viña del Mar el bus es la opción más directa. Una vez en la Región de Coquimbo, el último tramo hasta el cerro se resuelve en auto, taxi, colectivo o a pie. El fuerte queda a pocos kilómetros del centro de Coquimbo y de La Serena.",
+    "overviewText": "Para la mayoría de los visitantes, la decisión clave es cómo llegar a Coquimbo y cómo resolver la subida final al fuerte. Desde Santiago, Valparaíso o Viña del Mar, el bus de larga distancia sigue siendo la opción más directa. Ya en la ciudad, la última parte se resuelve mejor con taxi, colectivo, auto o a pie, según tiempo y energía.",
     "arrivalTitle": "Antes de salir",
     "arrivalItems": [
       "El fuerte está sobre un cerro, así que el último tramo suele ser en vehículo o a pie por la cuesta.",
@@ -63,73 +74,47 @@
     ],
     "modes": [
       {
-        "label": "Opción 01",
-        "title": "Avión",
-        "description": "La puerta aérea más cercana es el Aeropuerto de La Serena (LSC), a unos 15-20 km de Coquimbo, con vuelos regulares desde Santiago y otros puntos de Chile.",
-        "details": [
-          "Desde el aeropuerto puedes tomar un transferencia, taxi o bus hacia Coquimbo.",
-          "También se llega en vuelo a Santiago y desde allí en bus de larga distancia a la Región de Coquimbo.",
-          "El fuerte no tiene acceso aéreo directo; el avión es solo la primera etapa del viaje."
-        ]
-      },
-      {
-        "label": "Opción 02",
-        "title": "Tren",
-        "description": "Hoy el tren no es una forma práctica de llegar a Coquimbo: no existe un servicio de pasajeros que conecte directamente la zona con Santiago o Valparaíso.",
-        "details": [
-          "Chile tiene cobertura ferroviaria limitada para pasajeros; el tramo norte no cuenta con tren turístico habitual.",
-          "Para la gran mayoría de los viajeros, bus, auto o avión son opciones más simples.",
-          "El tren funciona mejor como idea de ruta regional que como acceso directo al fuerte."
-        ]
-      },
-      {
-        "label": "Opción 03",
+        "label": "Llegada interurbana",
+        "icon": "🚌",
         "title": "Bus de larga distancia",
-        "description": "Es la forma más usada de llegar a Coquimbo desde Santiago, Valparaíso o Viña del Mar, con salidas frecuentes durante todo el día.",
+        "description": "Desde Santiago, Valparaíso o Viña del Mar, el bus sigue siendo la forma más clara y práctica de entrar a Coquimbo.",
         "details": [
-          "Los buses llegan a la terminal de Coquimbo; desde allí tomas taxi, colectivo o el recorrido a pie hasta el cerro.",
-          "El viaje desde Santiago dura aproximadamente 5 a 6 horas por la Ruta 5 Norte.",
-          "Es la opción más equilibrada entre costo y comodidad para quienes vienen de otras regiones."
+          "Desde Santiago el viaje suele tomar unas 5 a 6 horas por la Ruta 5 Norte.",
+          "La terminal de buses de Coquimbo queda relativamente cerca del cerro del fuerte.",
+          "Si no vas a conducir, es la alternativa más equilibrada entre costo, frecuencia y facilidad."
         ]
       },
       {
-        "label": "Opción 04",
-        "title": "Transporte público local",
-        "description": "Dentro de Coquimbo, micros y colectivos conectan el centro, el puerto y las cercanías del cerro donde está el fuerte.",
+        "label": "Último tramo",
+        "icon": "🚕",
+        "title": "Taxi o colectivo",
+        "description": "Desde el centro, el puerto o la terminal, colectivo y taxi son la manera menos cansadora de subir hasta la entrada.",
         "details": [
-          "Los colectivos son una forma económica de subir gran parte de la cuesta.",
-          "El recorrido final a pie es corto pero en pendiente; lleva calzado cómodo.",
-          "Desde La Serena también hay buses que comunican ambas ciudades."
+          "El taxi conviene especialmente si viajas con niños, equipo fotográfico o personas mayores.",
+          "El colectivo suele ser más económico y ahorra buena parte de la pendiente.",
+          "Desde La Serena también puedes llegar primero al centro de Coquimbo y hacer este transbordo."
         ]
       },
       {
-        "label": "Opción 05",
-        "title": "Taxi / traslado privado",
-        "description": "Para el último tramo desde la terminal de buses, el aeropuerto o tu alojamiento, el taxi es la forma más cómoda de subir al cerro.",
+        "label": "Visita en auto",
+        "icon": "🚗",
+        "title": "Ruta en coche",
+        "description": "Conducir funciona muy bien si integras el fuerte en una ruta por Coquimbo, La Serena y el borde costero.",
         "details": [
-          "Es especialmente útil si viajas con niños, personas mayores o equipaje.",
-          "El vehículo deja cerca de la entrada; el mirador ya es accesible a pie.",
-          "Dentro de la ciudad, el costo suele ser más controlable que un traslado interurbano."
+          "Se entra por la Ruta 5 Norte y luego se continúa hacia Camino Al Fuerte.",
+          "El recinto y los alrededores suelen contar con zonas de estacionamiento.",
+          "En la subida conviene evitar detenciones en curvas o tramos estrechos."
         ]
       },
       {
-        "label": "Opción 06",
-        "title": "Coche",
-        "description": "Conducir encaja bien en una ruta por el norte de Chile; Coquimbo se llega por la Ruta 5 Norte y luego la Ruta 41 o la costanera.",
+        "label": "Ritmo pausado",
+        "icon": "🚶",
+        "title": "A pie o en bicicleta",
+        "description": "Si quieres sentir la topografía del puerto y del cerro, caminar o subir en bici convierte el acceso en parte de la experiencia.",
         "details": [
-          "Desde Santiago se baja por la Ruta 5 Norte hasta el desvío a Coquimbo.",
-          "Hay estacionamiento en el recinto del fuerte y en zonas aledañas.",
-          "El acceso en auto hasta la explanada es posible; revisa el horario de apertura."
-        ]
-      },
-      {
-        "label": "Opción 07",
-        "title": "Bicicleta / a pie",
-        "description": "Una vez en Coquimbo, caminar o ir en bici por la cuesta es una forma agradable de acercarse al fuerte y al mirador.",
-        "details": [
-          "La subida es en pendiente, así que conviene hacerla con calma y temprano.",
-          "La bici acorta el tramo, pero la cuesta exige esfuerzo.",
-          "Desde el puerto o la península, el paseo a pie permite ver la bahía de cerca."
+          "La pendiente se siente más en verano y al mediodía, así que es mejor salir temprano.",
+          "La bicicleta acorta el tramo, pero requiere esfuerzo sostenido.",
+          "Desde el puerto o la península se obtienen vistas muy fotogénicas de la bahía."
         ]
       }
     ],
@@ -173,8 +158,32 @@
   },
   "gallery": {
     "title": "Galería de fotos",
-    "subtitle": "El fuerte, sus baluartes y la bahía de Coquimbo",
+    "subtitle": "Explora cañones, murallas, plataformas altas y vistas abiertas sobre la bahía con descripciones más concretas de cada escena.",
     "photoAlt": "Fuerte de Coquimbo y la bahía de Coquimbo",
+    "photoAlts": [
+      "Vista general del fuerte sobre el cerro con la bahía de Coquimbo al fondo",
+      "Cañón histórico del siglo XIX sobre una plataforma de piedra",
+      "Baluarte y muralla con el puerto visible a la distancia",
+      "Explanada panorámica con vista amplia hacia el Pacífico",
+      "Bahía de Coquimbo bajo la luz dorada del atardecer",
+      "Acceso al fuerte entre muros y pendiente de subida",
+      "Mirador orientado hacia la Cruz del Tercer Milenio",
+      "Detalle de muro defensivo y posición de artillería",
+      "Vista del puerto y los techos urbanos desde la altura",
+      "Sendero ascendente hacia la plataforma superior del fuerte",
+      "Mirador abierto con bahía azul y borde costero",
+      "Cañones del fuerte con la ciudad de Coquimbo detrás",
+      "Esquina del baluarte iluminada en contraluz",
+      "Perspectiva alta sobre el puerto y la avenida costera",
+      "Murallas de piedra y horizonte de la península al caer la tarde",
+      "Entrada al recinto histórico desde el camino del cerro",
+      "Plataforma del fuerte con la Cruz del Tercer Milenio al fondo",
+      "Textura erosionada de la muralla y detalles del conjunto defensivo",
+      "Vista simultánea de la zona residencial y del puerto desde la ladera",
+      "Baranda del mirador frente al mar azul verdoso",
+      "Costa curva de la bahía vista desde el borde del sitio histórico",
+      "Última luz de la tarde sobre la explanada del fuerte"
+    ],
     "viewAll": "Ver ubicación en Google Maps",
     "showMore": "Mostrar más fotos",
     "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
@@ -182,8 +191,20 @@
   "reviews": {
     "title": "Opiniones de los visitantes",
     "declaration": "Las opiniones de los visitantes están disponibles en Google Maps (enlace externo).",
+    "featuredTitle": "Impresiones destacadas",
+    "featuredSubtitle": "Dos voces resumidas ayudan a enlazar la lectura histórica con la experiencia real del mirador.",
     "moreReviews": "Ver en Google Maps",
     "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "featured": [
+      {
+        "text": "Un lugar con mucha historia. Se entiende por qué lo pusieron en lo alto del cerro: el mirador es de 360 grados. Ideal para ir en familia.",
+        "source": "Diego M., febrero 2026"
+      },
+      {
+        "text": "El atardecer desde el fuerte, con la Cruz del Tercer Milenio de fondo, es espectacular y ayuda a entender la importancia estratégica del sitio.",
+        "source": "Tomás V., diciembre 2025"
+      }
+    ],
     "items": [
       {
         "name": "Camila R.",
@@ -219,7 +240,7 @@
   },
   "footer": {
     "siteName": "Fuerte de Coquimbo",
-    "rights": "© 2026 Fuerte de Coquimbo — Guía de viaje independiente. Todos los derechos reservados.",
+    "rights": "© 2026 Fuerte de Coquimbo — Proyecto independiente y sin fines de lucro de información patrimonial. Todos los derechos reservados.",
     "privacy": "Política de privacidad",
     "terms": "Términos del servicio",
     "cookies": "Configuración de cookies",
@@ -229,7 +250,6 @@
     "officialLinksList": [
       { "name": "Ilustre Municipalidad de Coquimbo", "url": "https://www.municoquimbo.cl" },
       { "name": "SERNATUR Región de Coquimbo", "url": "https://www.sernatur.cl/region/coquimbo/" },
-      { "name": "Turismo Región de Coquimbo", "url": "https://turismoregiondecoquimbo.cl/" },
       { "name": "Consejo de Monumentos Nacionales", "url": "https://www.monumentos.gob.cl" },
       { "name": "Gobierno Regional de Coquimbo", "url": "https://www.gorecoquimbo.cl" }
     ],
@@ -349,7 +369,7 @@
         "items": [
           {
             "q": "¿Se paga entrada?",
-            "a": "El acceso suele ser de bajo costo o gratuito en ciertos horarios; confirma el valor en la entrada, ya que puede variar según la temporada y la gestión del recinto. La explanada y las vistas se recorren dentro del horario de apertura (10:00–20:00)."
+            "a": "La visita suele ser gratuita; si hay un ajuste temporal de gestión, actividad especial o cambio de horario, conviene confirmarlo en la entrada. La explanada y las vistas se recorren dentro del horario de apertura (10:00–20:00)."
           },
           {
             "q": "¿Cuánto tiempo se necesita para visitarlo?",
