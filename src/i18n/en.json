@@ -1,0 +1,393 @@
+{
+  "meta": {
+    "title": "Fuerte de Coquimbo | Coquimbo, Chile",
+    "description": "The complete guide to Fuerte de Coquimbo (Fuerte Lambert): military history, the bay's coastal defences, photos, visitor reviews, and how to get there in Chile's Coquimbo Region."
+  },
+  "header": {
+    "siteName": "Fuerte de Coquimbo",
+    "home": "Home",
+    "visit": "Visit",
+    "transport": "Getting Here",
+    "history": "History",
+    "gallery": "Gallery",
+    "reviews": "Reviews",
+    "faq": "FAQ",
+    "map": "Map",
+    "backToHome": "Back to Home"
+  },
+  "common": {
+    "changeLanguage": "Switch language",
+    "toggleTheme": "Toggle theme"
+  },
+  "hero": {
+    "title": "Fuerte de Coquimbo",
+    "subtitle": "A 19th-century fortress that watched over Coquimbo Bay from the hilltop — a witness to northern Chile's military and port history.",
+    "rating": "4.5(5,080)",
+    "reviewCount": "5,080 reviews",
+    "hours": "Open daily, 10:00–20:00",
+    "openMaps": "View Location",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+  },
+  "intro": {
+    "title": "Discover Fuerte de Coquimbo",
+    "description": "Fuerte de Coquimbo, also known as Fuerte Lambert, is a 19th-century military fortification built by the Chilean Army on the hill that overlooks Coquimbo Bay. It was part of a coastal defence system raised to protect the port, then one of the busiest on the country's northern coast. Today it is a National Monument and a natural viewpoint: from its ramparts and tunnels you can take in the peninsula, the harbour and the Cruz del Tercer Milenio. It is one of the most photographed spots in Coquimbo and a must-stop for anyone exploring the Coquimbo Region.",
+    "visitGuide": {
+      "title": "Visitor Guide",
+      "items": [
+        "Open every day, roughly 10:00 to 20:00; confirm the schedule before you go.",
+        "Located at Camino Al Fuerte 20, on the hill that closes Coquimbo Bay.",
+        "The visit includes ramparts, historic cannons, tunnels and a panoramic esplanade.",
+        "A few minutes by car, taxi or colectivo from downtown Coquimbo and neighbouring La Serena."
+      ]
+    },
+    "alsoKnownAs": {
+      "title": "Highlights",
+      "items": [
+        "19th-century fortress and National Monument of Chile",
+        "360° views over the bay, harbour and Cruz del Tercer Milenio",
+        "Preserved cannons, tunnels and walls from the coastal defence system",
+        "Viewpoint and military-history site in the Coquimbo Region"
+      ]
+    }
+  },
+  "transportSection": {
+    "title": "How to Reach Fuerte de Coquimbo",
+    "subtitle": "From a flight into Santiago or La Serena to the final hill climb by car or on foot, here is a clear guide to the most common ways to reach Fuerte de Coquimbo.",
+    "overviewTitle": "Start with where you are coming from",
+    "overviewText": "If you are coming from far away, the usual pattern is to fly into La Serena Airport or take a long-distance bus to Coquimbo. From Santiago, Valparaíso or Viña del Mar, the bus is the most direct option. Once in the Coquimbo Region, the last stretch up the hill is done by car, taxi, colectivo or on foot. The fort is a few kilometres from downtown Coquimbo and from La Serena.",
+    "arrivalTitle": "Know this before you set out",
+    "arrivalItems": [
+      "The fort sits on a hill, so the final approach is usually by vehicle or on foot up the slope.",
+      "Downtown Coquimbo, the port and the bus terminal are all relatively close.",
+      "In summer and on weekends it gets busier; mornings are usually calmer."
+    ],
+    "modes": [
+      {
+        "label": "Option 01",
+        "title": "Air Travel",
+        "description": "The closest air gateway is La Serena Airport (LSC), about 15–20 km from Coquimbo, with regular flights from Santiago and other parts of Chile.",
+        "details": [
+          "From the airport you can take a transfer, taxi or bus towards Coquimbo.",
+          "You can also fly into Santiago and then take a long-distance bus to the Coquimbo Region.",
+          "The fort has no direct air access; the flight is only the first leg of the trip."
+        ]
+      },
+      {
+        "label": "Option 02",
+        "title": "Train",
+        "description": "Rail is not currently a practical way to reach Coquimbo: there is no passenger service that connects the area directly with Santiago or Valparaíso.",
+        "details": [
+          "Chile has limited passenger rail coverage; the northern stretch has no regular tourist train.",
+          "For most travellers, bus, car or plane are simpler options.",
+          "Train works better as a regional route idea than as direct access to the fort."
+        ]
+      },
+      {
+        "label": "Option 03",
+        "title": "Long-distance Bus",
+        "description": "This is the most used way to reach Coquimbo from Santiago, Valparaíso or Viña del Mar, with frequent departures throughout the day.",
+        "details": [
+          "Buses arrive at the Coquimbo terminal; from there take a taxi, colectivo or the walk up the hill.",
+          "The trip from Santiago takes about 5 to 6 hours via the Ruta 5 Norte.",
+          "It is the most balanced option between cost and comfort for visitors from other regions."
+        ]
+      },
+      {
+        "label": "Option 04",
+        "title": "Local Public Transport",
+        "description": "Within Coquimbo, micros (buses) and colectivos connect the centre, the port and the surroundings of the hill where the fort stands.",
+        "details": [
+          "Colectivos are a cheap way to climb most of the slope.",
+          "The final walk on foot is short but uphill; wear comfortable shoes.",
+          "From La Serena there are also buses linking both cities."
+        ]
+      },
+      {
+        "label": "Option 05",
+        "title": "Taxi / Private Transfer",
+        "description": "For the last stretch from the bus terminal, the airport or your hotel, a taxi is the most comfortable way to climb the hill.",
+        "details": [
+          "It is especially useful if you travel with children, older companions or luggage.",
+          "The vehicle drops you near the entrance; the viewpoint is then reached on foot.",
+          "Within the city, fares are usually easier to manage than a long intercity transfer."
+        ]
+      },
+      {
+        "label": "Option 06",
+        "title": "Self-Drive",
+        "description": "Driving fits well into a route through northern Chile; Coquimbo is reached via the Ruta 5 Norte and then Route 41 or the coastal avenue.",
+        "details": [
+          "From Santiago, take the Ruta 5 Norte to the turn-off for Coquimbo.",
+          "There is parking on the fort grounds and in nearby areas.",
+          "Driving up to the esplanade is possible; check the opening hours."
+        ]
+      },
+      {
+        "label": "Option 07",
+        "title": "Cycling / Walking",
+        "description": "Once in Coquimbo, walking or cycling up the slope is a pleasant way to approach the fort and the viewpoint.",
+        "details": [
+          "The climb is uphill, so take it easy and go early.",
+          "Cycling shortens the stretch, but the slope demands effort.",
+          "From the port or peninsula, the walk lets you see the bay up close."
+        ]
+      }
+    ],
+    "localTipsTitle": "Useful tips for the final approach",
+    "localTips": [
+      "The hill climb is exposed to wind and sun; bring water and a hat, especially in summer.",
+      "If driving, use the on-site parking so you don't leave the car on a narrow stretch.",
+      "Line up your arrival with opening hours (10:00–20:00) so you don't find the site closed."
+    ],
+    "mapsCta": "View Map & Route",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+  },
+  "officialManagement": {
+    "title": "About the Fort",
+    "text": "Fuerte de Coquimbo is a National Monument managed within the framework of the defence of Chile's military heritage. The fortification and its ramparts are part of the bay's defence system built by the Chilean Army in the 19th century to safeguard the port. Today it is maintained as a publicly accessible historic site, where cannons, tunnels and the panoramic esplanade are preserved. Together with the Municipality of Coquimbo and regional agencies, the site is part of the identity and heritage offering of the Coquimbo Region."
+  },
+  "knowledge": {
+    "title": "History, Meaning & Legend of the Fort",
+    "sections": [
+      {
+        "id": "history",
+        "title": "Origins (19th century)",
+        "content": "Coquimbo Bay was strategically important from colonial times, when galleons and later merchant ships called at its waters. After independence, the Chilean state reinforced the defence of its coastline and, throughout the 19th century, raised fortifications to protect the port of Coquimbo from pirates, privateers and naval threats. Fuerte Lambert — a name that honours a military engineer of the era — was built on the hill that closes the bay, using its height to watch over maritime access. Its walls, ramparts and tunnels are part of that coastal defence system that accompanied the port boom of northern Chile."
+      },
+      {
+        "id": "meaning",
+        "title": "Why Here?",
+        "content": "The fort was placed atop the hill for a clear military reason: the point dominates the bay's entrance and allowed control of maritime traffic while protecting the port. Symbolically, it is also a natural lookout over Coquimbo, La Serena and the Pacific. Its elevated position made it an indispensable watchtower and, today, one of the best panoramic balconies of the region."
+      },
+      {
+        "id": "legend",
+        "title": "Local Stories",
+        "content": "Those who grew up by the bay say that, on foggy nights, the wind through the fort's tunnels sounds like the echo of the troops who once guarded it. Another popular story says the Cruz del Tercer Milenio, visible from the ramparts, was raised to bless the sailors who depart from and return to Coquimbo Bay. Legend or devotion, the fort remains a place where military memory and local faith meet."
+      },
+      {
+        "id": "significance",
+        "title": "A Symbol of Coquimbo",
+        "content": "Today Fuerte de Coquimbo is a National Monument and a landmark of local identity. From its walls you can take in the peninsula, the harbour and the Cruz del Tercer Milenio, and its esplanade is one of the city's most beloved viewpoints. Alongside La Serena and the Elqui Valley, it is part of the heritage and tourism triangle of the Coquimbo Region, and an essential stop for understanding the maritime history of northern Chile."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "subtitle": "The fort, its ramparts and Coquimbo Bay",
+    "photoAlt": "Fuerte de Coquimbo and Coquimbo Bay",
+    "viewAll": "View Location on Google Maps",
+    "showMore": "Show More Photos",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+  },
+  "reviews": {
+    "title": "Visitor Reviews",
+    "declaration": "Visitor feedback is available on Google Maps (external link).",
+    "moreReviews": "View on Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "items": [
+      {
+        "name": "Camila R.",
+        "date": "March 2026",
+        "rating": 5,
+        "text": "Incredible view of the whole bay. We went early and there was almost no one there; the cannons and tunnels are very well preserved. A must in Coquimbo."
+      },
+      {
+        "name": "Diego M.",
+        "date": "February 2026",
+        "rating": 5,
+        "text": "A place full of history. You understand why they put it on top of the hill: the viewpoint is 360 degrees. Great to go with family."
+      },
+      {
+        "name": "Francisca L.",
+        "date": "January 2026",
+        "rating": 4,
+        "text": "A very good outing if you are around La Serena. The drive up is comfortable and the esplanade is well worth it. Bring water, it's windy up top."
+      },
+      {
+        "name": "Tomás V.",
+        "date": "December 2025",
+        "rating": 5,
+        "text": "Sunset from the fort, with the Cruz del Tercer Milenio in the background, is spectacular. Perfect for photos and to learn the military history of the area."
+      }
+    ]
+  },
+  "mapSection": {
+    "title": "How to Get Here",
+    "subtitle": "Camino Al Fuerte 20, Coquimbo, Coquimbo Region, Chile",
+    "openMaps": "Open in Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+  },
+  "footer": {
+    "siteName": "Fuerte de Coquimbo",
+    "rights": "© 2026 Fuerte de Coquimbo — Independent Travel Guide. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Settings",
+    "officialResourcesTitle": "Official & Reference Resources",
+    "mapsLabel": "Google Maps →",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "officialLinksList": [
+      { "name": "Ilustre Municipalidad de Coquimbo", "url": "https://www.municoquimbo.cl" },
+      { "name": "SERNATUR Región de Coquimbo", "url": "https://www.sernatur.cl/region/coquimbo/" },
+      { "name": "Turismo Región de Coquimbo", "url": "https://turismoregiondecoquimbo.cl/" },
+      { "name": "Consejo de Monumentos Nacionales", "url": "https://www.monumentos.gob.cl" },
+      { "name": "Gobierno Regional de Coquimbo", "url": "https://www.gorecoquimbo.cl" }
+    ],
+    "disclaimer": "This is an independent, non-profit visitor information project. We are not affiliated with any government body or official institution."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: March 2026",
+    "sections": [
+      {
+        "heading": "1. Information Collection",
+        "content": "We generally do not actively collect personally identifiable information from users. Any information provided by you through contact forms or emails will be kept strictly confidential."
+      },
+      {
+        "heading": "2. Use of Information",
+        "content": "The information we collect is used solely to provide, maintain, and improve our services, and to communicate with you. We do not sell or share your personal information with third parties for marketing purposes."
+      },
+      {
+        "heading": "3. Cookies and Tracking",
+        "content": "We use cookies and similar tracking technologies to track the activity on our website and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent."
+      },
+      {
+        "heading": "4. Data Security",
+        "content": "The security of your data is important to us. We use commercially acceptable means to protect your Personal Data, though no method of transmission over the Internet is 100% secure."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: March 2026",
+    "sections": [
+      {
+        "heading": "1. Acceptance of Terms",
+        "content": "By accessing and using this website, you agree to be bound by these terms of service. If you disagree with any part of the terms, you may not access the service."
+      },
+      {
+        "heading": "2. Use of Service",
+        "content": "This website is an independent, non-profit visitor information project. The information provided is for general informational purposes only. You agree to use the site responsibly and lawfully."
+      },
+      {
+        "heading": "3. Intellectual Property",
+        "content": "All content on this website, including texts, images, and logos, is the property of the website owner unless otherwise stated. Unauthorized use, reproduction, or distribution is strictly prohibited."
+      },
+      {
+        "heading": "4. Limitation of Liability",
+        "content": "We shall not be held liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use this website or the information contained herein."
+      }
+    ]
+  },
+  "cookieSettings": {
+    "title": "Cookie Settings",
+    "description": "Manage your cookie preferences.",
+    "essential": {
+      "title": "Strictly Necessary Cookies",
+      "description": "Required for basic website functionality.",
+      "badge": "Always active"
+    },
+    "analytics": {
+      "title": "Analytics Cookies",
+      "description": "Help us understand how visitors interact with the site."
+    },
+    "marketing": {
+      "title": "Marketing Cookies",
+      "description": "Used to track visitors across websites."
+    },
+    "save": "Save Preferences",
+    "saved": "Preferences saved!"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Practical information on facilities, history and planning your visit to Fuerte de Coquimbo.",
+    "amenities": {
+      "title": "Facilities nearby",
+      "items": [
+        { "icon": "🅿️", "label": "Parking", "value": "On-site and nearby areas" },
+        { "icon": "🚻", "label": "Restrooms", "value": "On-site and in Coquimbo centre" },
+        { "icon": "🔌", "label": "Fuel / EV", "value": "Fuel and EV charging in Coquimbo and La Serena" },
+        { "icon": "♿", "label": "Accessibility", "value": "Ramps on esplanade; some stair sections" }
+      ]
+    },
+    "categories": [
+      {
+        "id": "infra",
+        "title": "Transport & Facilities",
+        "items": [
+          {
+            "q": "Is there parking nearby? How much does it cost?",
+            "a": "Yes. The fort grounds have on-site parking and there is additional space around the hill. Parking is usually free or low-cost; in summer (January–February) it fills quickly, so the best option is to arrive early or use public transport or a taxi."
+          },
+          {
+            "q": "Can wheelchairs or strollers get close?",
+            "a": "The main esplanade and reception area have ramps and are accessible, but the site is on a hill and some ramparts and tunnels have steps or uneven floors. Ask at the entrance about the accessible route for wheelchairs or strollers."
+          },
+          {
+            "q": "Are there restrooms or food nearby?",
+            "a": "The site has basic restroom facilities. To eat or drink, downtown Coquimbo and the port are a few minutes away, with cafés, restaurants and seafood spots a short drive or colectivo ride away."
+          }
+        ]
+      },
+      {
+        "id": "geo",
+        "title": "History & Trivia",
+        "items": [
+          {
+            "q": "Why was the fort built on the hill?",
+            "a": "The fort was placed on top of the hill that closes the bay because that position dominated maritime access and allowed the port of Coquimbo to be watched over and protected. The height made it an ideal military watchtower and, today, a 360-degree panoramic viewpoint."
+          },
+          {
+            "q": "What can you see inside the fort?",
+            "a": "The visit includes ramparts, historic cannons, tunnels and the upper esplanade, from where you take in the peninsula, the harbour and the Cruz del Tercer Milenio. It is a 19th-century military site and one of the most beloved viewpoints of the Coquimbo Region."
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "title": "Planning & Tickets",
+        "items": [
+          {
+            "q": "Is there an entrance fee?",
+            "a": "Access is usually low-cost or free at certain times; confirm the price at the entrance, as it may vary by season and management. The esplanade and views are visited within opening hours (10:00–20:00)."
+          },
+          {
+            "q": "How long does a visit take?",
+            "a": "A typical visit lasts 40 to 70 minutes: climb the hill, walk the ramparts and tunnels, read the historical signage and enjoy the viewpoint. Add a stroll through the port or the Cruz del Tercer Milenio and it easily fills a morning or afternoon."
+          },
+          {
+            "q": "Can I go in bad weather?",
+            "a": "The fort is open-air and can be visited in any weather, but the esplanade and slope are exposed to wind and sun. On very windy or rainy days take care near the edges; in summer go early to avoid the heat on the climb."
+          }
+        ]
+      },
+      {
+        "id": "nearby",
+        "title": "What to see nearby",
+        "items": [
+          {
+            "q": "After visiting, what else do you recommend nearby?",
+            "a": "Very close by are the Cruz del Tercer Milenio, the port and the Coquimbo peninsula. A few kilometres away are La Serena (its Neoclassical old town and the Monumental Lighthouse), the Elqui Valley, the beaches of Tongoy and Guanaqueros, and the Humboldt Penguin Reserve on Isla Damas."
+          }
+        ]
+      }
+    ]
+  },
+  "recommendations": {
+    "title": "Discover More in the Coquimbo Region",
+    "attractionsTitle": "Nearby Attractions",
+    "toursTitle": "Recommended Tours & Activities",
+    "attractions": [
+      { "name": "La Serena and its historic centre", "url": "https://turismoregiondecoquimbo.cl/" },
+      { "name": "Cruz del Tercer Milenio", "url": "https://www.municoquimbo.cl" },
+      { "name": "Elqui Valley", "url": "https://turismoregiondecoquimbo.cl/" },
+      { "name": "Beaches of Tongoy and Guanaqueros", "url": "https://www.sernatur.cl/region/coquimbo/" },
+      { "name": "Humboldt Penguin Reserve (Isla Damas)", "url": "https://www.sernatur.cl/region/coquimbo/" }
+    ],
+    "tours": [
+      { "name": "Historical tour of La Serena and Coquimbo", "url": "https://turismoregiondecoquimbo.cl/" },
+      { "name": "Astronomy in the Elqui Valley", "url": "https://www.sernatur.cl/region/coquimbo/" },
+      { "name": "Beaches and seafood tour in Tongoy", "url": "https://turismoregiondecoquimbo.cl/" }
+    ]
+  }
+}

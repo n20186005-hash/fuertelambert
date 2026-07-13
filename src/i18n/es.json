@@ -1,0 +1,393 @@
+{
+  "meta": {
+    "title": "Fuerte de Coquimbo | Coquimbo, Chile",
+    "description": "Guía completa del Fuerte de Coquimbo (Fuerte Lambert): historia militar, las defensas de la bahía, fotos, opiniones de visitantes y cómo llegar en la Región de Coquimbo, Chile."
+  },
+  "header": {
+    "siteName": "Fuerte de Coquimbo",
+    "home": "Inicio",
+    "visit": "Visita",
+    "transport": "Cómo llegar",
+    "history": "Historia",
+    "gallery": "Galería",
+    "reviews": "Opiniones",
+    "faq": "Preguntas",
+    "map": "Mapa",
+    "backToHome": "Volver al inicio"
+  },
+  "common": {
+    "changeLanguage": "Cambiar idioma",
+    "toggleTheme": "Cambiar tema"
+  },
+  "hero": {
+    "title": "Fuerte de Coquimbo",
+    "subtitle": "Una fortaleza del siglo XIX que vigiló la bahía de Coquimbo desde lo alto del cerro, testigo de la historia militar y portuaria del norte de Chile.",
+    "rating": "4.5(5.080)",
+    "reviewCount": "5.080 opiniones",
+    "hours": "Abierto todos los días, 10:00–20:00",
+    "openMaps": "Ver ubicación",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+  },
+  "intro": {
+    "title": "Descubre el Fuerte de Coquimbo",
+    "description": "El Fuerte de Coquimbo, también conocido como Fuerte Lambert, es una fortificación militar del siglo XIX construida por el Ejército de Chile sobre el cerro que domina la bahía de Coquimbo. Forma parte de un sistema de defensas costeras levantadas para proteger el puerto, entonces uno de los más activos del norte del país. Hoy es un Monumento Nacional y un mirador natural: desde sus baluartes y túneles se contempla la península, el puerto y la Cruz del Tercer Milenio. Es uno de los puntos más fotografiados de Coquimbo y una parada obligada para quienes recorren la Región de Coquimbo.",
+    "visitGuide": {
+      "title": "Guía de visita",
+      "items": [
+        "Abierto todos los días, aproximadamente de 10:00 a 20:00; confirma el horario antes de ir.",
+        "Ubicado en Camino Al Fuerte 20, sobre el cerro que cierra la bahía de Coquimbo.",
+        "El recorrido incluye baluartes, cañones históricos, túneles y una explanada con vista panorámica.",
+        "A pocos minutos en auto, taxi o colectivo desde el centro de Coquimbo y la vecina La Serena."
+      ]
+    },
+    "alsoKnownAs": {
+      "title": "Destacados",
+      "items": [
+        "Fortaleza del siglo XIX y Monumento Nacional de Chile",
+        "Vista de 360° sobre la bahía, el puerto y la Cruz del Tercer Milenio",
+        "Cañones, túneles y murallas conservadas del sistema de defensa costera",
+        "Mirador y sitio de historia militar en la Región de Coquimbo"
+      ]
+    }
+  },
+  "transportSection": {
+    "title": "Cómo llegar al Fuerte de Coquimbo",
+    "subtitle": "Desde el vuelo hasta Santiago o La Serena hasta la última cuesta en auto o a pie, aquí tienes una guía clara de las formas más habituales de llegar al Fuerte de Coquimbo.",
+    "overviewTitle": "Primero define tu punto de partida",
+    "overviewText": "Si vienes de lejos, lo normal es volar al Aeropuerto de La Serena o tomar un bus de larga distancia hasta Coquimbo. Desde Santiago, Valparaíso o Viña del Mar el bus es la opción más directa. Una vez en la Región de Coquimbo, el último tramo hasta el cerro se resuelve en auto, taxi, colectivo o a pie. El fuerte queda a pocos kilómetros del centro de Coquimbo y de La Serena.",
+    "arrivalTitle": "Antes de salir",
+    "arrivalItems": [
+      "El fuerte está sobre un cerro, así que el último tramo suele ser en vehículo o a pie por la cuesta.",
+      "El centro de Coquimbo, el puerto y la terminal de buses quedan relativamente cerca.",
+      "En verano y fines de semana hay más afluencia; por la mañana suele estar más tranquilo."
+    ],
+    "modes": [
+      {
+        "label": "Opción 01",
+        "title": "Avión",
+        "description": "La puerta aérea más cercana es el Aeropuerto de La Serena (LSC), a unos 15-20 km de Coquimbo, con vuelos regulares desde Santiago y otros puntos de Chile.",
+        "details": [
+          "Desde el aeropuerto puedes tomar un transferencia, taxi o bus hacia Coquimbo.",
+          "También se llega en vuelo a Santiago y desde allí en bus de larga distancia a la Región de Coquimbo.",
+          "El fuerte no tiene acceso aéreo directo; el avión es solo la primera etapa del viaje."
+        ]
+      },
+      {
+        "label": "Opción 02",
+        "title": "Tren",
+        "description": "Hoy el tren no es una forma práctica de llegar a Coquimbo: no existe un servicio de pasajeros que conecte directamente la zona con Santiago o Valparaíso.",
+        "details": [
+          "Chile tiene cobertura ferroviaria limitada para pasajeros; el tramo norte no cuenta con tren turístico habitual.",
+          "Para la gran mayoría de los viajeros, bus, auto o avión son opciones más simples.",
+          "El tren funciona mejor como idea de ruta regional que como acceso directo al fuerte."
+        ]
+      },
+      {
+        "label": "Opción 03",
+        "title": "Bus de larga distancia",
+        "description": "Es la forma más usada de llegar a Coquimbo desde Santiago, Valparaíso o Viña del Mar, con salidas frecuentes durante todo el día.",
+        "details": [
+          "Los buses llegan a la terminal de Coquimbo; desde allí tomas taxi, colectivo o el recorrido a pie hasta el cerro.",
+          "El viaje desde Santiago dura aproximadamente 5 a 6 horas por la Ruta 5 Norte.",
+          "Es la opción más equilibrada entre costo y comodidad para quienes vienen de otras regiones."
+        ]
+      },
+      {
+        "label": "Opción 04",
+        "title": "Transporte público local",
+        "description": "Dentro de Coquimbo, micros y colectivos conectan el centro, el puerto y las cercanías del cerro donde está el fuerte.",
+        "details": [
+          "Los colectivos son una forma económica de subir gran parte de la cuesta.",
+          "El recorrido final a pie es corto pero en pendiente; lleva calzado cómodo.",
+          "Desde La Serena también hay buses que comunican ambas ciudades."
+        ]
+      },
+      {
+        "label": "Opción 05",
+        "title": "Taxi / traslado privado",
+        "description": "Para el último tramo desde la terminal de buses, el aeropuerto o tu alojamiento, el taxi es la forma más cómoda de subir al cerro.",
+        "details": [
+          "Es especialmente útil si viajas con niños, personas mayores o equipaje.",
+          "El vehículo deja cerca de la entrada; el mirador ya es accesible a pie.",
+          "Dentro de la ciudad, el costo suele ser más controlable que un traslado interurbano."
+        ]
+      },
+      {
+        "label": "Opción 06",
+        "title": "Coche",
+        "description": "Conducir encaja bien en una ruta por el norte de Chile; Coquimbo se llega por la Ruta 5 Norte y luego la Ruta 41 o la costanera.",
+        "details": [
+          "Desde Santiago se baja por la Ruta 5 Norte hasta el desvío a Coquimbo.",
+          "Hay estacionamiento en el recinto del fuerte y en zonas aledañas.",
+          "El acceso en auto hasta la explanada es posible; revisa el horario de apertura."
+        ]
+      },
+      {
+        "label": "Opción 07",
+        "title": "Bicicleta / a pie",
+        "description": "Una vez en Coquimbo, caminar o ir en bici por la cuesta es una forma agradable de acercarse al fuerte y al mirador.",
+        "details": [
+          "La subida es en pendiente, así que conviene hacerla con calma y temprano.",
+          "La bici acorta el tramo, pero la cuesta exige esfuerzo.",
+          "Desde el puerto o la península, el paseo a pie permite ver la bahía de cerca."
+        ]
+      }
+    ],
+    "localTipsTitle": "Consejos para el último tramo",
+    "localTips": [
+      "La cuesta al cerro es expuesta al viento y al sol; lleva agua y gorro, sobre todo en verano.",
+      "Si vas en auto, aprovecha el estacionamiento del recinto para no dejar el vehículo en zona estrecha.",
+      "Coordina tu llegada con el horario de apertura (10:00–20:00) para no encontrar el recinto cerrado."
+    ],
+    "mapsCta": "Ver mapa y ruta",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+  },
+  "officialManagement": {
+    "title": "Acerca del Fuerte",
+    "text": "El Fuerte de Coquimbo es un Monumento Nacional administrado en el marco de la defensa del patrimonio militar de Chile. La fortificación y sus baluartes forman parte del sistema de defensas de la bahía levantado por el Ejército de Chile en el siglo XIX para resguardar el puerto. Hoy se mantiene como sitio histórico de acceso público, donde se conservan cañones, túneles y la explanada panorámica. Junto a la Municipalidad de Coquimbo y los organismos regionales, el recinto forma parte de la identidad y la oferta patrimonial de la Región de Coquimbo."
+  },
+  "knowledge": {
+    "title": "Historia, significado y leyenda del Fuerte",
+    "sections": [
+      {
+        "id": "history",
+        "title": "Orígenes (siglo XIX)",
+        "content": "La bahía de Coquimbo tuvo importancia estratégica desde la época colonial, cuando galeones y luego barcos mercantes recalaban en sus aguas. Tras la independencia, el Estado de Chile reforzó la defensa de su litoral y, a lo largo del siglo XIX, levantó fortificaciones para proteger el puerto de Coquimbo de piratas, corsarios y amenazas navales. El Fuerte Lambert —nombre que recuerda a un ingeniero militar de la época— se construyó sobre el cerro que cierra la bahía, aprovechando su altura para vigilar el acceso marítimo. Sus muros, baluartes y túneles forman parte de ese sistema de defensa costera que acompañó el auge portuario del norte de Chile."
+      },
+      {
+        "id": "meaning",
+        "title": "¿Por qué aquí?",
+        "content": "El fuerte se emplazó en lo alto del cerro por una razón militar clara: el punto domina la entrada de la bahía y permitía controlar el tráfico marítimo y proteger el puerto. Simbólicamente, también es un mirador natural sobre Coquimbo, La Serena y el Pacífico. La posición elevada lo convirtió en una atalaya indispensable y, hoy, en uno de los mejores balcones panorámicos de la región."
+      },
+      {
+        "id": "legend",
+        "title": "Leyendas locales",
+        "content": "Quienes crecieron junto a la bahía cuentan que, en las noches de neblina, el sonido del viento entre los túneles del fuerte parece el eco de las tropas que alguna vez lo custodiaron. Otra historia popular dice que la Cruz del Tercer Milenio, visible desde los baluartes, fue levantada para bendecir a los marinos que parten y regresan de la bahía de Coquimbo. Sea leyenda o devoción, el fuerte sigue siendo un lugar donde la memoria militar y la fe local se encuentran."
+      },
+      {
+        "id": "significance",
+        "title": "Un símbolo de Coquimbo",
+        "content": "Hoy el Fuerte de Coquimbo es un Monumento Nacional y un hito de la identidad local. Desde sus murallas se abarca la península, el puerto y la Cruz del Tercer Milenio, y su explanada es uno de los miradores más queridos de la ciudad. Junto a La Serena y el Valle del Elqui, es parte del triángulo patrimonial y turístico de la Región de Coquimbo, y una parada esencial para entender la historia marítima del norte de Chile."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Galería de fotos",
+    "subtitle": "El fuerte, sus baluartes y la bahía de Coquimbo",
+    "photoAlt": "Fuerte de Coquimbo y la bahía de Coquimbo",
+    "viewAll": "Ver ubicación en Google Maps",
+    "showMore": "Mostrar más fotos",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+  },
+  "reviews": {
+    "title": "Opiniones de los visitantes",
+    "declaration": "Las opiniones de los visitantes están disponibles en Google Maps (enlace externo).",
+    "moreReviews": "Ver en Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "items": [
+      {
+        "name": "Camila R.",
+        "date": "Marzo 2026",
+        "rating": 5,
+        "text": "Vista increíble de toda la bahía. Subimos temprano y casi no había gente; los cañones y los túneles están muy bien conservados. Imperdible en Coquimbo."
+      },
+      {
+        "name": "Diego M.",
+        "date": "Febrero 2026",
+        "rating": 5,
+        "text": "Un lugar con mucha historia. Se entiende por qué lo pusieron en lo alto del cerro: el mirador es de 360 grados. Ideal para ir en familia."
+      },
+      {
+        "name": "Francisca L.",
+        "date": "Enero 2026",
+        "rating": 4,
+        "text": "Muy buen paseo si vas por La Serena. La subida en auto es cómoda y la explanada vale mucho la pena. Lleva agua, hace viento arriba."
+      },
+      {
+        "name": "Tomás V.",
+        "date": "Diciembre 2025",
+        "rating": 5,
+        "text": "El atardecer desde el fuerte, con la Cruz del Tercer Milenio de fondo, es espectacular. Perfecto para fotos y para conocer la historia militar de la zona."
+      }
+    ]
+  },
+  "mapSection": {
+    "title": "Cómo llegar",
+    "subtitle": "Camino Al Fuerte 20, Coquimbo, Región de Coquimbo, Chile",
+    "openMaps": "Abrir en Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+  },
+  "footer": {
+    "siteName": "Fuerte de Coquimbo",
+    "rights": "© 2026 Fuerte de Coquimbo — Guía de viaje independiente. Todos los derechos reservados.",
+    "privacy": "Política de privacidad",
+    "terms": "Términos del servicio",
+    "cookies": "Configuración de cookies",
+    "officialResourcesTitle": "Recursos oficiales y de referencia",
+    "mapsLabel": "Google Maps →",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "officialLinksList": [
+      { "name": "Ilustre Municipalidad de Coquimbo", "url": "https://www.municoquimbo.cl" },
+      { "name": "SERNATUR Región de Coquimbo", "url": "https://www.sernatur.cl/region/coquimbo/" },
+      { "name": "Turismo Región de Coquimbo", "url": "https://turismoregiondecoquimbo.cl/" },
+      { "name": "Consejo de Monumentos Nacionales", "url": "https://www.monumentos.gob.cl" },
+      { "name": "Gobierno Regional de Coquimbo", "url": "https://www.gorecoquimbo.cl" }
+    ],
+    "disclaimer": "Este es un proyecto independiente y sin fines de lucro de información para visitantes. No estamos afiliados con ningún organismo gubernamental ni institución oficial."
+  },
+  "privacy": {
+    "title": "Política de privacidad",
+    "lastUpdated": "Última actualización: Marzo 2026",
+    "sections": [
+      {
+        "heading": "1. Recopilación de información",
+        "content": "Por lo general, no recopilamos activamente información personal identificable de los usuarios. Cualquier información que nos proporciones mediante formularios de contacto o correos electrónicos se mantendrá estrictamente confidencial."
+      },
+      {
+        "heading": "2. Uso de la información",
+        "content": "La información que recopilamos se utiliza únicamente para ofrecer, mantener y mejorar nuestros servicios, y para comunicarnos contigo. No vendemos ni compartimos tu información personal con terceros con fines de marketing."
+      },
+      {
+        "heading": "3. Cookies y seguimiento",
+        "content": "Utilizamos cookies y tecnologías de seguimiento similares para monitorear la actividad en nuestro sitio web y almacenar cierta información. Puedes configurar tu navegador para rechazar todas las cookies o para avisarte cuando se envía una cookie."
+      },
+      {
+        "heading": "4. Seguridad de los datos",
+        "content": "La seguridad de tus datos es importante para nosotros. Utilizamos medios comercialmente aceptables para proteger tus datos personales, aunque ningún método de transmisión por Internet es 100% seguro."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Términos del servicio",
+    "lastUpdated": "Última actualización: Marzo 2026",
+    "sections": [
+      {
+        "heading": "1. Aceptación de los términos",
+        "content": "Al acceder y utilizar este sitio web, aceptas quedar vinculado por estos términos del servicio. Si no estás de acuerdo con alguna parte de los términos, no podrás acceder al servicio."
+      },
+      {
+        "heading": "2. Uso del servicio",
+        "content": "Este sitio web es un proyecto independiente y sin fines de lucro de información para visitantes. La información proporcionada es solo para fines informativos generales. Aceptas utilizar el sitio de manera responsable y lícita."
+      },
+      {
+        "heading": "3. Propiedad intelectual",
+        "content": "Todo el contenido de este sitio web, incluidos textos, imágenes y logotipos, es propiedad del titular del sitio salvo que se indique lo contrario. Queda estrictamente prohibido el uso, reproducción o distribución no autorizados."
+      },
+      {
+        "heading": "4. Limitación de responsabilidad",
+        "content": "No nos hacemos responsables de ningún daño directo, indirecto, incidental o consecuente derivado del uso o la imposibilidad de usar este sitio web o la información que contiene."
+      }
+    ]
+  },
+  "cookieSettings": {
+    "title": "Configuración de cookies",
+    "description": "Gestiona tus preferencias de cookies.",
+    "essential": {
+      "title": "Cookies estrictamente necesarias",
+      "description": "Requeridas para la funcionalidad básica del sitio web.",
+      "badge": "Siempre activas"
+    },
+    "analytics": {
+      "title": "Cookies de analítica",
+      "description": "Nos ayudan a entender cómo interactúan los visitantes con el sitio."
+    },
+    "marketing": {
+      "title": "Cookies de marketing",
+      "description": "Se utilizan para rastrear a los visitantes entre sitios web."
+    },
+    "save": "Guardar preferencias",
+    "saved": "¡Preferencias guardadas!"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Información práctica sobre servicios, historia y planificación de tu visita al Fuerte de Coquimbo.",
+    "amenities": {
+      "title": "Servicios en la zona",
+      "items": [
+        { "icon": "🅿️", "label": "Estacionamiento", "value": "En el recinto y zona aledaña" },
+        { "icon": "🚻", "label": "Baños", "value": "En el recinto y centro de Coquimbo" },
+        { "icon": "🔌", "label": "Carga / Gasolina", "value": "Bencinas y carga EV en Coquimbo y La Serena" },
+        { "icon": "♿", "label": "Accesibilidad", "value": "Rampas en la explanada; tramos con escaleras" }
+      ]
+    },
+    "categories": [
+      {
+        "id": "infra",
+        "title": "Transporte e infraestructura",
+        "items": [
+          {
+            "q": "¿Hay estacionamiento en la zona? ¿Cuánto cuesta?",
+            "a": "Sí. El recinto del fuerte cuenta con estacionamiento en su interior y hay espacios adicionales en las inmediaciones del cerro. El estacionamiento suele ser gratuito o de bajo costo; en temporada estival (enero–febrero) se llena rápido, así que la mejor opción es llegar temprano o en transporte público o taxi."
+          },
+          {
+            "q": "¿Se puede acceder con silla de ruedas o coche de bebé?",
+            "a": "La explanada principal y la zona de recepción tienen rampas y son accesibles, pero el recinto está sobre un cerro y algunos baluartes y túneles tienen escalones o suelos irregulares. Se recomienda preguntar en la entrada sobre el recorrido accesible para silla de ruedas o coche de bebé."
+          },
+          {
+            "q": "¿Hay baños o servicios de comida en la zona?",
+            "a": "En el recinto hay servicios básicos de baños. Para comer o tomar algo, el centro de Coquimbo y el puerto están a pocos minutos, con cafés, restaurantes y locales de mariscos a pocos minutos en auto o colectivo."
+          }
+        ]
+      },
+      {
+        "id": "geo",
+        "title": "Historia y curiosidades",
+        "items": [
+          {
+            "q": "¿Por qué se construyó el fuerte sobre el cerro?",
+            "a": "El fuerte se emplazó en lo alto del cerro que cierra la bahía porque esa posición dominaba la entrada marítima y permitía vigilar y proteger el puerto de Coquimbo. La altura lo convertía en una atalaya militar ideal y, hoy, en un mirador panorámico de 360 grados."
+          },
+          {
+            "q": "¿Qué se puede ver dentro del fuerte?",
+            "a": "El recorrido incluye baluartes, cañones históricos, túneles y la explanada superior, desde donde se abarca la península, el puerto y la Cruz del Tercer Milenio. Es un sitio de historia militar del siglo XIX y uno de los miradores más queridos de la Región de Coquimbo."
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "title": "Planificación y entradas",
+        "items": [
+          {
+            "q": "¿Se paga entrada?",
+            "a": "El acceso suele ser de bajo costo o gratuito en ciertos horarios; confirma el valor en la entrada, ya que puede variar según la temporada y la gestión del recinto. La explanada y las vistas se recorren dentro del horario de apertura (10:00–20:00)."
+          },
+          {
+            "q": "¿Cuánto tiempo se necesita para visitarlo?",
+            "a": "Una visita habitual dura entre 40 y 70 minutos: subir al cerro, recorrer baluartes y túneles, leer la señalética histórica y disfrutar el mirador. Si sumas el paseo por el puerto o la Cruz del Tercer Milenio, la experiencia llena fácilmente una mañana o una tarde."
+          },
+          {
+            "q": "¿Se puede ir con mal tiempo?",
+            "a": "El fuerte está al aire libre y se puede visitar con cualquier clima, pero la explanada y la cuesta son expuestas al viento y al sol. En días de mucho viento o lluvia conviene precaución en los bordes; en verano, ve temprano para evitar el calor y la radiación en la subida."
+          }
+        ]
+      },
+      {
+        "id": "nearby",
+        "title": "Qué ver cerca",
+        "items": [
+          {
+            "q": "Terminando la visita, ¿qué otros lugares recomiendan cerca?",
+            "a": "Muy cerca están la Cruz del Tercer Milenio, el puerto y la península de Coquimbo. A pocos kilómetros se encuentran La Serena (su centro histórico neoclásico y el Faro Monumental), el Valle del Elqui, las playas de Tongoy y Guanaqueros, y la Reserva Pingüino de Humboldt en la Isla Damas."
+          }
+        ]
+      }
+    ]
+  },
+  "recommendations": {
+    "title": "Descubre más en la Región de Coquimbo",
+    "attractionsTitle": "Atracciones cercanas",
+    "toursTitle": "Tours y actividades recomendados",
+    "attractions": [
+      { "name": "La Serena y su centro histórico", "url": "https://turismoregiondecoquimbo.cl/" },
+      { "name": "Cruz del Tercer Milenio", "url": "https://www.municoquimbo.cl" },
+      { "name": "Valle del Elqui", "url": "https://turismoregiondecoquimbo.cl/" },
+      { "name": "Playas de Tongoy y Guanaqueros", "url": "https://www.sernatur.cl/region/coquimbo/" },
+      { "name": "Reserva Pingüino de Humboldt (Isla Damas)", "url": "https://www.sernatur.cl/region/coquimbo/" }
+    ],
+    "tours": [
+      { "name": "Tour histórico por La Serena y Coquimbo", "url": "https://turismoregiondecoquimbo.cl/" },
+      { "name": "Observación astronómica en el Valle del Elqui", "url": "https://www.sernatur.cl/region/coquimbo/" },
+      { "name": "Tour de playas y gastronomía en Tongoy", "url": "https://turismoregiondecoquimbo.cl/" }
+    ]
+  }
+}

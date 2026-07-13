@@ -1,0 +1,393 @@
+{
+  "meta": {
+    "title": "Coquimbo Pukara | Coquimbo, Chile",
+    "description": "Coquimbo Pukara (Fuerte Lambert) nütram: wigka kuyfi, lafken defensa, ta'anga, chewü nütram, chumküpa Coquimbo Región, Chile."
+  },
+  "header": {
+    "siteName": "Coquimbo Pukara",
+    "home": "Ruka",
+    "visit": "Küpa",
+    "transport": "Chumküpa",
+    "history": "Kuyfi dungu",
+    "gallery": "Ta'anga aty",
+    "reviews": "Chewü nütram",
+    "faq": "Porandu",
+    "map": "Mapa",
+    "backToHome": "Küpa ruka"
+  },
+  "common": {
+    "changeLanguage": "Dungu müno",
+    "toggleTheme": "Küyen müno"
+  },
+  "hero": {
+    "title": "Coquimbo Pukara",
+    "subtitle": "Pukara siglo XIX, cerro wenu, Coquimbo lafken kütral. Chile püle wigka mongen kuyfi.",
+    "rating": "4.5 (5.080)",
+    "reviewCount": "Chewü nütram 5.080",
+    "hours": "Kom antü, 10:00–20:00",
+    "openMaps": "Tenda echë",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+  },
+  "intro": {
+    "title": "Coquimbo Pukara echë",
+    "description": "Coquimbo Pukara, Fuerte Lambert rume, siglo XIX wigka pukara, Chile Ejército wel. Cerro wenu Coquimbo lafken. Lafken defensa püle puerto kütral. Akün Monumento Nacional. Wenu viewpoint: baluarte, túnel, Coquimbo península, puerto, Cruz del Tercer Milenio. Coquimbo ta'anga füta, Región de Coquimbo küpa.",
+    "visitGuide": {
+      "title": "Küpa reko",
+      "items": [
+        "Kom antü, 10:00 ka 20:00; echë tripaye mboyve.",
+        "Camino Al Fuerte 20, cerro Coquimbo lafken.",
+        "Küpa: baluarte, cañón kuyfi, túnel, wenu esplanade.",
+        "Auto, taxi, colectivo Coquimbo centro ka La Serena."
+      ]
+    },
+    "alsoKnownAs": {
+      "title": "Küme",
+      "items": [
+        "Siglo XIX pukara, Chile Monumento Nacional",
+        "360° Coquimbo lafken, puerto, Cruz del Tercer Milenio",
+        "Cañón, túnel, muralla defensa lafken",
+        "Viewpoint ka wigka kuyfi Región de Coquimbo"
+      ]
+    }
+  },
+  "transportSection": {
+    "title": "Chumküpa Coquimbo Pukara",
+    "subtitle": "Avión Santiago ka La Serena, cerro jeguata auto ka pié, ko sección nütram püle chumküpa Coquimbo Pukara.",
+    "overviewTitle": "Echë moñma tripaye",
+    "overviewText": "Püle wenu tripaye ramo, avión La Serena Aeropuerto (LSC) ka bus füta Coquimbo. Santiago, Valparaíso, Viña del Mar püle bus directo. Coquimbo Región rupi, cerro último auto, taxi, colectivo ka pié. Pukara Coquimbo centro ka La Serena kütral.",
+    "arrivalTitle": "Tripaye mboyve",
+    "arrivalItems": [
+      "Pukara cerro wenu, último jeguata auto ka pié.",
+      "Coquimbo centro, puerto, bus terminal kütral.",
+      "Verano ka fin de semana chewü füta; petüvün kalm."
+    ],
+    "modes": [
+      {
+        "label": "Alternativa 01",
+        "title": "Avión",
+        "description": "Aeropuerto cercano La Serena (LSC), Coquimbo 15–20 km, vuelo Santiago ka Chile.",
+        "details": [
+          "Aeropuerto püle transfer, taxi, bus Coquimbo.",
+          "Santiago avión ka bus füta Coquimbo Región.",
+          "Pukara avión directo ül; avión tripaye püle."
+        ]
+      },
+      {
+        "label": "Alternativa 02",
+        "title": "Tren",
+        "description": "Tren küpa Coquimbo ül: pasajero tren Santiago ka Valparaíso ül.",
+        "details": [
+          "Chile tren pasajero kütral, norte tren turismo ül.",
+          "Chewü bus, auto, avión kom.",
+          "Tren región ruma, pukara küpa ül."
+        ]
+      },
+      {
+        "label": "Alternativa 03",
+        "title": "Bus füta",
+        "description": "Coquimbo bus füta Santiago, Valparaíso, Viña del Mar, kom antü.",
+        "details": [
+          "Bus Coquimbo terminal; taxi, colectivo, pié cerro.",
+          "Santiago 5 ka 6 hora Ruta 5 Norte.",
+          "Costo ka kom kütral."
+        ]
+      },
+      {
+        "label": "Alternativa 04",
+        "title": "Micro / Colectivo",
+        "description": "Coquimbo rupi micro ka colectivo centro, puerto, cerro pukara.",
+        "details": [
+          "Colectivo cerro jeguata püle.",
+          "Pié korü, zapatilla kom.",
+          "La Serena bus ka Coquimbo."
+        ]
+      },
+      {
+        "label": "Alternativa 05",
+        "title": "Taxi / Traslado",
+        "description": "Bus terminal, aeropuerto, hotel püle taxi cerro küpa.",
+        "details": [
+          "Mitã, füta che, equipaje püle kom.",
+          "Auto entrada kütral, viewpoint pié.",
+          "Ciudad rupi precio küme."
+        ]
+      },
+      {
+        "label": "Alternativa 06",
+        "title": "Auto",
+        "description": "Chile norte ruta auto, Coquimbo Ruta 5 Norte, Ruta 41 ka costanera.",
+        "details": [
+          "Santiago Ruta 5 Norte Coquimbo.",
+          "Estacionamiento pukara ka cercano.",
+          "Auto esplanade, hora echë."
+        ]
+      },
+      {
+        "label": "Alternativa 07",
+        "title": "Bicicleta / Pié",
+        "description": "Coquimbo rupi bicicleta ka pié cerro pukara viewpoint.",
+        "details": [
+          "Cerro korü, petüvün tripaye.",
+          "Bicicleta korü pichi, fuerza müle.",
+          "Puerto pié lafken echë."
+        ]
+      }
+    ],
+    "localTipsTitle": "Cerró küpa reko",
+    "localTips": [
+      "Cerro viento ka antü; cohipu ka chumpiru, verano.",
+      "Auto ramo estacionamiento pukara, ruka estrecho ül.",
+      "Hora 10:00–20:00 echë, pukara kütral."
+    ],
+    "mapsCta": "Mapa ka ruta echë",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+  },
+  "officialManagement": {
+    "title": "Pukara nütram",
+    "text": "Coquimbo Pukara Chile Monumento Nacional, wigka mongen defensa. Pukara baluarte lafken defensa siglo XIX Chile Ejército, puerto kütral. Akün chewü küpa, cañón, túnel, wenu esplanade. Coquimbo Municipalidad ka región rume, pukara Coquimbo Región identity ka patrimonio."
+  },
+  "knowledge": {
+    "title": "Pukara kuyfi, newen ka nütram",
+    "sections": [
+      {
+        "id": "history",
+        "title": "Kuyfi (siglo XIX)",
+        "content": "Coquimbo lafken kuyfi España püle, galeón ka barco. Independencia rupi Chile lafken defensa, siglo XIX pukara puerto kütral pirata, corsario ka wigka. Fuerte Lambert — wigka ingeniero rume — cerro Coquimbo lafken wel, wenu lafken echë. Muralla, baluarte, túnel defensa lafken, Chile norte puerto."
+      },
+      {
+        "id": "meaning",
+        "title": "¿Chum?",
+        "content": "Pukara cerro wenu wigka rume: tenda lafken entrada kütral, puerto kütral. Wenu viewpoint Coquimbo, La Serena ka Pacífico. Wenu newen watchtower, akün viewpoint füta región."
+      },
+      {
+        "id": "legend",
+        "title": "Nütram",
+        "content": "Lafken chewü nütram: küra rupi, viento túnel pukara wigka chewü rume. Pichi nütram: Cruz del Tercer Milenio baluarte echë, marino Coquimbo lafken küpa ka kütral rume. Nütram ka fe, pukara wigka mongen ka fe."
+      },
+      {
+        "id": "significance",
+        "title": "Coquimbo ta'anga",
+        "content": "Akün Coquimbo Pukara Monumento Nacional ka identity. Muralla península, puerto, Cruz del Tercer Milenio, esplanade viewpoint füta. La Serena ka Elqui Valley rume, Coquimbo Región patrimonio ka turismo, Chile norte lafken kuyfi."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Ta'anga aty",
+    "subtitle": "Pukara, baluarte ka Coquimbo lafken",
+    "photoAlt": "Coquimbo Pukara ka Coquimbo lafken",
+    "viewAll": "Tenda echë Google Maps",
+    "showMore": "Ta'anga füta echë",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+  },
+  "reviews": {
+    "title": "Chewü nütram",
+    "declaration": "Chewü nütram Google Maps (enlace externo).",
+    "moreReviews": "Google Maps echë",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "items": [
+      {
+        "name": "Camila R.",
+        "date": "Marzo 2026",
+        "rating": 5,
+        "text": "Lafken füta viewpoint. Petüvün tripaye, chewü ül; cañón ka túnel kom. Coquimbo kom."
+      },
+      {
+        "name": "Diego M.",
+        "date": "Febrero 2026",
+        "rating": 5,
+        "text": "Kuyfi dungu füta. Cerro wenu pukara; viewpoint 360°. Ruka chewü püle kom."
+      },
+      {
+        "name": "Francisca L.",
+        "date": "Enero 2026",
+        "rating": 4,
+        "text": "La Serena rupi kom. Auto cerro kom, esplanade kütral. Cohipu, viento wenu."
+      },
+      {
+        "name": "Tomás V.",
+        "date": "Diciembre 2025",
+        "rating": 5,
+        "text": "Küyen rupi pukara, Cruz del Tercer Milenio, füta. Ta'anga ka wigka kuyfi."
+      }
+    ]
+  },
+  "mapSection": {
+    "title": "Chumküpa",
+    "subtitle": "Camino Al Fuerte 20, Coquimbo, Región de Coquimbo, Chile",
+    "openMaps": "Google Maps echë",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+  },
+  "footer": {
+    "siteName": "Coquimbo Pukara",
+    "rights": "© 2026 Coquimbo Pukara — Küme mongen nütram. Kom derecho.",
+    "privacy": "Privacidad",
+    "terms": "Dungu reko",
+    "cookies": "Cookie",
+    "officialResourcesTitle": "Oficial ka referencia",
+    "mapsLabel": "Google Maps →",
+    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "officialLinksList": [
+      { "name": "Ilustre Municipalidad de Coquimbo", "url": "https://www.municoquimbo.cl" },
+      { "name": "SERNATUR Región de Coquimbo", "url": "https://www.sernatur.cl/region/coquimbo/" },
+      { "name": "Turismo Región de Coquimbo", "url": "https://turismoregiondecoquimbo.cl/" },
+      { "name": "Consejo de Monumentos Nacionales", "url": "https://www.monumentos.gob.cl" },
+      { "name": "Gobierno Regional de Coquimbo", "url": "https://www.gorecoquimbo.cl" }
+    ],
+    "disclaimer": "Ko web küme mongen nütram, institución oficial ül."
+  },
+  "privacy": {
+    "title": "Privacidad",
+    "lastUpdated": "Ül püle: Marzo 2026",
+    "sections": [
+      {
+        "heading": "1. Dungu müle",
+        "content": "Ngün möle chewü dungu. Elu dungu formulario ka e-mail, küme kütral."
+      },
+      {
+        "heading": "2. Dungu wel",
+        "content": "Dungu wel küme servicio, mongen ka nütram. Ngün ül chewü dungu winka marketing."
+      },
+      {
+        "heading": "3. Cookie ka seguimiento",
+        "content": "Wel cookie ka tecnología seguimiento. Nde navegador cookie ül."
+      },
+      {
+        "heading": "4. Datos seguridad",
+        "content": "Nde datos seguridad küme. Internet rupi 100% seguro ül."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Dungu reko",
+    "lastUpdated": "Ül püle: Marzo 2026",
+    "sections": [
+      {
+        "heading": "1. Dungu reko wel",
+        "content": "Web echë ka wel, dungu reko. Dungu reko ül, web ül."
+      },
+      {
+        "heading": "2. Web wel",
+        "content": "Web küme mongen dungu. Dungu información general. Nde web küme wel."
+      },
+      {
+        "heading": "3. Propiedad intelectual",
+        "content": "Kom contenido texto, ta'anga, logo dueño web. Uso autorizado ül."
+      },
+      {
+        "heading": "4. Responsabilidad límite",
+        "content": "Ngün ül daño directo, indirecto web rupi información."
+      }
+    ]
+  },
+  "cookieSettings": {
+    "title": "Cookie",
+    "description": "Nde cookie küme.",
+    "essential": {
+      "title": "Cookie necesario",
+      "description": "Web funcionamiento necesario.",
+      "badge": "Siempre activo"
+    },
+    "analytics": {
+      "title": "Cookie analítica",
+      "description": "Küpa chewü web nütram."
+    },
+    "marketing": {
+      "title": "Cookie marketing",
+      "description": "Welu chewü web seguimiento."
+    },
+    "save": "Guardar",
+    "saved": "¡Guardado!"
+  },
+  "faq": {
+    "title": "Porandu",
+    "subtitle": "Coquimbo Pukara infrastructure, kuyfi ka küpa marandu.",
+    "amenities": {
+      "title": "Tenda rupi",
+      "items": [
+        { "icon": "🅿️", "label": "Estacionamiento", "value": "Pukara ka cercano" },
+        { "icon": "🚻", "label": "Baños", "value": "Pukara ka Coquimbo centro" },
+        { "icon": "🔌", "label": "Bencina / Carga", "value": "Coquimbo ka La Serena" },
+        { "icon": "♿", "label": "Accesibilidad", "value": "Esplanade rampa; escalón" }
+      ]
+    },
+    "categories": [
+      {
+        "id": "infra",
+        "title": "Transporte ka infrastructure",
+        "items": [
+          {
+            "q": "¿Müle estacionamiento? ¿Chum precio?",
+            "a": "Müle. Pukara estacionamiento ka cercano. Gratuito ka pichi; verano (Enero–Febrero) chewü, petüvün tripaye ka transporte público."
+          },
+          {
+            "q": "¿Müle silla de ruedas ka coche de bebé?",
+            "a": "Esplanade ka recepción rampa, accesible; pukara cerro wenu, baluarte ka túnel escalón. Entrada dungu ruta accesible."
+          },
+          {
+            "q": "¿Müle baño ka comida?",
+            "a": "Pukara baño básico. Coquimbo centro ka puerto café, restaurante, marisco, auto ka colectivo."
+          }
+        ]
+      },
+      {
+        "id": "geo",
+        "title": "Kuyfi ka newen",
+        "items": [
+          {
+            "q": "¿Chum pukara cerro wenu?",
+            "a": "Pukara cerro Coquimbo lafken, tenda lafken entrada kütral, puerto kütral. Wenu watchtower, akün viewpoint 360°."
+          },
+          {
+            "q": "¿Iney pukara rupi?",
+            "a": "Baluarte, cañón kuyfi, túnel, wenu esplanade, península, puerto, Cruz del Tercer Milenio. Siglo XIX wigka ka viewpoint füta Región de Coquimbo."
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "title": "Küpa ka entrada",
+        "items": [
+          {
+            "q": "¿Müle entrada pago?",
+            "a": "Acceso pichi ka gratuito; precio entrada echë, temporada rupi. Esplanade ka viewpoint hora 10:00–20:00."
+          },
+          {
+            "q": "¿Chum aravo küpa?",
+            "a": "Küpa 40 ka 70 minuto: cerro, baluarte, túnel, nütram, viewpoint. Puerto ka Cruz del Tercer Milenio mañana ka tarde."
+          },
+          {
+            "q": "¿Müle ára vai?",
+            "a": "Pukara aire libre, kom ára; esplanade ka cerro viento ka antü. Viento ka lluvia cuidado; verano petüvün."
+          }
+        ]
+      },
+      {
+        "id": "nearby",
+        "title": "Tenda cercano",
+        "items": [
+          {
+            "q": "Küpa rire, ¿iney tenda oĩva?",
+            "a": "Cruz del Tercer Milenio, puerto, Coquimbo península. La Serena (centro histórico ka Faro Monumental), Elqui Valley, Tongoy ka Guanaqueros playa, Humboldt Penguin Reserve Isla Damas."
+          }
+        ]
+      }
+    ]
+  },
+  "recommendations": {
+    "title": "Coquimbo Región rupi",
+    "attractionsTitle": "Tenda cercano",
+    "toursTitle": "Tour ka actividad",
+    "attractions": [
+      { "name": "La Serena centro histórico", "url": "https://turismoregiondecoquimbo.cl/" },
+      { "name": "Cruz del Tercer Milenio", "url": "https://www.municoquimbo.cl" },
+      { "name": "Elqui Valley", "url": "https://turismoregiondecoquimbo.cl/" },
+      { "name": "Tongoy ka Guanaqueros playa", "url": "https://www.sernatur.cl/region/coquimbo/" },
+      { "name": "Humboldt Penguin Reserve (Isla Damas)", "url": "https://www.sernatur.cl/region/coquimbo/" }
+    ],
+    "tours": [
+      { "name": "La Serena ka Coquimbo histórico tour", "url": "https://turismoregiondecoquimbo.cl/" },
+      { "name": "Elqui Valley astronomía", "url": "https://www.sernatur.cl/region/coquimbo/" },
+      { "name": "Tongoy playa ka marisco tour", "url": "https://turismoregiondecoquimbo.cl/" }
+    ]
+  }
+}
