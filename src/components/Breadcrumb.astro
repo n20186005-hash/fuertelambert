@@ -1,0 +1,59 @@
+---
+import { getI18n } from '../i18n/ui';
+import { attraction } from '../config';
+
+const { lang, messages } = getI18n(Astro.url);
+const crumb = messages.breadcrumb;
+const homeHref = `/${lang}`;
+
+// Geographic containment chain: attraction -> city -> region -> country
+const trail = [
+  { label: crumb.home, href: homeHref, current: false },
+  { label: attraction.fullName, href: undefined, current: true },
+  { label: attraction.city, href: undefined, current: false },
+  { label: attraction.state, href: undefined, current: false },
+  { label: attraction.country, href: undefined, current: false },
+];
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: crumb.home,
+      item: `${attraction.baseUrl}/${lang}`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: attraction.city,
+      item: `${attraction.baseUrl}/${lang}`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: attraction.fullName,
+      item: `${attraction.baseUrl}/${lang}`,
+    },
+  ],
+};
+---
+
+<nav aria-label="Breadcrumb" class="border-b" style="border-color: var(--border-color);">
+  <ol class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm" style="color: var(--text-muted);">
+    {trail.map((node, i) => (
+      <li class="flex items-center gap-x-2">
+        {node.href ? (
+          <a href={node.href} class="hover:opacity-70" style="color: var(--accent);">{node.label}</a>
+        ) : (
+          <span aria-current={node.current ? 'page' : undefined} style={node.current ? 'color: var(--text-primary); font-weight: 500;' : ''}>{node.label}</span>
+        )}
+        {i < trail.length - 1 && <span aria-hidden="true" style="color: var(--text-muted);">→</span>}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)}></script>

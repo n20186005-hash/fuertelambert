@@ -1,0 +1,90 @@
+---
+import { getI18n } from '../i18n/ui';
+import { getContent } from '../i18n/content';
+
+const { lang } = getI18n(Astro.url);
+const h = getContent(lang).heritage;
+---
+
+<section id="heritage" class="section-padding" style="background: var(--bg-primary);">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">
+      {h.title}
+    </h2>
+    <p class="text-center text-base sm:text-lg mb-12" style="color: var(--text-secondary);">{h.subtitle}</p>
+
+    <!-- Chronology -->
+    <h3 class="font-display text-2xl font-semibold mb-6" style="color: var(--text-primary);">{h.timelineTitle}</h3>
+    <ol class="relative border-s ps-6 space-y-7 mb-14" style="border-color: var(--border-color);">
+      {h.timeline.map((entry) => (
+        <li class="relative">
+          <span
+            class="absolute -start-[1.95rem] top-1.5 w-3 h-3 rounded-full"
+            aria-hidden="true"
+            style="background: var(--accent);"
+          ></span>
+          <div class="text-xs font-mono uppercase tracking-wider mb-1" style="color: var(--accent);">
+            {entry.period}
+          </div>
+          <h4 class="font-semibold text-base mb-1.5" style="color: var(--text-primary);">{entry.title}</h4>
+          <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{entry.text}</p>
+        </li>
+      ))}
+    </ol>
+
+    <!-- Surviving elements -->
+    <h3 class="font-display text-2xl font-semibold mb-6" style="color: var(--text-primary);">
+      {h.architectureTitle}
+    </h3>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-14">
+      {h.architecture.map((item) => (
+        <li
+          class="rounded-2xl border p-5 h-full"
+          style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);"
+        >
+          <h4 class="font-semibold text-base mb-2" style="color: var(--text-primary);">{item.name}</h4>
+          <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{item.text}</p>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Reading the landscape -->
+    <div
+      class="rounded-2xl border p-5 sm:p-7 mb-14"
+      style="background: var(--bg-secondary); border-color: var(--border-color);"
+    >
+      <h3 class="font-display text-2xl font-semibold mb-5" style="color: var(--text-primary);">
+        {h.viewpointTitle}
+      </h3>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+        {h.viewpoint.map((item) => (
+          <li class="flex gap-3 text-sm leading-relaxed" style="color: var(--text-secondary);">
+            <span aria-hidden="true" style="color: var(--accent);">◆</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Stories -->
+    <h3 class="font-display text-2xl font-semibold mb-6" style="color: var(--text-primary);">{h.storiesTitle}</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      {h.stories.map((story) => (
+        <article
+          class="rounded-2xl border p-5 h-full"
+          style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);"
+        >
+          <h4 class="font-display font-semibold text-lg mb-2" style="color: var(--text-primary);">{story.title}</h4>
+          <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{story.text}</p>
+        </article>
+      ))}
+    </div>
+
+    <p
+      class="text-xs leading-relaxed mt-8 rounded-xl border p-4"
+      style="background: var(--bg-secondary); border-color: var(--border-color); color: var(--text-muted);"
+    >
+      <strong style="color: var(--text-secondary);">{h.noteTitle}</strong> — {h.note}
+    </p>
+  </div>
+</section>

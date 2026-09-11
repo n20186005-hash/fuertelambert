@@ -1,0 +1,46 @@
+---
+import { getI18n } from '../i18n/ui';
+import { attraction } from '../config';
+
+const { messages } = getI18n(Astro.url);
+const s = messages.sources;
+
+// Authoritative / institutional citations + the Google Maps entity listing.
+const links = [
+  ...(messages.footer.officialLinksList ?? []),
+  {
+    name: `Google Maps — ${attraction.fullName} (${attraction.ratingValue}★)`,
+    url: attraction.mapsShareUrl,
+  },
+];
+---
+
+<section id="sources" class="section-padding" style="background: var(--bg-secondary);">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">{s.title}</h2>
+    <p class="text-center text-lg mb-4" style="color: var(--text-secondary);">{s.subtitle}</p>
+    <p class="text-center text-base mb-10" style="color: var(--text-muted);">{s.text}</p>
+
+    <ul class="grid sm:grid-cols-2 gap-3">
+      {links.map((link) => (
+        <li>
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block rounded-xl p-4 border text-sm leading-relaxed hover:shadow-md transition break-words"
+            style="background: var(--card-bg); border-color: var(--border-color); color: var(--text-primary);"
+          >
+            {link.name} <span style="color: var(--accent);">↗</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <p class="mt-8 text-center text-sm" style="color: var(--text-muted);">
+      <a href={attraction.mapsShareUrl} target="_blank" rel="noopener noreferrer" style="color: var(--accent);">
+        {attraction.fullName} — {attraction.streetAddress}, {attraction.city}, {attraction.state}, {attraction.country}
+      </a>
+    </p>
+  </div>
+</section>

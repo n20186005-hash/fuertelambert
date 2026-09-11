@@ -1,7 +1,21 @@
 {
   "meta": {
-    "title": "Fuerte de Coquimbo | Coquimbo, Chile",
-    "description": "The complete guide to Fuerte de Coquimbo (Fuerte Lambert): military history, the bay's coastal defences, photos, visitor reviews, and how to get there in Chile's Coquimbo Region."
+    "title": "Fuerte Lambert, Coquimbo: History, Hours, How to Get There",
+    "description": "Fuerte Lambert (Fuerte de Coquimbo): military history, hours 10:00–20:00, how to reach Camino Al Fuerte 20, and what to see. Rated 4.5★ by 5,000+ visitors."
+  },
+  "keyFacts": {
+    "title": "Opening hours & key facts",
+    "subtitle": "The essentials before you climb: opening hours, admission, how long to allow and the exact location.",
+    "hoursLabel": "Opening hours",
+    "hoursValue": "Daily, 10:00–20:00",
+    "entryLabel": "Admission",
+    "entryValue": "Usually free to enter",
+    "durationLabel": "Time needed",
+    "durationValue": "40–70 minutes",
+    "addressLabel": "Address",
+    "coordsLabel": "Coordinates",
+    "coordsNote": "Plus Code and coordinates you can paste into any map app.",
+    "cta": "How to get there"
   },
   "header": {
     "siteName": "Fuerte de Coquimbo",
@@ -19,14 +33,17 @@
     "changeLanguage": "Switch language",
     "toggleTheme": "Toggle theme"
   },
+  "breadcrumb": {
+    "home": "Home"
+  },
   "hero": {
     "title": "Fuerte de Coquimbo",
     "subtitle": "A 19th-century hilltop fortress with 360° views across Coquimbo Bay, its port history and the Pacific coastline.",
-    "rating": "4.5(5,080)",
-    "reviewCount": "5,080 reviews",
+    "rating": "4.5(5,093)",
+    "reviewCount": "5,093 reviews",
     "hours": "Open daily, 10:00–20:00",
     "openMaps": "View on Google Maps",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA",
     "tags": ["Usually free entry", "Family-friendly", "Suggested visit: 1 hour"],
     "routeCta": {
       "label": "Plan Your Route",
@@ -40,6 +57,8 @@
   "intro": {
     "title": "Discover Fuerte de Coquimbo",
     "description": "Fuerte de Coquimbo, also known as Fuerte Lambert, is a 19th-century military fortification built by the Chilean Army on the hill that overlooks Coquimbo Bay. It was part of a coastal defence system raised to protect the port, then one of the busiest on the country's northern coast. Today it is a National Monument and a natural viewpoint: from its ramparts and tunnels you can take in the peninsula, the harbour and the Cruz del Tercer Milenio. It is one of the most photographed spots in Coquimbo and a must-stop for anyone exploring the Coquimbo Region.",
+    "lead": "Welcome to Fuerte de Coquimbo, widely recognized as the central Fuerte Lambert. Located in Coquimbo, Región de Coquimbo, Chile, this hilltop fortress serves as a primary hub for travellers exploring the maritime heritage of northern Chile.",
+    "nearby": "When visiting Fuerte de Coquimbo, visitors can easily explore surrounding historical landmarks and points of interest, including the Cruz del Tercer Milenio and the port and peninsula of Coquimbo.",
     "visitGuide": {
       "title": "Visitor Guide",
       "eyebrow": "Practical Planning",
@@ -125,7 +144,7 @@
       "Line up your arrival with opening hours (10:00–20:00) so you don't find the site closed."
     ],
     "mapsCta": "View Map & Route",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA"
   },
   "officialManagement": {
     "title": "About the Fort",
@@ -186,7 +205,7 @@
     ],
     "viewAll": "View Location on Google Maps",
     "showMore": "Show More Photos",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA"
   },
   "reviews": {
     "title": "Visitor Reviews",
@@ -194,7 +213,7 @@
     "featuredTitle": "Selected Impressions",
     "featuredSubtitle": "Two short visitor quotes break up the long read and reinforce the fort's mix of panorama and history.",
     "moreReviews": "View on Google Maps",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA",
     "featured": [
       {
         "text": "A place full of history. You understand why they put it on top of the hill: the viewpoint is 360 degrees. Great to go with family.",
@@ -235,8 +254,10 @@
   "mapSection": {
     "title": "How to Get Here",
     "subtitle": "Camino Al Fuerte 20, Coquimbo, Coquimbo Region, Chile",
+    "officialText": "For official updates and regional tourism information, visit the",
+    "officialLink": "Región de Coquimbo Official Tourism Portal",
     "openMaps": "Open in Google Maps",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA"
   },
   "footer": {
     "siteName": "Fuerte de Coquimbo",
@@ -247,13 +268,15 @@
     "cookies": "Cookie Settings",
     "officialResourcesTitle": "Official & Reference Resources",
     "mapsLabel": "Google Maps →",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA",
     "officialLinksList": [
       { "name": "Ilustre Municipalidad de Coquimbo", "url": "https://www.municoquimbo.cl" },
       { "name": "SERNATUR Región de Coquimbo", "url": "https://www.sernatur.cl/region/coquimbo/" },
       { "name": "Consejo de Monumentos Nacionales", "url": "https://www.monumentos.gob.cl" },
       { "name": "Gobierno Regional de Coquimbo", "url": "https://www.gorecoquimbo.cl" }
     ],
+    "address": "Fuerte de Coquimbo — Camino Al Fuerte 20, Coquimbo, Región de Coquimbo, Chile",
+    "imageCredits": "Image credits: all images displayed on this website remain the property and copyright of their respective photographers.",
     "disclaimer": "This is an independent, non-profit visitor information project. We are not affiliated with any government body or official institution."
   },
   "privacy": {
@@ -393,6 +416,11 @@
         ]
       }
     ]
+  },
+  "sources": {
+    "title": "Sources & References",
+    "subtitle": "This independent guide is compiled and cross-checked against official and institutional sources.",
+    "text": "Consult the official portals below for verified information about the fort, its address and its protected status."
   },
   "recommendations": {
     "title": "Discover More in the Coquimbo Region",

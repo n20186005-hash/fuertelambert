@@ -1,0 +1,75 @@
+---
+import { getI18n } from '../i18n/ui';
+import { getContent } from '../i18n/content';
+
+const { lang } = getI18n(Astro.url);
+const p = getContent(lang).practical;
+---
+
+<section id="practical" class="section-padding" style="background: var(--bg-secondary);">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">
+      {p.title}
+    </h2>
+    <p class="text-center text-base sm:text-lg mb-8" style="color: var(--text-secondary);">{p.subtitle}</p>
+
+    <p
+      class="text-sm leading-relaxed rounded-xl border p-4 mb-10"
+      style="background: var(--card-bg); border-color: var(--border-color); color: var(--text-secondary);"
+    >
+      {p.neutral}
+    </p>
+
+    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {p.facilities.map((item) => (
+        <li
+          class="rounded-2xl border p-5 h-full"
+          style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);"
+        >
+          <div class="flex items-start gap-3">
+            <span class="text-2xl leading-none" aria-hidden="true">{item.icon}</span>
+            <h3 class="font-semibold text-base" style="color: var(--text-primary);">{item.title}</h3>
+          </div>
+          <p class="text-sm leading-relaxed mt-3" style="color: var(--text-secondary);">{item.text}</p>
+        </li>
+      ))}
+    </ul>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10">
+      <div
+        class="rounded-2xl border p-5 sm:p-6"
+        style="background: var(--card-bg); border-color: var(--border-color);"
+      >
+        <h3 class="font-display text-xl font-semibold mb-2" style="color: var(--text-primary);">
+          {p.emergencyTitle}
+        </h3>
+        <p class="text-xs mb-4" style="color: var(--text-muted);">{p.emergencyNote}</p>
+        <ul class="space-y-2">
+          {p.emergency.map((item) => (
+            <li class="flex items-center justify-between gap-4 text-sm" style="color: var(--text-secondary);">
+              <span>{item.label}</span>
+              <span class="font-mono font-semibold" style="color: var(--text-primary);">{item.value}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div
+        class="rounded-2xl border p-5 sm:p-6"
+        style="background: var(--card-bg); border-color: var(--border-color);"
+      >
+        <h3 class="font-display text-xl font-semibold mb-4" style="color: var(--text-primary);">
+          {p.etiquetteTitle}
+        </h3>
+        <ul class="space-y-3">
+          {p.etiquette.map((item) => (
+            <li class="flex gap-3 text-sm leading-relaxed" style="color: var(--text-secondary);">
+              <span aria-hidden="true" style="color: var(--accent);">◆</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

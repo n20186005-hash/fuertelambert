@@ -4,9 +4,23 @@ const { messages } = getI18n(Astro.url);
 const faq = messages.faq;
 const categories = faq.categories;
 const amenities = faq.amenities?.items ?? [];
+
+// FAQPage structured data — helps surface answers in featured snippets / AI overviews
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: categories.flatMap((cat) =>
+    (cat.items ?? []).map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    }))
+  ),
+};
 ---
 
 <section id="faq" class="section-padding" style="background: var(--bg-primary);">
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqLd)}></script>
   <div class="max-w-4xl mx-auto px-4">
     <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">{faq.title}</h2>
     <p class="text-center text-lg mb-10" style="color: var(--text-secondary);">{faq.subtitle}</p>

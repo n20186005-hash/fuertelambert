@@ -1,0 +1,72 @@
+---
+import { getI18n } from '../i18n/ui';
+import { attraction } from '../config';
+
+const { messages } = getI18n(Astro.url);
+const k = messages.keyFacts;
+
+// Address and coordinates are built from the same config object that feeds the
+// structured data, so the text a visitor reads and the text a crawler parses
+// are the same string.
+const address = `${attraction.streetAddress}, ${attraction.city}, ${attraction.state}, ${attraction.country}`;
+
+const facts = [
+  { icon: '🕒', label: k.hoursLabel, value: k.hoursValue },
+  { icon: '🎟️', label: k.entryLabel, value: k.entryValue },
+  { icon: '⏱️', label: k.durationLabel, value: k.durationValue },
+  { icon: '📍', label: k.addressLabel, value: address },
+  {
+    icon: '🧭',
+    label: k.coordsLabel,
+    value: attraction.plusCode,
+    detail: `${attraction.latitude}, ${attraction.longitude}`,
+  },
+];
+---
+
+<section id="key-facts" class="section-padding" style="background: var(--bg-primary);">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-6 text-center" style="color: var(--text-primary);">
+      {k.title}
+    </h2>
+    <div class="w-12 h-0.5 mb-6 mx-auto" style="background: var(--accent);"></div>
+    <p class="text-center text-base sm:text-lg mb-10" style="color: var(--text-secondary);">{k.subtitle}</p>
+
+    <dl class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {facts.map((fact) => (
+        <div
+          class="rounded-2xl border p-5 h-full"
+          style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);"
+        >
+          <dt
+            class="flex items-center gap-2 text-xs uppercase tracking-[0.14em] mb-2"
+            style="color: var(--text-muted);"
+          >
+            <span aria-hidden="true">{fact.icon}</span><span>{fact.label}</span>
+          </dt>
+          <dd class="text-base font-semibold leading-snug" style="color: var(--text-primary);">
+            {fact.value}
+            {fact.detail && (
+              <span class="block mt-1.5 text-sm font-normal font-mono" style="color: var(--text-secondary);">
+                {fact.detail}
+              </span>
+            )}
+          </dd>
+        </div>
+      ))}
+    </dl>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-3 mt-8">
+      <a
+        href="#map"
+        class="inline-flex w-full sm:w-auto justify-center px-8 py-3 rounded-full font-semibold text-white"
+        style="background: var(--accent);"
+      >
+        {k.cta}
+      </a>
+      <p class="text-xs leading-relaxed text-center sm:text-start max-w-sm" style="color: var(--text-muted);">
+        {k.coordsNote}
+      </p>
+    </div>
+  </div>
+</section>

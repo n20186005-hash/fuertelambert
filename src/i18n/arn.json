@@ -1,7 +1,21 @@
 {
   "meta": {
-    "title": "Coquimbo Pukara | Coquimbo, Chile",
-    "description": "Coquimbo Pukara (Fuerte Lambert) nütram: wigka kuyfi, lafken defensa, ta'anga, chewü nütram, chumküpa Coquimbo Región, Chile."
+    "title": "Fuerte Lambert (Coquimbo): nütram, ora ka chumküpa",
+    "description": "Fuerte Lambert (Fuerte de Coquimbo): nütram, ora 10:00–20:00, chumküpa Camino Al Fuerte 20. 4,5★, 5.093 nütram."
+  },
+  "keyFacts": {
+    "title": "Ora ka kimün",
+    "subtitle": "Küpan mew kimün: ora, entrada, ünkü ka chew müle.",
+    "hoursLabel": "Ora",
+    "hoursValue": "Kom antü, 10:00–20:00",
+    "entryLabel": "Entrada",
+    "entryValue": "Gratis, kom antü",
+    "durationLabel": "Ünkü",
+    "durationValue": "40–70 minuto",
+    "addressLabel": "Ruka",
+    "coordsLabel": "Coordenada",
+    "coordsNote": "Plus Code ka coordenada, mapa mew.",
+    "cta": "Chumküpa"
   },
   "header": {
     "siteName": "Coquimbo Pukara",
@@ -19,14 +33,17 @@
     "changeLanguage": "Dungu müno",
     "toggleTheme": "Küyen müno"
   },
+  "breadcrumb": {
+    "home": "Ruka"
+  },
   "hero": {
     "title": "Coquimbo Pukara",
     "subtitle": "Siglo XIX pukara, cerro wenu, 360° Coquimbo lafken, puerto kuyfi ka Pacífico.",
-    "rating": "4.5 (5.080)",
-    "reviewCount": "Chewü nütram 5.080",
+    "rating": "4.5 (5.093)",
+    "reviewCount": "Chewü nütram 5.093",
     "hours": "Kom antü, 10:00–20:00",
     "openMaps": "Google Maps tenda echë",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA",
     "tags": ["Entrada küme, müten gratuíta", "Ruka chewü püle", "1 hora küpa"],
     "routeCta": {
       "label": "Ruta küme",
@@ -40,6 +57,8 @@
   "intro": {
     "title": "Coquimbo Pukara echë",
     "description": "Coquimbo Pukara, Fuerte Lambert rume, siglo XIX wigka pukara, Chile Ejército wel. Cerro wenu Coquimbo lafken. Lafken defensa püle puerto kütral. Akün Monumento Nacional. Wenu viewpoint: baluarte, túnel, Coquimbo península, puerto, Cruz del Tercer Milenio. Coquimbo ta'anga füta, Región de Coquimbo küpa.",
+    "lead": "Küpa Coquimbo Pukara, Fuerte Lambert rume. Coquimbo, Región de Coquimbo, Chile mew müle. Cerro wenu pukara, Chile norte lafken kuyfi echë.",
+    "nearby": "Küpa Coquimbo Pukara mew, chewü Cruz del Tercer Milenio, Coquimbo puerto ka península echë.",
     "visitGuide": {
       "title": "Küpa reko",
       "eyebrow": "Küme plan",
@@ -125,7 +144,7 @@
       "Hora 10:00–20:00 echë, pukara kütral."
     ],
     "mapsCta": "Mapa ka ruta echë",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA"
   },
   "officialManagement": {
     "title": "Pukara nütram",
@@ -186,7 +205,7 @@
     ],
     "viewAll": "Tenda echë Google Maps",
     "showMore": "Ta'anga füta echë",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA"
   },
   "reviews": {
     "title": "Chewü nütram",
@@ -194,7 +213,7 @@
     "featuredTitle": "Pichi nütram küme",
     "featuredSubtitle": "Epu chewü nütram: tenda, kuyfi dungu ka küpa mongen müley.",
     "moreReviews": "Google Maps echë",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA",
     "featured": [
       {
         "text": "Kuyfi dungu füta. Cerro wenu pukara; viewpoint 360°. Ruka chewü püle kom.",
@@ -235,8 +254,10 @@
   "mapSection": {
     "title": "Chumküpa",
     "subtitle": "Camino Al Fuerte 20, Coquimbo, Región de Coquimbo, Chile",
+    "officialText": "Oficial dungu ka turismo región:",
+    "officialLink": "Región de Coquimbo Turismo Portal",
     "openMaps": "Google Maps echë",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA"
   },
   "footer": {
     "siteName": "Coquimbo Pukara",
@@ -247,13 +268,15 @@
     "cookies": "Cookie",
     "officialResourcesTitle": "Oficial ka referencia",
     "mapsLabel": "Google Maps →",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA",
     "officialLinksList": [
       { "name": "Ilustre Municipalidad de Coquimbo", "url": "https://www.municoquimbo.cl" },
       { "name": "SERNATUR Región de Coquimbo", "url": "https://www.sernatur.cl/region/coquimbo/" },
       { "name": "Consejo de Monumentos Nacionales", "url": "https://www.monumentos.gob.cl" },
       { "name": "Gobierno Regional de Coquimbo", "url": "https://www.gorecoquimbo.cl" }
     ],
+    "address": "Coquimbo Pukara — Camino Al Fuerte 20, Coquimbo, Región de Coquimbo, Chile",
+    "imageCredits": "Ta'anga: kom ta'anga müle web mew, dueño fotógrafo tañi derecho.",
     "disclaimer": "Ko web küme mongen nütram, institución oficial ül."
   },
   "privacy": {
@@ -393,6 +416,11 @@
         ]
       }
     ]
+  },
+  "sources": {
+    "title": "Dungu ka referencia",
+    "subtitle": "Fachi nütram oficial ka institución dungu püle.",
+    "text": "Oficial portal mew pukara, tañi dirección ka protección dungu kim:"
   },
   "recommendations": {
     "title": "Coquimbo Región rupi",

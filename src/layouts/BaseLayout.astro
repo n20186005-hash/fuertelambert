@@ -3,19 +3,79 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { getLangFromUrl, buildAlternates, htmlLangAttr } from '../i18n/ui';
-import { ogLocale } from '../config';
+import { ogLocale, attraction } from '../config';
 
 interface Props {
   title: string;
   description: string;
   path?: string;
+  /** Optional above-the-fold image (WebP) to preload on pages with a hero. */
+  heroImage?: string;
 }
 
-const { title, description, path = '' } = Astro.props;
+const { title, description, path = '', heroImage } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const htmlLang = htmlLangAttr(lang);
 const alts = buildAlternates(path);
 const canonical = alts[lang] ?? alts.es;
+const ogImage = `${attraction.baseUrl}${attraction.ogImage}`;
+const ogImageAlt = `${attraction.fullName} in ${attraction.city}, ${attraction.country}`;
+
+// --- Structured data: tourist attraction entity binding ---
+const touristAttraction = {
+  '@context': 'https://schema.org',
+  '@type': ['TouristAttraction', 'LandmarksOrHistoricalBuildings'],
+  '@id': `${attraction.baseUrl}/#attraction`,
+  name: attraction.fullName,
+  alternateName: attraction.alsoKnownAs,
+  description: `Comprehensive visitor guide to ${attraction.fullName} in ${attraction.city}, ${attraction.state}, ${attraction.country}. Location, history, opening details, nearby landmarks and travel tips.`,
+  url: attraction.baseUrl,
+  image: attraction.schemaImages,
+  isAccessibleForFree: true,
+  publicAccess: true,
+  openingHours: attraction.openingHours,
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: attraction.openDays,
+      opens: attraction.opensAt,
+      closes: attraction.closesAt,
+    },
+  ],
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: attraction.streetAddress,
+    addressLocality: attraction.city,
+    addressRegion: attraction.state,
+    postalCode: attraction.postalCode,
+    addressCountry: attraction.countryCode,
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: attraction.latitude,
+    longitude: attraction.longitude,
+  },
+  hasMap: attraction.mapsShareUrl,
+  sameAs: [attraction.mapsShareUrl, attraction.govtTourismUrl],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: attraction.ratingValue,
+    reviewCount: attraction.reviewCount,
+    bestRating: 5,
+    worstRating: 1,
+  },
+};
+
+const website = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${attraction.baseUrl}/#website`,
+  name: attraction.fullName,
+  alternateName: attraction.shortName,
+  url: attraction.baseUrl,
+  inLanguage: ['es', 'en', 'zh', 'arn'],
+  about: { '@id': `${attraction.baseUrl}/#attraction` },
+};
 ---
 
 <!doctype html>
@@ -25,6 +85,7 @@ const canonical = alts[lang] ?? alts.es;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="es" href={alts.es} />
     <link rel="alternate" hreflang="en" href={alts.en} />
@@ -32,15 +93,58 @@ const canonical = alts[lang] ?? alts.es;
     <link rel="alternate" hreflang="arn" href={alts.arn} />
     <link rel="alternate" hreflang="x-default" href={alts.xDefault} />
 
+    <!-- Performance hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google.com" />
+    {heroImage && <link rel="preload" as="image" href={heroImage} type="image/webp" fetchpriority="high" />}
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#2d5a3d" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content={attraction.shortName} />
+    <meta name="application-name" content={attraction.fullName} />
+
+    <!-- Geo / NAP entity signals -->
+    <meta name="geo.region" content="CL-CO" />
+    <meta name="geo.placename" content={`${attraction.city}, ${attraction.state}, ${attraction.country}`} />
+    <meta name="geo.position" content={`${attraction.latitude};${attraction.longitude}`} />
+    <meta name="ICBM" content={`${attraction.latitude}, ${attraction.longitude}`} />
+
+    <!-- Open Graph / social -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={ogLocale[lang] ?? lang} />
+    <meta property="og:site_name" content={attraction.fullName} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={ogImageAlt} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
 
     <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXX" />
     <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+
+    <!-- Google Analytics 4 -->
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${attraction.ga4Id}`}></script>
+    <script is:inline set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${attraction.ga4Id}');`}></script>
+
+    <!-- Structured data (JSON-LD) -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(touristAttraction)}></script>
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(website)}></script>
 
     <script is:inline>
       (function () {
@@ -61,5 +165,15 @@ const canonical = alts[lang] ?? alts.es;
       <slot />
     </main>
     <Footer />
+
+    <script is:inline>
+      (function () {
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function () {
+            navigator.serviceWorker.register('/sw.js').catch(function () {});
+          });
+        }
+      })();
+    </script>
   </body>
 </html>

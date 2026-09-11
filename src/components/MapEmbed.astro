@@ -1,8 +1,11 @@
 ---
 import { getI18n } from '../i18n/ui';
+import { attraction } from '../config';
 const { messages } = getI18n(Astro.url);
 const m = messages.mapSection;
-const embedUrl = 'https://www.google.com/maps?q=Fuerte+de+Coquimbo&output=embed';
+const k = messages.keyFacts;
+const embedUrl = attraction.mapsEmbedSrc;
+const fullAddress = `${attraction.fullName} — ${attraction.streetAddress}, ${attraction.city}, ${attraction.state}, ${attraction.country}`;
 ---
 
 <section id="map" class="section-padding" style="background: var(--bg-secondary);">
@@ -18,9 +21,20 @@ const embedUrl = 'https://www.google.com/maps?q=Fuerte+de+Coquimbo&output=embed'
         height="420"
         style="border:0;"
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title={m.title}
+        allowfullscreen
+        referrerpolicy="strict-origin-when-cross-origin"
+        title={`${attraction.fullName} — ${attraction.city}, ${attraction.country}`}
       ></iframe>
+    </div>
+
+    <div class="text-center text-xs sm:text-sm mt-4 space-y-1" style="color: var(--text-muted);">
+      <p>{fullAddress}</p>
+      <p>
+        <span>{k.coordsLabel}:</span>{' '}
+        <span class="font-mono" style="color: var(--text-secondary);">
+          {attraction.plusCode} · {attraction.latitude}, {attraction.longitude}
+        </span>
+      </p>
     </div>
 
     <div class="text-center mt-8">
@@ -28,5 +42,12 @@ const embedUrl = 'https://www.google.com/maps?q=Fuerte+de+Coquimbo&output=embed'
         📍 {m.openMaps}
       </a>
     </div>
+
+    <p class="text-center text-sm leading-relaxed mt-6" style="color: var(--text-secondary);">
+      {m.officialText}{' '}
+      <a href={attraction.govtTourismUrl} target="_blank" rel="noopener noreferrer" style="color: var(--accent);">
+        {m.officialLink}
+      </a>.
+    </p>
   </div>
 </section>

@@ -1,7 +1,21 @@
 {
   "meta": {
-    "title": "科金博堡垒 | 智利科金博大区",
-    "description": "科金博堡垒（Fuerte de Coquimbo，又称 Fuerte Lambert）完整指南：军事历史、海湾海防工事、照片、游客评价，以及如何抵达智利科金博大区。"
+    "title": "科金博堡垒 Fuerte Lambert：历史、开放时间与交通指南",
+    "description": "科金博堡垒（Fuerte de Coquimbo / Fuerte Lambert）：军事历史、开放时间 10:00–20:00、Camino Al Fuerte 20 交通方式与参观看点。4.5★，5,093+ 条评价。"
+  },
+  "keyFacts": {
+    "title": "开放时间与实用信息",
+    "subtitle": "上山前要确认的几件事：开放时间、门票、建议时长与精确位置。",
+    "hoursLabel": "开放时间",
+    "hoursValue": "每日 10:00–20:00",
+    "entryLabel": "门票",
+    "entryValue": "通常免费开放",
+    "durationLabel": "建议时长",
+    "durationValue": "40–70 分钟",
+    "addressLabel": "地址",
+    "coordsLabel": "坐标",
+    "coordsNote": "Plus Code 与经纬度，可直接粘贴进任意地图应用。",
+    "cta": "如何到达"
   },
   "header": {
     "siteName": "科金博堡垒",
@@ -19,14 +33,17 @@
     "changeLanguage": "切换语言",
     "toggleTheme": "切换主题"
   },
+  "breadcrumb": {
+    "home": "首页"
+  },
   "hero": {
     "title": "科金博堡垒",
     "subtitle": "矗立于 19 世纪的山巅要塞，360° 俯瞰科金博海湾的壮阔历史与蔚蓝海岸。",
-    "rating": "4.5(5,080)",
-    "reviewCount": "5,080 条评价",
+    "rating": "4.5(5,093)",
+    "reviewCount": "5,093 条评价",
     "hours": "每日开放，10:00–20:00",
     "openMaps": "查看 Google 地图位置",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA",
     "tags": ["通常免费入场", "适合家庭游览", "建议游玩 1 小时"],
     "routeCta": {
       "label": "规划前往路线",
@@ -40,6 +57,8 @@
   "intro": {
     "title": "探索科金博堡垒",
     "description": "科金博堡垒（Fuerte de Coquimbo，又称 Fuerte Lambert）是智利陆军于 19 世纪在俯瞰科金博海湾的山丘上修建的军事要塞，属于为保护当时北部最繁忙港口之一而建的海岸防御体系。如今它是智利国家纪念物（Monumento Nacional），也是一处天然观景台：从棱堡与隧道之间，可以纵览半岛、港口与千禧十字架（Cruz del Tercer Milenio）。它是科金博最上镜的地点之一，也是游览科金博大区时不可错过的一站。",
+    "lead": "欢迎来到科金博堡垒（Fuerte de Coquimbo），即广为人知的“兰伯特堡垒”（Fuerte Lambert）。它位于智利科金博大区科金博市，这座矗立于山巅的要塞是探索智利北部海洋遗产的重要门户。",
+    "nearby": "游览科金博堡垒时，访客还可以顺道探索周边的历史地标与景点，包括千禧十字架（Cruz del Tercer Milenio）以及科金博港口与半岛。",
     "visitGuide": {
       "title": "游览指南",
       "eyebrow": "实用规划",
@@ -125,7 +144,7 @@
       "把到达时间控制在开放时段（10:00–20:00）内，清晨与傍晚的光线通常最佳。"
     ],
     "mapsCta": "查看地图与路线",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA"
   },
   "officialManagement": {
     "title": "关于这座堡垒",
@@ -186,7 +205,7 @@
     ],
     "viewAll": "在 Google 地图上查看位置",
     "showMore": "显示更多照片",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA"
   },
   "reviews": {
     "title": "游客评价",
@@ -194,7 +213,7 @@
     "featuredTitle": "精选访客印象",
     "featuredSubtitle": "从完整评价中提炼两条最具代表性的观感，让历史空间与实地体验之间形成更自然的过渡。",
     "moreReviews": "在 Google 地图上查看",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA",
     "featured": [
       {
         "text": "一个充满历史的地方。你会明白为何建在山顶，观景台是 360 度的，非常适合全家出游。",
@@ -235,8 +254,10 @@
   "mapSection": {
     "title": "如何到达",
     "subtitle": "智利科金博大区科金博市 Camino Al Fuerte 20",
+    "officialText": "如需官方动态与区域旅游信息，请访问",
+    "officialLink": "科金博大区官方旅游门户",
     "openMaps": "在 Google 地图上打开",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA"
   },
   "footer": {
     "siteName": "科金博堡垒",
@@ -247,13 +268,15 @@
     "cookies": "Cookie 设置",
     "officialResourcesTitle": "官方与参考资源",
     "mapsLabel": "Google 地图 →",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA",
     "officialLinksList": [
       { "name": "科金博市政厅 (Ilustre Municipalidad de Coquimbo)", "url": "https://www.municoquimbo.cl" },
       { "name": "智利国家旅游局 - 科金博大区 (SERNATUR)", "url": "https://www.sernatur.cl/region/coquimbo/" },
       { "name": "智利国家古迹委员会", "url": "https://www.monumentos.gob.cl" },
       { "name": "科金博大区政府", "url": "https://www.gorecoquimbo.cl" }
     ],
+    "address": "科金博堡垒 — 智利科金博大区科金博市 Camino Al Fuerte 20",
+    "imageCredits": "图片版权：本网站所展示的所有图片产权及版权均归原摄影者所有。",
     "disclaimer": "本网站是一个独立的非营利游客信息项目。我们与任何政府机构或官方组织均无隶属关系。"
   },
   "privacy": {
@@ -393,6 +416,11 @@
         ]
       }
     ]
+  },
+  "sources": {
+    "title": "资料来源与参考",
+    "subtitle": "本独立指南依据官方与权威机构资料整理，并交叉核对。",
+    "text": "可通过以下官方门户，获取关于这座堡垒、其地址与保护状态的经核实信息。"
   },
   "recommendations": {
     "title": "探索科金博大区更多精彩",

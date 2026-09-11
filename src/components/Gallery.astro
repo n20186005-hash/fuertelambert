@@ -1,9 +1,45 @@
 ---
 import { getI18n } from '../i18n/ui';
-const { messages } = getI18n(Astro.url);
+import { attraction } from '../config';
+
+const { lang, messages } = getI18n(Astro.url);
 const g = messages.gallery;
-const images = Array.from({ length: 22 }, (_, i) => `/gallery/fuerte-de-coquimbo-${String(i + 1).padStart(2, '0')}.jpg`);
-const photoAlts = g.photoAlts ?? images.map(() => g.photoAlt);
+const locale = lang;
+
+const SLUG = 'fuerte-de-coquimbo';
+
+// Intrinsic dimensions of the archived photographs, used to reserve layout
+// space and avoid cumulative layout shift while the images decode.
+const dims: [number, number][] = [
+  [1600, 1066],
+  [1600, 1200],
+  [1600, 1200],
+  [1600, 2133],
+  [1600, 2844],
+  [1600, 1200],
+  [1600, 1200],
+  [1600, 900],
+  [1440, 1440],
+  [1600, 2837],
+  [1600, 1200],
+  [1600, 1200],
+  [1600, 900],
+  [1600, 1200],
+  [1600, 1200],
+  [1600, 1200],
+  [1600, 720],
+  [1600, 1200],
+  [1600, 1200],
+  [1600, 1200],
+  [1600, 720],
+  [1600, 900],
+];
+
+const count = dims.length;
+const photoAlts: string[] = g.photoAlts ?? [];
+const alt = (index: number) =>
+  photoAlts[index] ??
+  `${attraction.fullName} — photo ${index + 1} in ${attraction.city}, ${attraction.country}`;
 ---
 
 <section id="gallery" class="section-padding" style="background: var(--bg-secondary);">
@@ -12,14 +48,30 @@ const photoAlts = g.photoAlts ?? images.map(() => g.photoAlt);
     <p class="text-center text-lg mb-10" style="color: var(--text-secondary);">{g.subtitle}</p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="gallery-grid">
-      {images.map((src, index) => (
-        <figure class="gallery-item rounded-2xl border overflow-hidden" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
-          <img src={src} alt={photoAlts[index] ?? g.photoAlt} loading="lazy" class="w-full h-56 object-cover" />
-          <figcaption class="px-4 py-3 text-sm leading-relaxed" style="color: var(--text-secondary);">
-            {photoAlts[index] ?? g.photoAlt}
-          </figcaption>
-        </figure>
-      ))}
+      {Array.from({ length: count }, (_, index) => {
+        const n = index + 1;
+        const base = `/gallery/${SLUG}-${n}`;
+        const [w, h] = dims[index];
+        return (
+          <figure class="gallery-item rounded-2xl border overflow-hidden" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+            <picture>
+              <source srcset={`${base}.webp`} type="image/webp" />
+              <img
+                src={`${base}.jpg`}
+                alt={alt(index)}
+                width={w}
+                height={h}
+                loading="lazy"
+                decoding="async"
+                class="w-full h-56 object-cover"
+              />
+            </picture>
+            <figcaption class="px-4 py-3 text-sm leading-relaxed" style="color: var(--text-secondary);">
+              {photoAlts[index] ?? `${attraction.shortName} · ${index + 1}/${count}`}
+            </figcaption>
+          </figure>
+        );
+      })}
     </div>
 
     <div class="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center">

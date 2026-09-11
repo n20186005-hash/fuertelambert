@@ -1,7 +1,21 @@
 {
   "meta": {
-    "title": "Fuerte de Coquimbo | Coquimbo, Chile",
-    "description": "Guía completa del Fuerte de Coquimbo (Fuerte Lambert): historia militar, las defensas de la bahía, fotos, opiniones de visitantes y cómo llegar en la Región de Coquimbo, Chile."
+    "title": "Fuerte Lambert (Coquimbo): Historia, Horarios y Cómo Llegar",
+    "description": "Fuerte Lambert (Fuerte de Coquimbo): historia militar, horarios 10:00–20:00, cómo llegar a Camino Al Fuerte 20 y qué ver. 4,5★ con más de 5.093 opiniones."
+  },
+  "keyFacts": {
+    "title": "Horarios y datos prácticos",
+    "subtitle": "Lo esencial antes de subir: horario de apertura, entrada, duración y ubicación exacta.",
+    "hoursLabel": "Horario",
+    "hoursValue": "Todos los días, 10:00–20:00",
+    "entryLabel": "Entrada",
+    "entryValue": "Acceso habitualmente gratuito",
+    "durationLabel": "Duración",
+    "durationValue": "40–70 minutos",
+    "addressLabel": "Dirección",
+    "coordsLabel": "Coordenadas",
+    "coordsNote": "Código Plus y coordenadas para llegar con cualquier app de mapas.",
+    "cta": "Cómo llegar"
   },
   "header": {
     "siteName": "Fuerte de Coquimbo",
@@ -19,14 +33,17 @@
     "changeLanguage": "Cambiar idioma",
     "toggleTheme": "Cambiar tema"
   },
+  "breadcrumb": {
+    "home": "Inicio"
+  },
   "hero": {
     "title": "Fuerte de Coquimbo",
     "subtitle": "Una fortaleza decimonónica sobre el cerro, con vistas de 360° sobre la bahía de Coquimbo, su historia portuaria y la costa del Pacífico.",
-    "rating": "4.5(5.080)",
-    "reviewCount": "5.080 opiniones",
+    "rating": "4.5(5.093)",
+    "reviewCount": "5.093 opiniones",
     "hours": "Abierto todos los días, 10:00–20:00",
     "openMaps": "Ver ubicación en Google Maps",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA",
     "tags": ["Entrada habitualmente gratuita", "Ideal para familias", "Visita sugerida: 1 hora"],
     "routeCta": {
       "label": "Planificar la ruta",
@@ -40,6 +57,8 @@
   "intro": {
     "title": "Descubre el Fuerte de Coquimbo",
     "description": "El Fuerte de Coquimbo, también conocido como Fuerte Lambert, es una fortificación militar del siglo XIX construida por el Ejército de Chile sobre el cerro que domina la bahía de Coquimbo. Forma parte de un sistema de defensas costeras levantadas para proteger el puerto, entonces uno de los más activos del norte del país. Hoy es un Monumento Nacional y un mirador natural: desde sus baluartes y túneles se contempla la península, el puerto y la Cruz del Tercer Milenio. Es uno de los puntos más fotografiados de Coquimbo y una parada obligada para quienes recorren la Región de Coquimbo.",
+    "lead": "Bienvenido al Fuerte de Coquimbo, ampliamente reconocido como el central Fuerte Lambert. Ubicado en Coquimbo, Región de Coquimbo, Chile, este fuerte sobre el cerro es un punto de referencia para quienes exploran el patrimonio marítimo del norte de Chile.",
+    "nearby": "Al visitar el Fuerte de Coquimbo, los visitantes pueden explorar fácilmente los hitos históricos y puntos de interés cercanos, como la Cruz del Tercer Milenio y el puerto y la península de Coquimbo.",
     "visitGuide": {
       "title": "Guía de visita",
       "eyebrow": "Planificación útil",
@@ -125,7 +144,7 @@
       "Coordina tu llegada con el horario de apertura (10:00–20:00) para no encontrar el recinto cerrado."
     ],
     "mapsCta": "Ver mapa y ruta",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA"
   },
   "officialManagement": {
     "title": "Acerca del Fuerte",
@@ -186,7 +205,7 @@
     ],
     "viewAll": "Ver ubicación en Google Maps",
     "showMore": "Mostrar más fotos",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA"
   },
   "reviews": {
     "title": "Opiniones de los visitantes",
@@ -194,7 +213,7 @@
     "featuredTitle": "Impresiones destacadas",
     "featuredSubtitle": "Dos voces resumidas ayudan a enlazar la lectura histórica con la experiencia real del mirador.",
     "moreReviews": "Ver en Google Maps",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA",
     "featured": [
       {
         "text": "Un lugar con mucha historia. Se entiende por qué lo pusieron en lo alto del cerro: el mirador es de 360 grados. Ideal para ir en familia.",
@@ -235,8 +254,10 @@
   "mapSection": {
     "title": "Cómo llegar",
     "subtitle": "Camino Al Fuerte 20, Coquimbo, Región de Coquimbo, Chile",
+    "officialText": "Para novedades oficiales e información turística regional, visita el",
+    "officialLink": "Portal Oficial de Turismo de la Región de Coquimbo",
     "openMaps": "Abrir en Google Maps",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA"
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA"
   },
   "footer": {
     "siteName": "Fuerte de Coquimbo",
@@ -247,13 +268,15 @@
     "cookies": "Configuración de cookies",
     "officialResourcesTitle": "Recursos oficiales y de referencia",
     "mapsLabel": "Google Maps →",
-    "mapsUrl": "https://maps.app.goo.gl/Vpkrn7GoJzFywVAfA",
+    "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA",
     "officialLinksList": [
       { "name": "Ilustre Municipalidad de Coquimbo", "url": "https://www.municoquimbo.cl" },
       { "name": "SERNATUR Región de Coquimbo", "url": "https://www.sernatur.cl/region/coquimbo/" },
       { "name": "Consejo de Monumentos Nacionales", "url": "https://www.monumentos.gob.cl" },
       { "name": "Gobierno Regional de Coquimbo", "url": "https://www.gorecoquimbo.cl" }
     ],
+    "address": "Fuerte de Coquimbo — Camino Al Fuerte 20, Coquimbo, Región de Coquimbo, Chile",
+    "imageCredits": "Créditos de imagen: todas las imágenes mostradas en este sitio son propiedad y están protegidas por los derechos de autor de sus respectivos fotógrafos.",
     "disclaimer": "Este es un proyecto independiente y sin fines de lucro de información para visitantes. No estamos afiliados con ningún organismo gubernamental ni institución oficial."
   },
   "privacy": {
@@ -393,6 +416,11 @@
         ]
       }
     ]
+  },
+  "sources": {
+    "title": "Fuentes y referencias",
+    "subtitle": "Esta guía independiente se elabora y contrasta con fuentes oficiales e institucionales.",
+    "text": "Consulta los portales oficiales a continuación para obtener información verificada sobre el fuerte, su dirección y su condición de monumento protegido."
   },
   "recommendations": {
     "title": "Descubre más en la Región de Coquimbo",

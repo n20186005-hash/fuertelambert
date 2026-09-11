@@ -1,0 +1,905 @@
+---
+import { getI18n } from '../i18n/ui';
+import { attraction } from '../config';
+import { getContent } from '../i18n/content';
+import { getAdviceCopy } from '../i18n/weatherAdviceCopy';
+import { buildAdvice, ITEM_EMOJI } from '../lib/weatherAdvice';
+import {
+  forecastUrl,
+  marineUrl,
+  getWeather,
+  getMarine,
+  weatherEmoji,
+  weatherGroup,
+  weatherLocale,
+  beaufort,
+  lowTideWindows,
+  tideNowOffset,
+  tideState,
+  tideTimeLabel,
+} from '../lib/weather';
+import { buildTideChart } from '../lib/tideChart';
+
+const { lang } = getI18n(Astro.url);
+const w = getContent(lang).weather;
+const copy = getAdviceCopy(lang);
+const locale = weatherLocale(lang);
+const timezone = 'America/Santiago';
+const days = 7;
+/** Internal coordinate box of the tide chart; it is scaled by CSS. */
+const CURVE_W = 720;
+const CURVE_H = 150;
+
+// Rendered on the server (build/runtime) with a short in-memory cache.
+const [forecast, marine] = await Promise.all([
+  getWeather(attraction.latitude, attraction.longitude, days),
+  getMarine(attraction.latitude, attraction.longitude),
+]);
+
+const current = forecast?.current ?? null;
+const daily = forecast?.daily ?? [];
+const slots = Array.from({ length: days }, (_, i) => daily[i] ?? null);
+
+const model = forecast
+  ? buildAdvice({ current: forecast.current, today: daily[0] ?? null, marine }, copy)
+  : null;
+
+const currentGroup = weatherGroup(current?.code);
+const currentEmoji = weatherEmoji(current?.code, current?.isDay ?? true);
+const force = model ? model.windForce : beaufort(current?.wind);
+const windForceText = `${copy.windForcePrefix} ${force}${copy.windForceSuffix}`;
+
+const dayName = (iso: string, index: number) => {
+  if (index === 0) return w.today;
+  try {
+    return new Intl.DateTimeFormat(locale, { weekday: 'short', timeZone: 'UTC' }).format(
+      new Date(`${iso}T12:00:00Z`)
+    );
+  } catch {
+    return iso.slice(5);
+  }
+};
+
+const clock = (iso: string | null | undefined) => {
+  if (!iso) return '';
+  try {
+    return new Intl.DateTimeFormat(locale, {
+      hour: '2-digit',
+      minute: '2-digit',
+      timeZone: timezone,
+    }).format(new Date(iso));
+  } catch {
+    return '';
+  }
+};
+
+const updatedLabel = forecast ? clock(forecast.updatedAt) : null;
+
+// ------------------------------------------------------------------- tides
+// The fort sits on a rocky headland, so the tide decides what the coastline
+// looks like and when it is safe to walk down to it.
+const tideDays = marine?.tideDays ?? [];
+const tideSeries = marine?.series ?? [];
+const tideEvents = marine?.tide ?? [];
+const tideToday = tideDays[0] ?? null;
+const nowOffset = tideNowOffset(tideDays, timezone);
+const tideNow = nowOffset === null ? null : tideState(tideSeries, tideEvents, nowOffset);
+const chart = tideToday
+  ? buildTideChart(tideSeries, tideToday.startOffset, tideEvents, nowOffset, tideNow?.height ?? null)
+  : null;
+const tideWindows = tideToday
+  ? lowTideWindows(tideEvents, tideToday.date, slots[0]?.sunrise ?? null, slots[0]?.sunset ?? null)
+  : [];
+const daylightWindows = tideWindows.filter((window) => window.daylight);
+const tideRange =
+  tideToday && tideToday.lowest !== null && tideToday.highest !== null
+    ? Math.round((tideToday.highest - tideToday.lowest) * 100) / 100
+    : null;
+const tideNextLabel = tideNow?.next
+  ? tideNow.next.type === 'low'
+    ? copy.tide.nextLow
+    : copy.tide.nextHigh
+  : copy.tide.nextLow;
+
+/** "2 hours 15 min" in the visitor's language, without a date library. */
+const duration = (minutes: number | null | undefined) => {
+  if (minutes === null || minutes === undefined || minutes < 0) return '—';
+  const hours = Math.floor(minutes / 60);
+  const rest = minutes % 60;
+  if (hours <= 0) return `${rest}${copy.tide.minuteUnit}`;
+  if (rest === 0) return `${hours}${copy.tide.hourUnit}`;
+  return `${hours}${copy.tide.hourUnit} ${rest}${copy.tide.minuteUnit}`;
+};
+
+const config = {
+  codes: w.codes,
+  today: w.today,
+  updated: w.updated,
+  unavailable: w.unavailable,
+  advice: copy,
+  itemEmoji: ITEM_EMOJI,
+  forecastUrl: forecastUrl(attraction.latitude, attraction.longitude, days),
+  marineUrl: marineUrl(attraction.latitude, attraction.longitude),
+  timezone,
+  locale,
+};
+
+const alertStyle = 'background: rgba(220,38,38,0.10); border: 1px solid rgba(220,38,38,0.45);';
+const alertTitleStyle = 'color: #ef4444;';
+---
+
+<section id="weather" class="section-padding" style="background: var(--bg-primary);">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">
+      {w.title}
+    </h2>
+    <p class="text-center text-base sm:text-lg mb-10" style="color: var(--text-secondary);">{w.subtitle}</p>
+
+    <div
+      id="weather-root"
+      aria-live="polite"
+      class="space-y-6"
+    >
+      <!-- ── Risk alerts: rendered first, hidden unless something is triggered ── -->
+      <div
+        data-alerts-wrap
+        class={`rounded-2xl p-5 sm:p-6 ${model && model.alerts.length ? '' : 'hidden'}`}
+        style={alertStyle}
+      >
+        <h3 class="font-display text-lg font-semibold mb-3 flex items-center gap-2" style={alertTitleStyle}>
+          <span aria-hidden="true">⚠️</span>
+          <span>{copy.alertHeading}</span>
+        </h3>
+        <ul data-alerts class="space-y-3">
+          {(model?.alerts ?? []).map((alert) => (
+            <li>
+              <p class="font-semibold text-sm" style={alertTitleStyle}>{alert.title}</p>
+              <p class="text-sm leading-relaxed" style="color: var(--text-primary);">{alert.text}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- ── Basic conditions ── -->
+      <div
+        class="rounded-2xl border p-5 sm:p-7"
+        style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);"
+      >
+        <div class="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
+          <div class="flex items-center gap-4 sm:gap-6">
+            <span data-w="code-emoji" class="text-5xl sm:text-6xl leading-none" aria-hidden="true">{currentEmoji}</span>
+            <div>
+              <div class="font-display text-4xl sm:text-5xl font-bold" style="color: var(--text-primary);">
+                <span data-w="temp">{current ? `${current.temperature}°C` : '—'}</span>
+              </div>
+              <div class="text-sm mt-1" style="color: var(--text-secondary);" data-w="code-label">
+                {w.codes[currentGroup] ?? ''}
+              </div>
+            </div>
+          </div>
+
+          <dl class="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-3 sm:ms-auto text-sm flex-1">
+            <div>
+              <dt style="color: var(--text-muted);">{w.rainChance}</dt>
+              <dd class="font-semibold" style="color: var(--text-primary);" data-w="rain-chance">
+                {slots[0] ? `${slots[0].rainChance}%` : '—'}
+              </dd>
+            </div>
+            <div>
+              <dt style="color: var(--text-muted);">{w.wind}</dt>
+              <dd class="font-semibold" style="color: var(--text-primary);">
+                <span data-w="wind">{current ? `${current.wind} km/h` : '—'}</span>
+                <span class="text-xs font-normal block" style="color: var(--text-muted);" data-w="wind-force">
+                  {windForceText}
+                </span>
+              </dd>
+            </div>
+            <div>
+              <dt style="color: var(--text-muted);">{w.feelsLike}</dt>
+              <dd class="font-semibold" style="color: var(--text-primary);" data-w="feels">
+                {current ? `${current.apparent}°C` : '—'}
+              </dd>
+            </div>
+            <div>
+              <dt style="color: var(--text-muted);">{w.uv}</dt>
+              <dd class="font-semibold" style="color: var(--text-primary);" data-w="uv">
+                {slots[0]?.uv != null ? slots[0].uv : '—'}
+              </dd>
+            </div>
+            <div>
+              <dt style="color: var(--text-muted);">{w.humidity}</dt>
+              <dd class="font-semibold" style="color: var(--text-primary);" data-w="humidity">
+                {current ? `${current.humidity}%` : '—'}
+              </dd>
+            </div>
+            <div>
+              <dt style="color: var(--text-muted);">{w.precipitation}</dt>
+              <dd class="font-semibold" style="color: var(--text-primary);" data-w="precip">
+                {current ? `${current.precipitation} mm` : '—'}
+              </dd>
+            </div>
+            <div class="col-span-2">
+              <dt style="color: var(--text-muted);">{w.sun}</dt>
+              <dd class="font-semibold" style="color: var(--text-primary);" data-w="sun">
+                {slots[0]?.sunrise && slots[0]?.sunset ? `${slots[0].sunrise} / ${slots[0].sunset}` : '—'}
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <p class="text-xs mt-5" style="color: var(--text-muted);">
+          <span>{w.updated}:</span> <span data-w="updated">{updatedLabel ?? '—'}</span>
+        </p>
+      </div>
+
+      <!-- ── Actionable advice, in three labelled blocks ──
+           Muted while a warning is active, so the safety message leads. -->
+      <div
+        id="advice"
+        class={`grid grid-cols-1 md:grid-cols-3 gap-4 transition-opacity ${model && model.alerts.length ? 'opacity-70' : ''}`}
+      >
+        <div
+          data-group-block="outfit"
+          class={`rounded-2xl border p-5 ${model && model.outfit.length ? '' : 'hidden'}`}
+          style="background: var(--card-bg); border-color: var(--border-color);"
+        >
+          <h3 class="font-display text-base font-semibold mb-3 flex items-center gap-2" style="color: var(--text-primary);">
+            <span aria-hidden="true">🧥</span><span>{copy.groups.outfit}</span>
+          </h3>
+          <ul data-advice="outfit" class="space-y-3">
+            {(model?.outfit ?? []).map((line) => (
+              <li class="flex gap-3 text-sm leading-relaxed" style="color: var(--text-secondary);">
+                <span aria-hidden="true" style="color: var(--accent);">◆</span><span>{line}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div
+          data-group-block="plan"
+          class={`rounded-2xl border p-5 ${model && model.plan.length ? '' : 'hidden'}`}
+          style="background: var(--card-bg); border-color: var(--border-color);"
+        >
+          <h3 class="font-display text-base font-semibold mb-3 flex items-center gap-2" style="color: var(--text-primary);">
+            <span aria-hidden="true">🗺️</span><span>{copy.groups.plan}</span>
+          </h3>
+          <ul data-advice="plan" class="space-y-3">
+            {(model?.plan ?? []).map((line) => (
+              <li class="flex gap-3 text-sm leading-relaxed" style="color: var(--text-secondary);">
+                <span aria-hidden="true" style="color: var(--accent);">◆</span><span>{line}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div
+          data-group-block="items"
+          class={`rounded-2xl border p-5 ${model && model.items.length ? '' : 'hidden'}`}
+          style="background: var(--card-bg); border-color: var(--border-color);"
+        >
+          <h3 class="font-display text-base font-semibold mb-3 flex items-center gap-2" style="color: var(--text-primary);">
+            <span aria-hidden="true">🎒</span><span>{copy.groups.items}</span>
+          </h3>
+          <ul data-advice="items" class="space-y-2.5">
+            {(model?.items ?? []).map((item) => (
+              <li class="flex items-center gap-3 text-sm leading-relaxed" style="color: var(--text-secondary);">
+                <span aria-hidden="true" class="text-base">{ITEM_EMOJI[item.id] ?? '•'}</span>
+                <span>{item.label}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <!-- ── Sea state and tide: this is a headland, so it gets its own panel ── -->
+      <div
+        data-marine-block
+        class={`rounded-2xl border p-5 sm:p-6 ${marine ? '' : 'hidden'}`}
+        style="background: var(--bg-secondary); border-color: var(--border-color);"
+      >
+        <h3 class="font-display text-lg font-semibold mb-4 flex items-center gap-2" style="color: var(--text-primary);">
+          <span aria-hidden="true">🌊</span><span>{copy.marine.title}</span>
+        </h3>
+        <dl class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3 text-sm mb-4">
+          <div>
+            <dt style="color: var(--text-muted);">{copy.marine.wave}</dt>
+            <dd class="font-semibold" style="color: var(--text-primary);" data-w="marine-wave">
+              {marine?.waveHeight != null ? `${marine.waveHeight} m` : '—'}
+            </dd>
+          </div>
+          <div>
+            <dt style="color: var(--text-muted);">{copy.marine.period}</dt>
+            <dd class="font-semibold" style="color: var(--text-primary);" data-w="marine-period">
+              {marine?.wavePeriod != null ? `${Math.round(marine.wavePeriod)} s` : '—'}
+            </dd>
+          </div>
+          <div>
+            <dt style="color: var(--text-muted);">{copy.marine.seaTemp}</dt>
+            <dd class="font-semibold" style="color: var(--text-primary);" data-w="marine-temp">
+              {marine?.seaTemp != null ? `${marine.seaTemp} °C` : '—'}
+            </dd>
+          </div>
+        </dl>
+        <ul data-marine-rules class="space-y-2.5">
+          {(model?.marine ?? []).map((line) => (
+            <li class="flex gap-3 text-sm leading-relaxed" style="color: var(--text-secondary);">
+              <span aria-hidden="true" style="color: var(--accent);">◆</span><span>{line}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- ── Tide ──
+           The headland is read with the tide: this panel answers "how much
+           coast is showing, and when is it steadiest to walk down to it?". -->
+      <div
+        data-tide-block
+        class={`rounded-2xl border p-5 sm:p-6 ${marine && tideToday ? '' : 'hidden'}`}
+        style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);"
+      >
+        <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-5">
+          <h3 class="font-display text-lg font-semibold flex items-center gap-2" style="color: var(--text-primary);">
+            <span aria-hidden="true">🌊</span><span>{copy.tide.title}</span>
+          </h3>
+          <p class="text-xs" style="color: var(--text-muted);">
+            <span>{copy.tide.range}:</span>
+            <span class="font-semibold" style="color: var(--text-secondary);" data-w="tide-range">
+              {tideRange !== null ? `${tideRange} m` : '—'}
+            </span>
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+          <div class="rounded-xl border p-4" style="background: var(--bg-secondary); border-color: var(--border-color);">
+            <p class="text-xs mb-1" style="color: var(--text-muted);">{copy.tide.current}</p>
+            <p class="font-display text-3xl font-bold" style="color: var(--text-primary);">
+              <span data-w="tide-level">{tideNow?.height != null ? `${tideNow.height} m` : '—'}</span>
+            </p>
+            <p class="text-sm mt-1 font-semibold" style="color: var(--accent);" data-w="tide-trend">
+              {tideNow ? (tideNow.rising ? `↑ ${copy.tide.rising}` : `↓ ${copy.tide.falling}`) : '—'}
+            </p>
+          </div>
+
+          <div class="rounded-xl border p-4" style="background: var(--bg-secondary); border-color: var(--border-color);">
+            <p class="text-xs mb-1" style="color: var(--text-muted);" data-w="tide-next-label">{tideNextLabel}</p>
+            <p class="font-display text-3xl font-bold" style="color: var(--text-primary);" data-w="tide-next">
+              {duration(tideNow?.minutesUntilNext)}
+            </p>
+            <p class="text-xs mt-1" style="color: var(--text-muted);" data-w="tide-next-time">
+              {tideNow?.next ? `${tideNow.next.time} · ${tideNow.next.height} m` : ''}
+            </p>
+          </div>
+        </div>
+
+        <div class="rounded-xl border p-3 mb-5" style="background: var(--bg-secondary); border-color: var(--border-color);">
+          <svg
+            data-tide-svg
+            viewBox={`0 0 ${CURVE_W} ${CURVE_H}`}
+            class="w-full h-auto"
+            role="img"
+            aria-label={copy.tide.title}
+          >
+            {chart && (
+              <>
+                <defs>
+                  <linearGradient id="tideFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.42" />
+                    <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.04" />
+                  </linearGradient>
+                </defs>
+                <polygon points={chart.area} fill="url(#tideFill)" />
+                <polyline
+                  points={chart.line}
+                  fill="none"
+                  stroke="#38bdf8"
+                  stroke-width="2.5"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                />
+                {chart.markers.map((marker) => (
+                  <circle cx={marker.x} cy={marker.y} r="3.5" fill={marker.high ? '#38bdf8' : '#fb923c'} />
+                ))}
+                {chart.nowX !== null && (
+                  <>
+                    <line
+                      x1={chart.nowX}
+                      y1="0"
+                      x2={chart.nowX}
+                      y2={CURVE_H}
+                      stroke="#ef4444"
+                      stroke-width="1.5"
+                      stroke-dasharray="4 4"
+                    />
+                    {chart.nowY !== null && <circle cx={chart.nowX} cy={chart.nowY} r="4.5" fill="#ef4444" />}
+                  </>
+                )}
+              </>
+            )}
+          </svg>
+          <p class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs px-1 pt-1" style="color: var(--text-muted);">
+            <span class="flex items-center gap-1.5">
+              <span class="inline-block w-2 h-2 rounded-full" style="background: #38bdf8;"></span>{copy.tide.high}
+            </span>
+            <span class="flex items-center gap-1.5">
+              <span class="inline-block w-2 h-2 rounded-full" style="background: #fb923c;"></span>{copy.tide.low}
+            </span>
+            <span class="flex items-center gap-1.5">
+              <span class="inline-block w-2 h-2 rounded-full" style="background: #ef4444;"></span>{copy.tide.current}
+            </span>
+          </p>
+        </div>
+
+        <div class="mb-5">
+          <p class="text-sm font-semibold mb-2" style="color: var(--text-primary);">{copy.tide.window}</p>
+          <div data-tide-windows class="flex flex-wrap gap-2 mb-2">
+            {daylightWindows.map((window) => (
+              <span
+                class="rounded-full px-3 py-1 text-xs font-semibold"
+                style="background: var(--bg-secondary); border: 1px solid var(--border-color); color: var(--accent);"
+              >
+                {tideTimeLabel(window.startOffset)}–{tideTimeLabel(window.endOffset)}
+              </span>
+            ))}
+          </div>
+          <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-tide-window-note>
+            {daylightWindows.length ? copy.tide.windowHint : copy.tide.noDaylightWindow}
+          </p>
+        </div>
+
+        <p class="text-sm font-semibold mb-2" style="color: var(--text-primary);">{copy.tide.outlook}</p>
+        <ul data-tide-days class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          {tideDays.slice(0, 3).map((day, i) => (
+            <li class="rounded-xl border p-3" style="background: var(--bg-secondary); border-color: var(--border-color);">
+              <p class="text-xs font-semibold uppercase tracking-wide mb-2" style="color: var(--text-muted);">
+                {dayName(day.date, i)}
+              </p>
+              <ul class="space-y-1">
+                {day.events.map((event) => (
+                  <li class="flex items-center justify-between gap-3 text-xs">
+                    <span style="color: var(--text-secondary);">
+                      {event.type === 'high' ? `↑ ${copy.tide.high}` : `↓ ${copy.tide.low}`}
+                    </span>
+                    <span class="font-semibold" style="color: var(--text-primary);">
+                      {event.time} · {event.height} m
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- ── 7-day outlook ── -->
+      <div>
+        <h3 class="font-display text-xl font-semibold mb-4" style="color: var(--text-primary);">{w.forecastTitle}</h3>
+        <ul class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+          {slots.map((day, i) => (
+            <li
+              class="rounded-xl border p-3 text-center"
+              data-day={i}
+              style="background: var(--card-bg); border-color: var(--border-color);"
+            >
+              <div class="text-xs font-semibold uppercase tracking-wide" style="color: var(--text-muted);" data-w="day-name">
+                {day ? dayName(day.date, i) : '—'}
+              </div>
+              <div class="text-2xl my-2" aria-hidden="true" data-w="day-emoji">
+                {day ? weatherEmoji(day.code, true) : '⛅'}
+              </div>
+              <div class="text-xs mb-2 min-h-[2rem]" style="color: var(--text-secondary);" data-w="day-label">
+                {day ? w.codes[weatherGroup(day.code)] ?? '' : ''}
+              </div>
+              <div class="text-sm font-semibold" style="color: var(--text-primary);">
+                <span data-w="day-max">{day ? `${day.max}°` : '—'}</span>
+                <span style="color: var(--text-muted);"> / <span data-w="day-min">{day ? `${day.min}°` : '—'}</span></span>
+              </div>
+              <div class="text-xs mt-1" style="color: var(--text-muted);">
+                💧 <span data-w="day-rain">{day ? `${day.rainChance}%` : '—'}</span>
+              </div>
+              <div class="text-xs mt-0.5" style="color: var(--text-muted);" data-w="day-wind">
+                {day ? `${copy.windForcePrefix} ${beaufort(day.windMax)}${copy.windForceSuffix}` : ''}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <p class="text-sm hidden" data-w="fallback" style="color: var(--text-muted);">{w.unavailable}</p>
+    </div>
+
+    <!-- ── Local know-how that does not depend on the forecast ── -->
+    <div
+      class="mt-10 rounded-2xl border p-5 sm:p-7"
+      style="background: var(--bg-secondary); border-color: var(--border-color);"
+    >
+      <h3 class="font-display text-xl font-semibold mb-4" style="color: var(--text-primary);">{w.tipsTitle}</h3>
+      <ul class="space-y-3">
+        {w.tips.map((item) => (
+          <li class="flex gap-3 text-sm leading-relaxed" style="color: var(--text-secondary);">
+            <span aria-hidden="true" style="color: var(--accent);">◆</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script type="application/json" id="weather-config" is:inline set:html={JSON.stringify(config)}></script>
+
+<script>
+  import { buildAdvice, ITEM_EMOJI } from '../lib/weatherAdvice';
+  import {
+    normalizeForecast,
+    normalizeMarine,
+    weatherGroup,
+    weatherEmoji,
+    beaufort,
+    lowTideWindows,
+    tideNowOffset,
+    tideState,
+    tideTimeLabel,
+  } from '../lib/weather';
+  import { buildTideChart } from '../lib/tideChart';
+
+  const root = document.getElementById('weather-root');
+  const configEl = document.getElementById('weather-config');
+  if (root && configEl) {
+    const cfg: any = JSON.parse(configEl.textContent || '{}');
+    const copy = cfg.advice;
+    const STORAGE_KEY = 'fc-weather-v4';
+    const TTL = 20 * 60 * 1000;
+
+    const pick = (key: string, scope?: ParentNode) =>
+      (scope ?? root).querySelector(`[data-w="${key}"]`) as HTMLElement | null;
+
+    const write = (key: string, value: string, scope?: ParentNode) => {
+      const el = pick(key, scope);
+      if (el) el.textContent = value;
+    };
+
+    const degrees = (value: number | null | undefined) => (value == null ? '—' : `${value}°`);
+    const card = (index: number) => root.querySelector(`[data-day="${index}"]`);
+
+    const weekday = (iso: string, index: number) => {
+      if (index === 0) return cfg.today ?? '';
+      try {
+        return new Intl.DateTimeFormat(cfg.locale, { weekday: 'short', timeZone: 'UTC' }).format(
+          new Date(`${iso}T12:00:00Z`)
+        );
+      } catch {
+        return iso.slice(5);
+      }
+    };
+
+    const clock = (iso: string | null) => {
+      if (!iso) return '';
+      try {
+        return new Intl.DateTimeFormat(cfg.locale, {
+          hour: '2-digit',
+          minute: '2-digit',
+          timeZone: cfg.timezone,
+        }).format(new Date(iso));
+      } catch {
+        return '';
+      }
+    };
+
+    const windText = (force: number) => `${copy.windForcePrefix} ${force}${copy.windForceSuffix}`;
+
+    /** Rebuilds a bullet list in place, matching the server-rendered markup. */
+    const fillList = (selector: string, entries: any[], variant: 'text' | 'item') => {
+      const list = root.querySelector(selector) as HTMLElement | null;
+      if (!list) return;
+      list.textContent = '';
+      for (const entry of entries) {
+        const li = document.createElement('li');
+        li.className =
+          variant === 'item'
+            ? 'flex items-center gap-3 text-sm leading-relaxed'
+            : 'flex gap-3 text-sm leading-relaxed';
+        li.style.color = 'var(--text-secondary)';
+        const marker = document.createElement('span');
+        marker.setAttribute('aria-hidden', 'true');
+        if (variant === 'item') {
+          marker.className = 'text-base';
+          marker.textContent = ITEM_EMOJI[entry.id] ?? '•';
+        } else {
+          marker.style.color = 'var(--accent)';
+          marker.textContent = '◆';
+        }
+        const label = document.createElement('span');
+        label.textContent = variant === 'item' ? entry.label : entry;
+        li.append(marker, label);
+        list.appendChild(li);
+      }
+    };
+
+    const setGroup = (name: string, entries: any[]) => {
+      const block = root.querySelector(`[data-group-block="${name}"]`) as HTMLElement | null;
+      if (block) block.classList.toggle('hidden', entries.length === 0);
+      fillList(`[data-advice="${name}"]`, entries, name === 'items' ? 'item' : 'text');
+    };
+
+    const renderAlerts = (alerts: { id: string; title: string; text: string }[]) => {
+      const wrap = root.querySelector('[data-alerts-wrap]') as HTMLElement | null;
+      const list = root.querySelector('[data-alerts]') as HTMLElement | null;
+      if (!wrap || !list) return;
+      list.textContent = '';
+      for (const alert of alerts) {
+        const li = document.createElement('li');
+        const title = document.createElement('p');
+        title.className = 'font-semibold text-sm';
+        title.style.color = '#ef4444';
+        title.textContent = alert.title;
+        const body = document.createElement('p');
+        body.className = 'text-sm leading-relaxed';
+        body.style.color = 'var(--text-primary)';
+        body.textContent = alert.text;
+        li.append(title, body);
+        list.appendChild(li);
+      }
+      wrap.classList.toggle('hidden', alerts.length === 0);
+      const adviceGrid = document.getElementById('advice');
+      if (adviceGrid) adviceGrid.classList.toggle('opacity-70', alerts.length > 0);
+    };
+
+    const renderForecast = (forecast: any) => {
+      const { current, daily } = forecast;
+      const today = daily[0] ?? null;
+
+      write('temp', `${current.temperature}°C`);
+      write('feels', `${current.apparent}°C`);
+      write('humidity', `${current.humidity}%`);
+      write('precip', `${current.precipitation} mm`);
+      write('wind', `${current.wind} km/h`);
+      write('code-emoji', weatherEmoji(current.code, current.isDay));
+      write('code-label', (cfg.codes ?? {})[weatherGroup(current.code)] ?? '');
+      write('rain-chance', today ? `${today.rainChance}%` : '—');
+      write('uv', today && today.uv != null ? String(today.uv) : '—');
+      write(
+        'sun',
+        today && today.sunrise && today.sunset ? `${today.sunrise} / ${today.sunset}` : '—'
+      );
+      write('wind-force', windText(beaufort(Math.max(today ? today.windMax : 0, current.wind))));
+
+      daily.forEach((day: any, i: number) => {
+        const node = card(i);
+        if (!node) return;
+        write('day-name', weekday(day.date, i), node);
+        write('day-emoji', weatherEmoji(day.code, true), node);
+        write('day-label', (cfg.codes ?? {})[weatherGroup(day.code)] ?? '', node);
+        write('day-max', degrees(day.max), node);
+        write('day-min', degrees(day.min), node);
+        write('day-rain', `${day.rainChance}%`, node);
+        write('day-wind', windText(beaufort(day.windMax)), node);
+      });
+
+      write('updated', clock(forecast.updatedAt));
+    };
+
+    const renderMarine = (marine: any) => {
+      const block = root.querySelector('[data-marine-block]') as HTMLElement | null;
+      if (!block || !marine) return;
+      block.classList.remove('hidden');
+      write('marine-wave', marine.waveHeight != null ? `${marine.waveHeight} m` : '—');
+      write('marine-period', marine.wavePeriod != null ? `${Math.round(marine.wavePeriod)} s` : '—');
+      write('marine-temp', marine.seaTemp != null ? `${marine.seaTemp} °C` : '—');
+    };
+
+    const duration = (minutes: number | null | undefined) => {
+      if (minutes === null || minutes === undefined || minutes < 0) return '—';
+      const hours = Math.floor(minutes / 60);
+      const rest = minutes % 60;
+      if (hours <= 0) return `${rest}${copy.tide.minuteUnit}`;
+      if (rest === 0) return `${hours}${copy.tide.hourUnit}`;
+      return `${hours}${copy.tide.hourUnit} ${rest}${copy.tide.minuteUnit}`;
+    };
+
+    const renderTide = (marine: any, forecast: any) => {
+      const block = root.querySelector('[data-tide-block]') as HTMLElement | null;
+      const days = marine?.tideDays ?? [];
+      const today = days[0] ?? null;
+      if (!block || !today) return;
+      block.classList.remove('hidden');
+
+      const series = marine.series ?? [];
+      const events = marine.tide ?? [];
+      const nowOffset = tideNowOffset(days, cfg.timezone);
+      const state = nowOffset === null ? null : tideState(series, events, nowOffset);
+      const windows = lowTideWindows(
+        events,
+        today.date,
+        forecast?.daily?.[0]?.sunrise ?? null,
+        forecast?.daily?.[0]?.sunset ?? null
+      ).filter((window) => window.daylight);
+
+      const range =
+        today.lowest !== null && today.highest !== null
+          ? Math.round((today.highest - today.lowest) * 100) / 100
+          : null;
+      write('tide-range', range !== null ? `${range} m` : '—');
+      write('tide-level', state?.height != null ? `${state.height} m` : '—');
+      write('tide-trend', state ? (state.rising ? `↑ ${copy.tide.rising}` : `↓ ${copy.tide.falling}`) : '—');
+      write(
+        'tide-next-label',
+        state?.next ? (state.next.type === 'low' ? copy.tide.nextLow : copy.tide.nextHigh) : copy.tide.nextLow
+      );
+      write('tide-next', duration(state?.minutesUntilNext));
+      write('tide-next-time', state?.next ? `${state.next.time} · ${state.next.height} m` : '');
+
+      const svg = block.querySelector('[data-tide-svg]') as SVGSVGElement | null;
+      const chart = svg
+        ? buildTideChart(series, today.startOffset, events, nowOffset, state?.height ?? null)
+        : null;
+      if (svg && chart) {
+        const markers = chart.markers
+          .map(
+            (marker) =>
+              `<circle cx="${marker.x.toFixed(1)}" cy="${marker.y.toFixed(1)}" r="3.5" fill="${
+                marker.high ? '#38bdf8' : '#fb923c'
+              }" />`
+          )
+          .join('');
+        const now =
+          chart.nowX === null
+            ? ''
+            : `<line x1="${chart.nowX.toFixed(1)}" y1="0" x2="${chart.nowX.toFixed(
+                1
+              )}" y2="${chart.height}" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />` +
+              (chart.nowY === null
+                ? ''
+                : `<circle cx="${chart.nowX.toFixed(1)}" cy="${chart.nowY.toFixed(1)}" r="4.5" fill="#ef4444" />`);
+        svg.innerHTML =
+          '<defs><linearGradient id="tideFill" x1="0" y1="0" x2="0" y2="1">' +
+          '<stop offset="0%" stop-color="#38bdf8" stop-opacity="0.42" />' +
+          '<stop offset="100%" stop-color="#38bdf8" stop-opacity="0.04" />' +
+          '</linearGradient></defs>' +
+          `<polygon points="${chart.area}" fill="url(#tideFill)" />` +
+          `<polyline points="${chart.line}" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" />` +
+          markers +
+          now;
+      }
+
+      const windowBox = block.querySelector('[data-tide-windows]') as HTMLElement | null;
+      if (windowBox) {
+        windowBox.textContent = '';
+        for (const window of windows) {
+          const chip = document.createElement('span');
+          chip.className = 'rounded-full px-3 py-1 text-xs font-semibold';
+          chip.style.background = 'var(--bg-secondary)';
+          chip.style.border = '1px solid var(--border-color)';
+          chip.style.color = 'var(--accent)';
+          chip.textContent = `${tideTimeLabel(window.startOffset)}–${tideTimeLabel(window.endOffset)}`;
+          windowBox.appendChild(chip);
+        }
+      }
+      const note = block.querySelector('[data-tide-window-note]') as HTMLElement | null;
+      if (note) note.textContent = windows.length ? copy.tide.windowHint : copy.tide.noDaylightWindow;
+
+      const list = block.querySelector('[data-tide-days]') as HTMLElement | null;
+      if (list) {
+        list.textContent = '';
+        days.slice(0, 3).forEach((day: any, i: number) => {
+          const item = document.createElement('li');
+          item.className = 'rounded-xl border p-3';
+          item.style.background = 'var(--bg-secondary)';
+          item.style.borderColor = 'var(--border-color)';
+
+          const heading = document.createElement('p');
+          heading.className = 'text-xs font-semibold uppercase tracking-wide mb-2';
+          heading.style.color = 'var(--text-muted)';
+          heading.textContent = weekday(day.date, i);
+          item.appendChild(heading);
+
+          const rows = document.createElement('ul');
+          rows.className = 'space-y-1';
+          for (const event of day.events) {
+            const row = document.createElement('li');
+            row.className = 'flex items-center justify-between gap-3 text-xs';
+            const label = document.createElement('span');
+            label.style.color = 'var(--text-secondary)';
+            label.textContent = event.type === 'high' ? `↑ ${copy.tide.high}` : `↓ ${copy.tide.low}`;
+            const value = document.createElement('span');
+            value.className = 'font-semibold';
+            value.style.color = 'var(--text-primary)';
+            value.textContent = `${event.time} · ${event.height} m`;
+            row.append(label, value);
+            rows.appendChild(row);
+          }
+          item.appendChild(rows);
+          list.appendChild(item);
+        });
+      }
+    };
+
+    const apply = (forecast: any, marine: any) => {
+      if (forecast) {
+        renderForecast(forecast);
+        const model = buildAdvice(
+          { current: forecast.current, today: forecast.daily[0] ?? null, marine },
+          copy
+        );
+        renderAlerts(model.alerts);
+        setGroup('outfit', model.outfit);
+        setGroup('plan', model.plan);
+        setGroup('items', model.items);
+        const marineList = root.querySelector('[data-marine-rules]') as HTMLElement | null;
+        if (marineList) fillList('[data-marine-rules]', model.marine, 'text');
+      }
+      if (marine) {
+        renderMarine(marine);
+        renderTide(marine, forecast);
+      }
+      const fallback = pick('fallback');
+      if (fallback) fallback.classList.add('hidden');
+    };
+
+    const fail = () => {
+      const hasValues = pick('temp');
+      if (!hasValues || hasValues.textContent?.trim() === '—') {
+        const fallback = pick('fallback');
+        if (fallback) fallback.classList.remove('hidden');
+      }
+    };
+
+    // ------------------------------------------------------------ caching
+    const readCache = () => {
+      try {
+        const raw = sessionStorage.getItem(STORAGE_KEY);
+        if (!raw) return null;
+        const parsed = JSON.parse(raw);
+        if (!parsed || typeof parsed.at !== 'number' || Date.now() - parsed.at > TTL) return null;
+        return parsed;
+      } catch {
+        return null;
+      }
+    };
+
+    const writeCache = (entry: unknown) => {
+      try {
+        sessionStorage.setItem(STORAGE_KEY, JSON.stringify(entry));
+      } catch {
+        /* storage full or blocked: the page keeps the server-rendered values */
+      }
+    };
+
+    const cached = readCache();
+    if (cached) {
+      apply(cached.forecast, cached.marine);
+    } else {
+      const controller = 'AbortController' in window ? new AbortController() : null;
+      const timer = controller ? setTimeout(() => controller.abort(), 8000) : null;
+
+      Promise.all([
+        fetch(cfg.forecastUrl, {
+          signal: controller ? controller.signal : undefined,
+          headers: { accept: 'application/json' },
+        })
+          .then((res) => (res.ok ? res.json() : null))
+          .catch(() => null),
+        fetch(cfg.marineUrl, {
+          signal: controller ? controller.signal : undefined,
+          headers: { accept: 'application/json' },
+        })
+          .then((res) => (res.ok ? res.json() : null))
+          .catch(() => null),
+      ])
+        .then(([rawForecast, rawMarine]) => {
+          if (timer) clearTimeout(timer);
+          const forecast = rawForecast ? normalizeForecast(rawForecast) : null;
+          const marine = rawMarine ? normalizeMarine(rawMarine) : null;
+          if (!forecast && !marine) {
+            fail();
+            return;
+          }
+          writeCache({ at: Date.now(), forecast, marine });
+          apply(forecast, marine);
+        })
+        .catch(() => {
+          if (timer) clearTimeout(timer);
+          fail();
+        });
+    }
+  }
+</script>
