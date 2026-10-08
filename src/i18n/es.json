@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Fuerte Lambert (Coquimbo): Historia, Horarios y Cómo Llegar",
-    "description": "Fuerte Lambert (Fuerte de Coquimbo): historia militar, horarios 10:00–20:00, cómo llegar a Camino Al Fuerte 20 y qué ver. 4,5★ con más de 5.093 opiniones."
+    "title": "Fuerte Lambert (Fuerte de Coquimbo), Coquimbo: Horarios, Fotos y Cómo Llegar",
+    "description": "Descubre el Fuerte Lambert (Fuerte de Coquimbo) en Coquimbo, Chile. Consulta su historia, horarios 10:00–20:00, fotografías, ubicación y cómo llegar para planificar tu visita. 4,5★ con más de 5.108 opiniones."
   },
   "keyFacts": {
     "title": "Horarios y datos prácticos",
@@ -37,10 +37,10 @@
     "home": "Inicio"
   },
   "hero": {
-    "title": "Fuerte de Coquimbo",
+    "title": "Fuerte Lambert (Fuerte de Coquimbo)",
     "subtitle": "Una fortaleza decimonónica sobre el cerro, con vistas de 360° sobre la bahía de Coquimbo, su historia portuaria y la costa del Pacífico.",
-    "rating": "4.5(5.093)",
-    "reviewCount": "5.093 opiniones",
+    "rating": "4.5(5.108)",
+    "reviewCount": "5.108 opiniones",
     "hours": "Abierto todos los días, 10:00–20:00",
     "openMaps": "Ver ubicación en Google Maps",
     "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA",
@@ -55,8 +55,8 @@
     }
   },
   "intro": {
-    "title": "Descubre el Fuerte de Coquimbo",
-    "description": "El Fuerte de Coquimbo, también conocido como Fuerte Lambert, es una fortificación militar del siglo XIX construida por el Ejército de Chile sobre el cerro que domina la bahía de Coquimbo. Forma parte de un sistema de defensas costeras levantadas para proteger el puerto, entonces uno de los más activos del norte del país. Hoy es un Monumento Nacional y un mirador natural: desde sus baluartes y túneles se contempla la península, el puerto y la Cruz del Tercer Milenio. Es uno de los puntos más fotografiados de Coquimbo y una parada obligada para quienes recorren la Región de Coquimbo.",
+    "title": "Descubre el Fuerte Lambert (Fuerte de Coquimbo)",
+    "description": "El Fuerte de Coquimbo, también conocido como Fuerte Lambert, es una fortificación militar del siglo XIX sobre el cerro que domina la bahía de Coquimbo. Forma parte del sistema de defensas costeras levantado para proteger el puerto, entonces uno de los más activos del norte del país. Su nombre recuerda a Carlos J. Lambert, empresario que impulsó su construcción en 1879 durante la Guerra del Pacífico. Hoy es un sitio histórico y un mirador natural: desde sus baluartes y túneles se contempla la península, el puerto y la Cruz del Tercer Milenio. Es uno de los puntos más fotografiados de Coquimbo y una parada obligada para quienes recorren la Región de Coquimbo.",
     "lead": "Bienvenido al Fuerte de Coquimbo, ampliamente reconocido como el central Fuerte Lambert. Ubicado en Coquimbo, Región de Coquimbo, Chile, este fuerte sobre el cerro es un punto de referencia para quienes exploran el patrimonio marítimo del norte de Chile.",
     "nearby": "Al visitar el Fuerte de Coquimbo, los visitantes pueden explorar fácilmente los hitos históricos y puntos de interés cercanos, como la Cruz del Tercer Milenio y el puerto y la península de Coquimbo.",
     "visitGuide": {
@@ -73,7 +73,7 @@
     "alsoKnownAs": {
       "title": "Destacados",
       "items": [
-        "Fortaleza del siglo XIX y Monumento Nacional de Chile",
+        "Fortaleza del siglo XIX y sitio histórico de Coquimbo",
         "Vista de 360° sobre la bahía, el puerto y la Cruz del Tercer Milenio",
         "Cañones, túneles y murallas conservadas del sistema de defensa costera",
         "Mirador y sitio de historia militar en la Región de Coquimbo"
@@ -148,7 +148,7 @@
   },
   "officialManagement": {
     "title": "Acerca del Fuerte",
-    "text": "El Fuerte de Coquimbo es un Monumento Nacional administrado en el marco de la defensa del patrimonio militar de Chile. La fortificación y sus baluartes forman parte del sistema de defensas de la bahía levantado por el Ejército de Chile en el siglo XIX para resguardar el puerto. Hoy se mantiene como sitio histórico de acceso público, donde se conservan cañones, túneles y la explanada panorámica. Junto a la Municipalidad de Coquimbo y los organismos regionales, el recinto forma parte de la identidad y la oferta patrimonial de la Región de Coquimbo."
+    "text": "El Fuerte Lambert (Fuerte de Coquimbo) es un sitio histórico de la ciudad, vinculado a la defensa del patrimonio militar de Chile. La fortificación y sus baluartes forman parte del sistema de defensas de la bahía desarrollado en el siglo XIX para resguardar el puerto. Hoy se mantiene como sitio histórico de acceso público, donde se conservan cañones, túneles y la explanada panorámica. Junto a la Municipalidad de Coquimbo y los organismos regionales, el recinto forma parte de la identidad y la oferta patrimonial de la Región de Coquimbo."
   },
   "knowledge": {
     "title": "Historia, significado y leyenda del Fuerte",
@@ -156,7 +156,7 @@
       {
         "id": "history",
         "title": "Orígenes (siglo XIX)",
-        "content": "La bahía de Coquimbo tuvo importancia estratégica desde la época colonial, cuando galeones y luego barcos mercantes recalaban en sus aguas. Tras la independencia, el Estado de Chile reforzó la defensa de su litoral y, a lo largo del siglo XIX, levantó fortificaciones para proteger el puerto de Coquimbo de piratas, corsarios y amenazas navales. El Fuerte Lambert —nombre que recuerda a un ingeniero militar de la época— se construyó sobre el cerro que cierra la bahía, aprovechando su altura para vigilar el acceso marítimo. Sus muros, baluartes y túneles forman parte de ese sistema de defensa costera que acompañó el auge portuario del norte de Chile."
+        "content": "La bahía de Coquimbo tuvo importancia estratégica desde la época colonial, cuando galeones y luego barcos mercantes recalaban en sus aguas. Tras la independencia, el Estado de Chile reforzó la defensa de su litoral y, a lo largo del siglo XIX, levantó fortificaciones para proteger el puerto de Coquimbo de piratas, corsarios y amenazas navales. El Fuerte Lambert —nombre que recuerda al empresario Carlos J. Lambert, impulsor de su construcción en 1879— se levantó sobre el cerro que cierra la bahía, aprovechando su altura para vigilar el acceso marítimo. Sus muros, baluartes y túneles forman parte de ese sistema de defensa costera que acompañó el auge portuario del norte de Chile."
       },
       {
         "id": "meaning",
@@ -171,7 +171,7 @@
       {
         "id": "significance",
         "title": "Un símbolo de Coquimbo",
-        "content": "Hoy el Fuerte de Coquimbo es un Monumento Nacional y un hito de la identidad local. Desde sus murallas se abarca la península, el puerto y la Cruz del Tercer Milenio, y su explanada es uno de los miradores más queridos de la ciudad. Junto a La Serena y el Valle del Elqui, es parte del triángulo patrimonial y turístico de la Región de Coquimbo, y una parada esencial para entender la historia marítima del norte de Chile."
+        "content": "Hoy el Fuerte Lambert (Fuerte de Coquimbo) es un sitio histórico y un hito de la identidad local. Desde sus murallas se abarca la península, el puerto y la Cruz del Tercer Milenio, y su explanada es uno de los miradores más queridos de la ciudad. Junto a La Serena y el Valle del Elqui, es parte del triángulo patrimonial y turístico de la Región de Coquimbo, y una parada esencial para entender la historia marítima del norte de Chile."
       }
     ]
   },
@@ -209,43 +209,43 @@
   },
   "reviews": {
     "title": "Opiniones de los visitantes",
-    "declaration": "Las opiniones de los visitantes están disponibles en Google Maps (enlace externo).",
+    "declaration": "Las impresiones que aparecen a continuación son resúmenes ilustrativos de comentarios frecuentes de visitantes y no constituyen reseñas individuales verificadas. La valoración oficial (4,5★, más de 5.108 opiniones) está disponible en Google Maps.",
     "featuredTitle": "Impresiones destacadas",
-    "featuredSubtitle": "Dos voces resumidas ayudan a enlazar la lectura histórica con la experiencia real del mirador.",
+    "featuredSubtitle": "Resúmenes ilustrativos de lo que suelen destacar quienes visitan el mirador, para enlazar la lectura histórica con la experiencia real del lugar.",
     "moreReviews": "Ver en Google Maps",
     "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA",
     "featured": [
       {
         "text": "Un lugar con mucha historia. Se entiende por qué lo pusieron en lo alto del cerro: el mirador es de 360 grados. Ideal para ir en familia.",
-        "source": "Diego M., febrero 2026"
+        "source": "Comentario frecuente de visitantes"
       },
       {
         "text": "El atardecer desde el fuerte, con la Cruz del Tercer Milenio de fondo, es espectacular y ayuda a entender la importancia estratégica del sitio.",
-        "source": "Tomás V., diciembre 2025"
+        "source": "Comentario frecuente de visitantes"
       }
     ],
     "items": [
       {
-        "name": "Camila R.",
-        "date": "Marzo 2026",
+        "name": "Familia en visita",
+        "date": "",
         "rating": 5,
         "text": "Vista increíble de toda la bahía. Subimos temprano y casi no había gente; los cañones y los túneles están muy bien conservados. Imperdible en Coquimbo."
       },
       {
-        "name": "Diego M.",
-        "date": "Febrero 2026",
+        "name": "Visitante desde La Serena",
+        "date": "",
         "rating": 5,
         "text": "Un lugar con mucha historia. Se entiende por qué lo pusieron en lo alto del cerro: el mirador es de 360 grados. Ideal para ir en familia."
       },
       {
-        "name": "Francisca L.",
-        "date": "Enero 2026",
+        "name": "Viajero en auto",
+        "date": "",
         "rating": 4,
         "text": "Muy buen paseo si vas por La Serena. La subida en auto es cómoda y la explanada vale mucho la pena. Lleva agua, hace viento arriba."
       },
       {
-        "name": "Tomás V.",
-        "date": "Diciembre 2025",
+        "name": "Quien busca el atardecer",
+        "date": "",
         "rating": 5,
         "text": "El atardecer desde el fuerte, con la Cruz del Tercer Milenio de fondo, es espectacular. Perfecto para fotos y para conocer la historia militar de la zona."
       }

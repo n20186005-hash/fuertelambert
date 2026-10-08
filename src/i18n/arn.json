@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Fuerte Lambert (Coquimbo): nütram, ora ka chumküpa",
-    "description": "Fuerte Lambert (Fuerte de Coquimbo): nütram, ora 10:00–20:00, chumküpa Camino Al Fuerte 20. 4,5★, 5.093 nütram."
+    "description": "Fuerte Lambert (Fuerte de Coquimbo): nütram, ora 10:00–20:00, chumküpa Camino Al Fuerte 20. 4,5★, 5.108 nütram."
   },
   "keyFacts": {
     "title": "Ora ka kimün",
@@ -39,8 +39,8 @@
   "hero": {
     "title": "Coquimbo Pukara",
     "subtitle": "Siglo XIX pukara, cerro wenu, 360° Coquimbo lafken, puerto kuyfi ka Pacífico.",
-    "rating": "4.5 (5.093)",
-    "reviewCount": "Chewü nütram 5.093",
+    "rating": "4.5 (5.108)",
+    "reviewCount": "Chewü nütram 5.108",
     "hours": "Kom antü, 10:00–20:00",
     "openMaps": "Google Maps tenda echë",
     "mapsUrl": "https://maps.app.goo.gl/KrnqyUTirGDCBaVTA",
@@ -56,7 +56,7 @@
   },
   "intro": {
     "title": "Coquimbo Pukara echë",
-    "description": "Coquimbo Pukara, Fuerte Lambert rume, siglo XIX wigka pukara, Chile Ejército wel. Cerro wenu Coquimbo lafken. Lafken defensa püle puerto kütral. Akün Monumento Nacional. Wenu viewpoint: baluarte, túnel, Coquimbo península, puerto, Cruz del Tercer Milenio. Coquimbo ta'anga füta, Región de Coquimbo küpa.",
+    "description": "Coquimbo Pukara, Fuerte Lambert rume, siglo XIX wigka pukara, Chile Ejército wel. Cerro wenu Coquimbo lafken. Lafken defensa püle puerto kütral. Akün sitio histórico. Wenu viewpoint: baluarte, túnel, Coquimbo península, puerto, Cruz del Tercer Milenio. Coquimbo ta'anga füta, Región de Coquimbo küpa.",
     "lead": "Küpa Coquimbo Pukara, Fuerte Lambert rume. Coquimbo, Región de Coquimbo, Chile mew müle. Cerro wenu pukara, Chile norte lafken kuyfi echë.",
     "nearby": "Küpa Coquimbo Pukara mew, chewü Cruz del Tercer Milenio, Coquimbo puerto ka península echë.",
     "visitGuide": {
@@ -73,7 +73,7 @@
     "alsoKnownAs": {
       "title": "Küme",
       "items": [
-        "Siglo XIX pukara, Chile Monumento Nacional",
+        "Siglo XIX pukara, Chile sitio histórico",
         "360° Coquimbo lafken, puerto, Cruz del Tercer Milenio",
         "Cañón, túnel, muralla defensa lafken",
         "Viewpoint ka wigka kuyfi Región de Coquimbo"
@@ -148,7 +148,7 @@
   },
   "officialManagement": {
     "title": "Pukara nütram",
-    "text": "Coquimbo Pukara Chile Monumento Nacional, wigka mongen defensa. Pukara baluarte lafken defensa siglo XIX Chile Ejército, puerto kütral. Akün chewü küpa, cañón, túnel, wenu esplanade. Coquimbo Municipalidad ka región rume, pukara Coquimbo Región identity ka patrimonio."
+    "text": "Coquimbo Pukara Chile sitio histórico, wigka mongen defensa. Pukara baluarte lafken defensa siglo XIX Chile Ejército, puerto kütral. Akün chewü küpa, cañón, túnel, wenu esplanade. Coquimbo Municipalidad ka región rume, pukara Coquimbo Región identity ka patrimonio."
   },
   "knowledge": {
     "title": "Pukara kuyfi, newen ka nütram",
@@ -171,7 +171,7 @@
       {
         "id": "significance",
         "title": "Coquimbo ta'anga",
-        "content": "Akün Coquimbo Pukara Monumento Nacional ka identity. Muralla península, puerto, Cruz del Tercer Milenio, esplanade viewpoint füta. La Serena ka Elqui Valley rume, Coquimbo Región patrimonio ka turismo, Chile norte lafken kuyfi."
+        "content": "Akün Coquimbo Pukara sitio histórico ka identity. Muralla península, puerto, Cruz del Tercer Milenio, esplanade viewpoint füta. La Serena ka Elqui Valley rume, Coquimbo Región patrimonio ka turismo, Chile norte lafken kuyfi."
       }
     ]
   },

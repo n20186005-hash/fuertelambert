@@ -1,0 +1,154 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getContent } from '../../i18n/content';
+import { getLangFromUrl } from '../../i18n/ui';
+import { attraction } from '../../config';
+
+export function getStaticPaths() {
+  return ['es', 'en', 'zh', 'arn'].map((lang) => ({ params: { lang } }));
+}
+
+const lang = getLangFromUrl(Astro.url);
+const c = getContent(lang);
+const h = c.heritage;
+const homeHref = `/${lang}`;
+const path = 'historia-fuerte-lambert';
+
+const homeLabels: Record<string, string> = {
+  es: 'Inicio',
+  en: 'Home',
+  zh: '首页',
+  arn: 'Inicio',
+};
+const homeLabel = homeLabels[lang] ?? homeLabels.es;
+
+const meta = {
+  es: {
+    title: 'Historia del Fuerte Lambert (Fuerte de Coquimbo): cronología y origen',
+    description:
+      'Cronología del Fuerte Lambert en Coquimbo: las primeras piezas de artillería de 1865, la construcción de 1879 impulsada por Carlos J. Lambert, el cañón Armstrong y la restauración municipal de 2003–2005.',
+  },
+  en: {
+    title: 'History of Fort Lambert (Fuerte de Coquimbo): timeline & origins',
+    description:
+      'Timeline of Fort Lambert in Coquimbo: the first guns of 1865, the 1879 construction driven by Carlos J. Lambert, the Armstrong cannon and the 2003–2005 municipal restoration.',
+  },
+  zh: {
+    title: '兰伯特堡（科金博堡垒）历史：时间线与起源',
+    description:
+      '科金博兰伯特堡的历史时间线：1865 年最初的火炮、1879 年由卡洛斯·J·兰伯特推动修建、阿姆斯特朗火炮，以及 2003–2005 年的市政修复。',
+  },
+  arn: {
+    title: 'Nütram Fuerte Lambert (Coquimbo Pukara): day ka püle',
+    description:
+      'Fuerte Lambert Coquimbo day: 1865 cañón, 1879 Carlos J. Lambert pukara, Armstrong cañón, 2003–2005 municipalidad kütral.',
+  },
+};
+const m = meta[lang] ?? meta.es;
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: homeLabel,
+      item: `${attraction.baseUrl}/${lang}`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: h.title,
+      item: `${attraction.baseUrl}/${lang}/${path}`,
+    },
+  ],
+};
+---
+
+<BaseLayout title={m.title} description={m.description} path={path}>
+  <nav aria-label="Breadcrumb" class="border-b" style="border-color: var(--border-color);">
+    <ol class="max-w-5xl mx-auto px-4 py-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm" style="color: var(--text-muted);">
+      <li><a href={homeHref} class="hover:opacity-70" style="color: var(--accent);">{homeLabel}</a></li>
+      <li aria-hidden="true" style="color: var(--text-muted);">→</li>
+      <li><span aria-current="page" style="color: var(--text-primary); font-weight: 500;">{h.title}</span></li>
+    </ol>
+  </nav>
+
+  <article class="section-padding" style="background: var(--bg-primary);">
+    <div class="max-w-4xl mx-auto px-4">
+      <header class="mb-12">
+        <p class="text-sm uppercase tracking-[0.18em] mb-3" style="color: var(--accent);">{attraction.shortName} · {attraction.city}</p>
+        <h1 class="font-display text-4xl sm:text-5xl font-bold leading-tight mb-5" style="color: var(--text-primary);">{h.title}</h1>
+        <p class="text-lg leading-relaxed" style="color: var(--text-secondary);">{h.subtitle}</p>
+      </header>
+
+      <section class="mb-14">
+        <h2 class="font-display text-2xl sm:text-3xl font-semibold mb-6" style="color: var(--text-primary);">{h.timelineTitle}</h2>
+        <ol class="relative border-s ps-6 space-y-7" style="border-color: var(--border-color);">
+          {h.timeline.map((entry) => (
+            <li class="relative">
+              <span class="absolute -start-[1.95rem] top-1.5 w-3 h-3 rounded-full" aria-hidden="true" style="background: var(--accent);"></span>
+              <div class="text-xs font-mono uppercase tracking-wider mb-1" style="color: var(--accent);">{entry.period}</div>
+              <h3 class="font-semibold text-lg mb-1.5" style="color: var(--text-primary);">{entry.title}</h3>
+              <p class="text-base leading-relaxed" style="color: var(--text-secondary);">{entry.text}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section class="mb-14">
+        <h2 class="font-display text-2xl sm:text-3xl font-semibold mb-6" style="color: var(--text-primary);">{h.architectureTitle}</h2>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {h.architecture.map((item) => (
+            <li class="rounded-2xl border p-5 h-full" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+              <h3 class="font-semibold text-base mb-2" style="color: var(--text-primary);">{item.name}</h3>
+              <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{item.text}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="mb-14">
+        <div class="rounded-2xl border p-5 sm:p-7" style="background: var(--bg-secondary); border-color: var(--border-color);">
+          <h2 class="font-display text-2xl sm:text-3xl font-semibold mb-5" style="color: var(--text-primary);">{h.viewpointTitle}</h2>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+            {h.viewpoint.map((item) => (
+              <li class="flex gap-3 text-sm leading-relaxed" style="color: var(--text-secondary);">
+                <span aria-hidden="true" style="color: var(--accent);">◆</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="font-display text-2xl sm:text-3xl font-semibold mb-6" style="color: var(--text-primary);">{h.storiesTitle}</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {h.stories.map((story) => (
+            <article class="rounded-2xl border p-5 h-full" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+              <h3 class="font-display font-semibold text-lg mb-2" style="color: var(--text-primary);">{story.title}</h3>
+              <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{story.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <p class="text-xs leading-relaxed mb-12 rounded-xl border p-4" style="background: var(--bg-secondary); border-color: var(--border-color); color: var(--text-muted);">
+        <strong style="color: var(--text-secondary);">{h.noteTitle}</strong> — {h.note}
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href={homeHref} class="inline-flex w-full sm:w-auto justify-center px-8 py-3 rounded-full font-semibold text-white" style="background: var(--accent);">
+          ← {lang === 'es' ? 'Volver a la guía de visita' : lang === 'en' ? 'Back to the visitor guide' : lang === 'zh' ? '返回参观指南' : 'Pukara küpa'}
+        </a>
+        <a href={`${homeHref}#transport`} class="inline-flex w-full sm:w-auto justify-center px-8 py-3 rounded-full font-semibold border" style="border-color: var(--border-color); color: var(--text-primary);">
+          {lang === 'es' ? 'Cómo llegar' : lang === 'en' ? 'How to get there' : lang === 'zh' ? '如何到达' : 'Chumküpa'}
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)}></script>
+</BaseLayout>

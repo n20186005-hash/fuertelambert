@@ -11,12 +11,16 @@ interface Props {
   path?: string;
   /** Optional above-the-fold image (WebP) to preload on pages with a hero. */
   heroImage?: string;
+  /** When true, the page is excluded from indexing but still crawlable (e.g. legal pages). */
+  noIndex?: boolean;
 }
 
-const { title, description, path = '', heroImage } = Astro.props;
+const { title, description, path = '', heroImage, noIndex = false } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const htmlLang = htmlLangAttr(lang);
 const alts = buildAlternates(path);
+// hreflang uses regional tags where it improves targeting (es-CL for Chile).
+const hreflangCodes: Record<string, string> = { es: 'es-CL', en: 'en', zh: 'zh', arn: 'arn' };
 const canonical = alts[lang] ?? alts.es;
 const ogImage = `${attraction.baseUrl}${attraction.ogImage}`;
 const ogImageAlt = `${attraction.fullName} in ${attraction.city}, ${attraction.country}`;
@@ -85,12 +89,12 @@ const website = {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="robots" content={noIndex ? 'noindex, follow, max-image-preview:large, max-snippet:-1' : 'index, follow, max-image-preview:large, max-snippet:-1'} />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="es" href={alts.es} />
-    <link rel="alternate" hreflang="en" href={alts.en} />
-    <link rel="alternate" hreflang="zh" href={alts.zh} />
-    <link rel="alternate" hreflang="arn" href={alts.arn} />
+    <link rel="alternate" hreflang={hreflangCodes.es} href={alts.es} />
+    <link rel="alternate" hreflang={hreflangCodes.en} href={alts.en} />
+    <link rel="alternate" hreflang={hreflangCodes.zh} href={alts.zh} />
+    <link rel="alternate" hreflang={hreflangCodes.arn} href={alts.arn} />
     <link rel="alternate" hreflang="x-default" href={alts.xDefault} />
 
     <!-- Performance hints -->

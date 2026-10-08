@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getI18n } from '../i18n/ui';
+
+type Kind = 'privacy' | 'terms' | 'cookieSettings';
+const { lang, messages } = getI18n(Astro.url);
+const kind = (Astro.props.kind ?? 'privacy') as Kind;
+const data = messages[kind];
+const homeHref = `/${lang}`;
+
+const pathByKind: Record<Kind, string> = {
+  privacy: 'privacy-policy',
+  terms: 'terms-of-service',
+  cookieSettings: 'cookie-settings',
+};
+const path = pathByKind[kind];
+
+const descByKind: Record<Kind, Record<string, string>> = {
+  privacy: {
+    es: 'Política de privacidad de fuertelambert.com: cómo tratamos la información de los visitantes.',
+    en: 'Privacy Policy of fuertelambert.com: how we handle visitor information.',
+    zh: 'fuertelambert.com 隐私政策：我们如何处理访客信息。',
+    arn: 'fuertelambert.com privacidad: küme mongen nütram.',
+  },
+  terms: {
+    es: 'Términos del servicio de fuertelambert.com, un proyecto independiente sin fines de lucro.',
+    en: 'Terms of Service of fuertelambert.com, an independent non-profit project.',
+    zh: 'fuertelambert.com 服务条款：独立的非营利项目。',
+    arn: 'fuertelambert.com dungu reko: küme mongen.',
+  },
+  cookieSettings: {
+    es: 'Configuración de cookies de fuertelambert.com y tipos de cookies que utilizamos.',
+    en: 'Cookie settings of fuertelambert.com and the types of cookies we use.',
+    zh: 'fuertelambert.com 的 Cookie 设置以及我们使用的 Cookie 类型。',
+    arn: 'fuertelambert.com cookie kütral.',
+  },
+};
+const description = (descByKind[kind] ?? descByKind.privacy)[lang] ?? descByKind[kind].es;
+
+const homeLabel = lang === 'es' ? 'Inicio' : lang === 'en' ? 'Home' : lang === 'zh' ? '首页' : 'Inicio';
+---
+
+<BaseLayout title={data.title} description={description} path={path} noIndex={true}>
+  <article class="section-padding" style="background: var(--bg-primary);">
+    <div class="max-w-3xl mx-auto px-4">
+      <p class="mb-4"><a href={homeHref} class="hover:opacity-70" style="color: var(--accent);">← {homeLabel}</a></p>
+      <h1 class="font-display text-3xl sm:text-4xl font-bold mb-2" style="color: var(--text-primary);">{data.title}</h1>
+      {data.lastUpdated && <p class="text-sm mb-8" style="color: var(--text-muted);">{data.lastUpdated}</p>}
+
+      {kind !== 'cookieSettings' ? (
+        <div class="space-y-6">
+          {data.sections.map((s) => (
+            <section>
+              <h2 class="font-display text-xl font-semibold mb-2" style="color: var(--text-primary);">{s.heading}</h2>
+              <p class="leading-relaxed" style="color: var(--text-secondary);">{s.content}</p>
+            </section>
+          ))}
+        </div>
+      ) : (
+        <div class="space-y-6">
+          <p class="leading-relaxed" style="color: var(--text-secondary);">{data.description}</p>
+          {[data.essential, data.analytics, data.marketing].map((cat) => (
+            <section class="rounded-2xl border p-5" style="background: var(--card-bg); border-color: var(--border-color);">
+              <div class="flex items-center justify-between gap-3 mb-2">
+                <h2 class="font-semibold text-lg" style="color: var(--text-primary);">{cat.title}</h2>
+                {cat.badge && <span class="text-xs px-2 py-1 rounded-full" style="background: var(--bg-secondary); color: var(--text-muted);">{cat.badge}</span>}
+              </div>
+              <p class="leading-relaxed text-sm" style="color: var(--text-secondary);">{cat.description}</p>
+            </section>
+          ))}
+        </div>
+      )}
+    </div>
+  </article>
+</BaseLayout>

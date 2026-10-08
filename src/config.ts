@@ -89,7 +89,7 @@ export const attraction = {
 
   // Aggregate rating shown on the page (source: Google Maps)
   ratingValue: 4.5,
-  reviewCount: 5093,
+  reviewCount: 5108,
 };
 
 export default attraction;

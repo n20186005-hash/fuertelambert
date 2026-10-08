@@ -1,8 +1,17 @@
 ---
 import { getI18n } from '../i18n/ui';
-const { messages } = getI18n(Astro.url);
+const { lang, messages } = getI18n(Astro.url);
 const t = messages.knowledge;
 const sections = t.sections;
+
+const moreLabels: Record<string, string> = {
+  es: 'Lee la crónica completa del fuerte',
+  en: 'Read the full fort chronicle',
+  zh: '阅读堡垒完整编年史',
+  arn: 'Pukara küpa nütram',
+};
+const moreLabel = moreLabels[lang] ?? moreLabels.es;
+const moreHref = `/${lang}/historia-fuerte-lambert`;
 ---
 
 <section id="history" class="section-padding" style="background: var(--bg-primary);">
@@ -24,6 +33,12 @@ const sections = t.sections;
           </div>
         </div>
       ))}
+    </div>
+
+    <div class="text-center mt-10">
+      <a href={moreHref} class="inline-flex w-full sm:w-auto justify-center px-8 py-3 rounded-full font-semibold text-white hover:opacity-90 transition" style="background: var(--accent);">
+        {moreLabel} →
+      </a>
     </div>
   </div>
 </section>
